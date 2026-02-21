@@ -1,12 +1,36 @@
 import { getAllPosts } from "@/lib/posts";
 
 const differentiators = [
-  { icon: "🔒", title: "100 % local", desc: "Vos données restent sur votre machine. Aucun cloud tiers, conformité RGPD native." },
-  { icon: "⚡", title: "Opérationnel en 48h", desc: "Installation, configuration, premier agent actif — en moins de deux jours." },
-  { icon: "🇫🇷", title: "Support francophone", desc: "Un interlocuteur humain, en français, joignable directement. Pas de ticket anonyme." },
-  { icon: "🔧", title: "Sur mesure", desc: "Chaque agent est configuré selon votre workflow réel. Pas de template générique." },
-  { icon: "🛡️", title: "Sécurité d'abord", desc: "Audit de configuration, chiffrement, permissions strictes. On ne coupe pas les coins." },
-  { icon: "📈", title: "Évolutif", desc: "Votre agent s'adapte à votre croissance. On l'affine au fil du temps." },
+  {
+    icon: "01",
+    title: "Seule agence 100 % OpenClaw en France",
+    desc: "On ne fait que ça. Pas des généralistes IA reconvertis. On connaît OpenClaw de l'intérieur — on l'utilise, on le débugge, on suit ses mises à jour semaine après semaine.",
+  },
+  {
+    icon: "02",
+    title: "Vos données ne bougent pas. Jamais.",
+    desc: "Pas de cloud, pas de serveur tiers, pas d'API qui renvoie vos emails quelque part. Votre agent tourne sur votre machine. C'est votre infrastructure, point.",
+  },
+  {
+    icon: "03",
+    title: "Un seul interlocuteur de A à Z",
+    desc: "Installation, configuration, maintenance, évolution — la même personne suit votre dossier. Pas de passage de relai, pas de 'votre technicien habituel est absent'.",
+  },
+  {
+    icon: "04",
+    title: "Prompts propriétaires testés en production",
+    desc: "Nos agents ne tournent pas sur la config par défaut. On a développé des séquences de prompts optimisées sur des dizaines de déploiements réels. Vos agents sont plus fiables que la moyenne.",
+  },
+  {
+    icon: "05",
+    title: "On s'engage sur les résultats",
+    desc: "Si l'agent ne fonctionne pas comme prévu dans les 30 jours, on revient gratuitement jusqu'à ce que ça marche. Pas de clause en petits caractères.",
+  },
+  {
+    icon: "06",
+    title: "Multi-canal natif dès le départ",
+    desc: "Telegram, WhatsApp, iMessage — connectés simultanément dès l'installation. Un seul agent, accessible depuis tous vos canaux. Pas besoin de choisir.",
+  },
 ];
 
 const offers = [
