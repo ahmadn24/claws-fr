@@ -36,23 +36,68 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Claws",
-  url: "https://claws.fr",
-  description: "Agence française spécialisée en installation, configuration et maintenance d'agents IA autonomes OpenClaw.",
-  address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
-  contactPoint: { "@type": "ContactPoint", email: "contact@claws.fr", contactType: "customer service" },
-  sameAs: [],
-  knowsAbout: ["OpenClaw", "agents IA autonomes", "automatisation par IA", "LLM", "Anthropic Claude"],
-};
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Claws",
+    url: "https://claws.fr",
+    description: "Agence française spécialisée en installation, configuration et maintenance d'agents IA autonomes OpenClaw.",
+    address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+    contactPoint: { "@type": "ContactPoint", email: "contact@claws.fr", contactType: "customer service", availableLanguage: "French" },
+    foundingDate: "2025",
+    areaServed: { "@type": "Country", name: "France" },
+    knowsAbout: ["OpenClaw", "agents IA autonomes", "automatisation par IA", "LLM", "Anthropic Claude", "Mac Mini IA", "RGPD IA"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services Claws",
+      itemListElement: [
+        { "@type": "Offer", name: "Installation OpenClaw", price: "199", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Agent sur mesure", description: "Configuration personnalisée d'agent IA autonome" },
+        { "@type": "Offer", name: "Retainer maintenance", price: "149", priceCurrency: "EUR", eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Qu'est-ce qu'OpenClaw ?",
+        acceptedAnswer: { "@type": "Answer", text: "OpenClaw est une plateforme open-source qui permet de déployer des agents IA autonomes directement sur votre machine locale. Vos données ne transitent par aucun serveur cloud tiers, ce qui garantit confidentialité et conformité RGPD." },
+      },
+      {
+        "@type": "Question",
+        name: "Combien coûte l'installation d'OpenClaw ?",
+        acceptedAnswer: { "@type": "Answer", text: "L'installation OpenClaw par Claws commence à 199€ pour une configuration complète sur votre machine existante, avec un canal Telegram ou WhatsApp connecté et opérationnel en 48h." },
+      },
+      {
+        "@type": "Question",
+        name: "Quelle est la différence entre un agent IA et ChatGPT ?",
+        acceptedAnswer: { "@type": "Answer", text: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte — sans supervision constante." },
+      },
+      {
+        "@type": "Question",
+        name: "Mes données sont-elles sécurisées avec OpenClaw ?",
+        acceptedAnswer: { "@type": "Answer", text: "Oui. OpenClaw fonctionne entièrement en local sur votre machine. Vos données ne transitent par aucun serveur tiers. Claws applique les meilleures pratiques de sécurité : chiffrement disque, firewall, permissions strictes." },
+      },
+      {
+        "@type": "Question",
+        name: "Sur quelle machine installer OpenClaw ?",
+        acceptedAnswer: { "@type": "Answer", text: "Le Mac Mini M4 est la machine recommandée pour OpenClaw : silencieux, économe en énergie (10-20W), suffisamment puissant pour faire tourner des agents IA en continu. Il fonctionne aussi sur n'importe quel Mac ou serveur Linux." },
+      },
+    ],
+  },
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {jsonLd.map((schema, i) => (
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        ))}
       </head>
       <body>{children}</body>
     </html>

@@ -195,6 +195,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ — GEO/SEO */}
+        <section className="section">
+          <div className="section-header">
+            <p className="section-tag">FAQ</p>
+            <h2 className="section-title">Questions fréquentes.</h2>
+          </div>
+          <div className="faq-list">
+            {[
+              { q: "Qu'est-ce qu'OpenClaw ?", a: "OpenClaw est une plateforme open-source qui permet de déployer des agents IA autonomes directement sur votre machine locale. Vos données ne transitent par aucun serveur cloud tiers — conformité RGPD garantie." },
+              { q: "Quelle est la différence entre un agent IA et ChatGPT ?", a: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte — sans supervision constante de votre part." },
+              { q: "Combien coûte l'installation d'OpenClaw ?", a: "L'installation par Claws démarre à 199€ pour une configuration complète sur votre machine existante, canal Telegram ou WhatsApp inclus, opérationnel en 48h." },
+              { q: "Mes données sont-elles sécurisées ?", a: "Oui. OpenClaw fonctionne entièrement en local sur votre machine. Claws applique les meilleures pratiques : chiffrement disque, firewall, permissions strictes, zéro backdoor." },
+              { q: "Sur quelle machine installer OpenClaw ?", a: "Le Mac Mini M4 est recommandé : silencieux, économe (10-20W), suffisamment puissant pour des agents IA en continu. Fonctionne aussi sur tout Mac ou serveur Linux." },
+              { q: "Peut-on connecter plusieurs canaux (Telegram, WhatsApp) ?", a: "Oui. OpenClaw supporte Telegram, WhatsApp, Discord, Signal, iMessage et d'autres. Plusieurs canaux peuvent être actifs simultanément." },
+            ].map((item, i) => (
+              <details key={i} className="faq-item">
+                <summary className="faq-question">{item.q}</summary>
+                <p className="faq-answer">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* CONTACT */}
         <section id="contact" className="section section-contact">
           <div className="contact-inner">

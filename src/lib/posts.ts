@@ -20,87 +20,154 @@ export const posts: Post[] = [
     readTime: "8 min",
     keywords: ["installation OpenClaw", "OpenClaw Mac Mini", "configurer OpenClaw", "OpenClaw France"],
     content: `
-## Pourquoi OpenClaw sur Mac Mini ?
+## Qu'est-ce qu'OpenClaw et pourquoi l'installer sur Mac Mini ?
 
-OpenClaw est la plateforme de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud, vos données ne quittent jamais votre infrastructure — un avantage décisif pour les entreprises soucieuses de conformité RGPD.
+OpenClaw est la plateforme open-source de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud comme ChatGPT ou Gemini, vos données ne quittent jamais votre infrastructure — un avantage décisif pour les entreprises soucieuses de confidentialité et de conformité RGPD.
 
-Le Mac Mini M4 est la machine idéale pour ce type de déploiement : silencieux, économe en énergie, et suffisamment puissant pour faire tourner des agents IA en continu. Un Mac Mini consomme entre 10 et 20W en charge normale, contre 80 à 300W pour un serveur classique.
+**Pourquoi le Mac Mini ?** C'est la machine idéale pour OpenClaw : silencieux, économe en énergie (10 à 20W seulement), et suffisamment puissant pour faire tourner des agents IA Claude en continu. Un Mac Mini M4 à 800€ est suffisant pour gérer plusieurs agents en parallèle — là où un serveur GPU GPU équivalent coûterait 5 000€ ou plus.
+
+En résumé : Mac Mini + OpenClaw = agent IA autonome, disponible 24h/24, pour un coût d'infrastructure minimal.
 
 ## Prérequis avant l'installation
 
-Avant de commencer, assurez-vous de disposer de :
+Avant de commencer l'installation d'OpenClaw, assurez-vous de disposer de :
 
 - **Mac Mini M4** (ou M2 Pro/M3) avec macOS Ventura ou supérieur
 - **Node.js 20+** installé (via Homebrew : \`brew install node\`)
-- **Un compte Anthropic** avec une clé API (claude.ai/settings)
-- **15 minutes** de disponibilité
+- **Un compte Anthropic** avec une clé API active (claude.ai/settings)
+- **15 à 30 minutes** de disponibilité
 
-## Installation étape par étape
+Si vous n'avez pas encore de clé API Anthropic, créez un compte sur anthropic.com. Les premiers tokens sont offerts, puis la facturation est à l'usage (environ 3€ pour 1 million de tokens avec Claude Sonnet).
 
-### 1. Installer OpenClaw
+## Guide d'installation OpenClaw étape par étape
+
+### Étape 1 : Installer OpenClaw via npm
+
+Ouvrez le Terminal et exécutez :
 
 \`\`\`bash
 npm install -g openclaw
 \`\`\`
 
-Une fois installé, lancez le wizard de configuration :
+Vérifiez l'installation :
+
+\`\`\`bash
+openclaw --version
+\`\`\`
+
+### Étape 2 : Lancer le wizard de configuration
 
 \`\`\`bash
 openclaw configure
 \`\`\`
 
-Le wizard vous guidera pour configurer votre clé API Anthropic, le modèle IA (Claude Sonnet par défaut), et le canal de communication.
+Le wizard interactif vous guidera pour configurer :
+- Votre clé API Anthropic
+- Le modèle IA (Claude Sonnet 4 recommandé pour l'équilibre performance/coût)
+- Le dossier de travail de l'agent (workspace)
 
-### 2. Configurer un canal Telegram
+### Étape 3 : Configurer un canal Telegram
 
-Telegram est le canal le plus simple à configurer. Créez un bot via @BotFather sur Telegram :
+Telegram est le canal le plus simple à configurer pour communiquer avec votre agent. Voici comment :
 
-1. Envoyez \`/newbot\` à @BotFather
-2. Choisissez un nom et un username pour votre bot
-3. Copiez le token fourni
+1. Ouvrez Telegram et cherchez **@BotFather**
+2. Envoyez \`/newbot\`
+3. Donnez un nom et un username à votre bot (ex: MonAgentIA_bot)
+4. Copiez le **token** fourni par BotFather
 
-Puis dans OpenClaw :
-
-\`\`\`bash
-openclaw channels add --channel telegram --token VOTRE_TOKEN
-\`\`\`
-
-### 3. Garder le Mac Mini actif en permanence
-
-Par défaut, macOS met l'écran en veille mais pas la machine si un processus actif tourne. Pour s'assurer que le gateway reste actif :
+Puis dans le Terminal :
 
 \`\`\`bash
-openclaw gateway start
+openclaw channels add --channel telegram --token VOTRE_TOKEN_ICI
 \`\`\`
 
-Pour démarrer automatiquement au boot :
+Pour activer le canal et autoriser votre compte Telegram :
+
+\`\`\`bash
+openclaw gateway restart
+\`\`\`
+
+Envoyez \`/start\` à votre bot — il vous donnera un code de pairing à approuver :
+
+\`\`\`bash
+openclaw pairing approve telegram VOTRE_CODE
+\`\`\`
+
+### Étape 4 : Démarrer le gateway en service permanent
+
+Le gateway est le serveur central d'OpenClaw. Pour qu'il démarre automatiquement au boot du Mac Mini :
 
 \`\`\`bash
 openclaw gateway install
+openclaw gateway start
 \`\`\`
 
-### 4. Sécuriser l'installation
+Pour vérifier que tout fonctionne :
 
-Points de sécurité essentiels à vérifier :
+\`\`\`bash
+openclaw gateway status
+openclaw channels status
+\`\`\`
 
-- **Chiffrement disque** : activez FileVault dans Réglages Système → Confidentialité et sécurité
-- **Firewall** : activez le pare-feu macOS
-- **Permissions** : vérifiez que le gateway écoute uniquement en local (\`localhost:18789\`)
-- **Clés API** : ne stockez jamais vos clés dans des fichiers de code versionnés
+### Étape 5 : Garder le Mac Mini actif même capot fermé
 
-## Erreurs courantes
+Par défaut, macOS peut mettre le système en veille. Pour éviter cela :
 
-**"Gateway token missing"** : le gateway tourne mais le client ne trouve pas le token. Lancez \`openclaw dashboard\` pour récupérer le token d'accès.
+- **Réglages Système → Batterie → Empêcher la mise en veille automatique** : activez cette option
+- Ou via Terminal : \`sudo pmset -a disablesleep 1\`
 
-**"Telegram channel not responding"** : vérifiez le mode confidentialité du bot via @BotFather → Group Privacy → Disable.
+Alternative recommandée : l'application **Amphetamine** (gratuite sur l'App Store) offre un contrôle précis de la mise en veille.
 
-**Agent ne répond pas** : vérifiez que le gateway tourne avec \`openclaw gateway status\` et que votre clé Anthropic est valide.
+## Sécuriser l'installation OpenClaw
+
+La sécurité est critique pour un système qui accède à vos données et canaux de communication.
+
+### Chiffrement disque
+Activez FileVault dans **Réglages Système → Confidentialité et sécurité → FileVault**. Cela chiffre l'intégralité du disque avec votre mot de passe.
+
+### Firewall macOS
+Activez le pare-feu dans **Réglages Système → Réseau → Coupe-feu**. OpenClaw n'a besoin que d'accéder à internet en sortie (pour l'API Anthropic et Telegram).
+
+### Vérifier les ports exposés
+Le gateway OpenClaw doit écouter uniquement en local :
+
+\`\`\`bash
+lsof -i :18789
+# Résultat attendu : localhost:18789, pas 0.0.0.0:18789
+\`\`\`
+
+### Stocker les clés API en sécurité
+Ne stockez jamais vos clés API dans des fichiers versionnés (git). OpenClaw stocke les clés dans \`~/.openclaw/openclaw.json\` — vérifiez que ce fichier n'est pas accessible publiquement.
+
+## Questions fréquentes sur l'installation OpenClaw
+
+**Q : OpenClaw est-il compatible avec Windows ou Linux ?**
+A : OpenClaw fonctionne sur macOS (recommandé), Linux et Windows via WSL2. Le Mac Mini reste la plateforme recommandée pour sa simplicité de gestion et sa fiabilité.
+
+**Q : Quelle est la différence entre OpenClaw et d'autres solutions d'agents IA ?**
+A : OpenClaw est 100% local — vos données ne quittent jamais votre machine. Les alternatives cloud (AutoGPT, AgentGPT, etc.) envoient vos données sur des serveurs tiers, ce qui pose des problèmes de confidentialité et de conformité RGPD.
+
+**Q : Combien coûte l'utilisation d'OpenClaw au quotidien ?**
+A : Le coût principal est l'API Anthropic. Pour un usage professionnel modéré (quelques centaines d'interactions par jour), comptez entre 20 et 80€/mois en tokens API. OpenClaw lui-même est gratuit et open-source.
+
+**Q : Peut-on connecter plusieurs canaux simultanément ?**
+A : Oui. OpenClaw supporte Telegram, WhatsApp, Discord, Signal, iMessage et d'autres. Vous pouvez activer plusieurs canaux en parallèle.
+
+## Erreurs courantes et solutions
+
+**"Gateway token missing"** → Lancez \`openclaw dashboard\` pour récupérer le token d'accès et configurez-le dans le client.
+
+**"Telegram channel not responding"** → Vérifiez le mode confidentialité du bot via @BotFather → /mybots → Bot Settings → Group Privacy → Turn off. Retirez et réajoutez le bot dans vos groupes.
+
+**"Agent ne répond pas"** → Vérifiez avec \`openclaw gateway status\` et \`openclaw doctor\`. Assurez-vous que votre clé API Anthropic est valide et a du crédit.
+
+**"No groups found"** → Par défaut, OpenClaw bloque les messages de groupe. Configurez avec : \`openclaw config set channels.telegram.groupPolicy open\`
 
 ## Conclusion
 
-L'installation d'OpenClaw sur Mac Mini est accessible, même sans compétences techniques avancées. En suivant ce guide, vous disposez d'un agent IA autonome, sécurisé, disponible 24h/24, pour un coût d'infrastructure minimal.
+L'installation d'OpenClaw sur Mac Mini est accessible en moins de 30 minutes en suivant ce guide. Vous disposez ensuite d'un agent IA autonome, sécurisé, disponible 24h/24, pour un coût d'infrastructure minimal.
 
-Vous préférez déléguer l'installation et la configuration à des experts ? [Contactez Claws](/contact) — nous intervenons à distance ou en présentiel en Île-de-France.
+Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse pour 199€. [Contactez-nous.](/contact)
 `,
   },
   {
