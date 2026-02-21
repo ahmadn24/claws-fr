@@ -260,7 +260,7 @@ Cette commande vérifie :
 
 ## Déléguer la maintenance
 
-La maintenance d'un système IA de production demande du temps et de l'expertise. Si vous préférez vous concentrer sur votre cœur de métier, notre formule **Retainer à 149€/mois** couvre l'ensemble de ces opérations — mises à jour, monitoring, rotation des clés, support direct.
+La maintenance d'un système IA de production demande du temps et de l'expertise. Si vous préférez vous concentrer sur votre cœur de métier, notre formule **Retainer à partir de 149€/mois** couvre l'ensemble de ces opérations — mises à jour, monitoring, rotation des clés, support direct.
 
 [Découvrir le Retainer Claws](/contact)
 `,

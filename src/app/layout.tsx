@@ -54,7 +54,7 @@ const jsonLd = [
       itemListElement: [
         { "@type": "Offer", name: "Installation OpenClaw", price: "189", priceCurrency: "EUR", description: "À partir de 189€ selon la configuration" },
         { "@type": "Offer", name: "Agent sur mesure", description: "Configuration personnalisée d'agent IA autonome" },
-        { "@type": "Offer", name: "Retainer maintenance", price: "149", priceCurrency: "EUR", eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
+        { "@type": "Offer", name: "Retainer maintenance", price: "149", description: "À partir de 149€/mois selon la configuration", priceCurrency: "EUR", eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
       ],
     },
   },

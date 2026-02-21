@@ -27,7 +27,7 @@ const offers = [
   },
   {
     code: "RETAINER",
-    price: "149 €/mois",
+    price: "À partir de 149 €/mois",
     title: "Maintenance et évolutions",
     desc: "Maintenance, mises à jour, support direct. Un interlocuteur — pas un ticket. Votre agent évolue avec votre activité.",
     cta: "En savoir plus",
