@@ -22,7 +22,7 @@ export const posts: Post[] = [
     content: `
 ## Qu'est-ce qu'OpenClaw et pourquoi l'installer sur Mac Mini ?
 
-OpenClaw est la plateforme open-source de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud comme ChatGPT ou Gemini, vos données ne quittent jamais votre infrastructure — un avantage décisif pour les entreprises soucieuses de confidentialité et de conformité RGPD.
+[OpenClaw](https://openclaw.ai) est la plateforme open-source de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud comme ChatGPT ou Gemini, vos données ne quittent jamais votre infrastructure — un avantage décisif pour les entreprises soucieuses de confidentialité et de conformité RGPD.
 
 **Pourquoi le Mac Mini ?** C'est la machine idéale pour OpenClaw : silencieux, économe en énergie (10 à 20W seulement), et suffisamment puissant pour faire tourner des agents IA Claude en continu. Un Mac Mini M4 à 800€ est suffisant pour gérer plusieurs agents en parallèle — là où un serveur GPU GPU équivalent coûterait 5 000€ ou plus.
 
@@ -37,7 +37,7 @@ Avant de commencer l'installation d'OpenClaw, assurez-vous de disposer de :
 - **Un compte Anthropic** avec une clé API active (claude.ai/settings)
 - **15 à 30 minutes** de disponibilité
 
-Si vous n'avez pas encore de clé API Anthropic, créez un compte sur anthropic.com. Les premiers tokens sont offerts, puis la facturation est à l'usage (environ 3€ pour 1 million de tokens avec Claude Sonnet).
+Si vous n'avez pas encore de clé API Anthropic, créez un compte sur [console.anthropic.com](https://console.anthropic.com). Les premiers tokens sont offerts, puis la facturation est à l'usage (environ 3€ pour 1 million de tokens avec Claude Sonnet).
 
 ## Guide d'installation OpenClaw étape par étape
 
@@ -167,7 +167,9 @@ A : Oui. OpenClaw supporte Telegram, WhatsApp, Discord, Signal, iMessage et d'au
 
 L'installation d'OpenClaw sur Mac Mini est accessible en moins de 30 minutes en suivant ce guide. Vous disposez ensuite d'un agent IA autonome, sécurisé, disponible 24h/24, pour un coût d'infrastructure minimal.
 
-Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/contact)
+Une fois installé, pensez à mettre en place une routine de [maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) pour garder votre agent fiable sur le long terme.
+
+Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/#contact)
 `,
   },
   {
@@ -182,7 +184,7 @@ Vous préférez déléguer l'installation et la configuration à des experts ? *
     content: `
 ## La maintenance, l'étape oubliée de l'IA d'entreprise
 
-Beaucoup d'équipes installent OpenClaw, configurent leurs agents, puis oublient la machine pendant des mois. C'est une erreur. Comme tout système de production, vos agents IA ont besoin d'une maintenance régulière pour rester performants, sécurisés et à jour.
+Beaucoup d'équipes [installent OpenClaw](/blog/installer-openclaw-mac-mini-2025), configurent leurs agents, puis oublient la machine pendant des mois. C'est une erreur. Comme tout système de production, vos agents IA ont besoin d'une maintenance régulière pour rester performants, sécurisés et à jour.
 
 Ce guide couvre les 5 axes de la maintenance OpenClaw en production.
 
@@ -262,7 +264,9 @@ Cette commande vérifie :
 
 La maintenance d'un système IA de production demande du temps et de l'expertise. Si vous préférez vous concentrer sur votre cœur de métier, notre formule **Retainer à partir de 149€/mois** couvre l'ensemble de ces opérations — mises à jour, monitoring, rotation des clés, support direct.
 
-[Découvrir le Retainer Claws](/contact)
+Si vous venez d'installer OpenClaw et cherchez à aller plus loin, consultez aussi notre guide sur [l'automatisation par agents IA](/blog/agence-automatisation-agents-ia-france).
+
+[Découvrir le Retainer Claws](/#contact)
 `,
   },
   {
@@ -300,7 +304,7 @@ Avant d'automatiser quoi que ce soit, il faut comprendre où votre équipe passe
 
 L'agent IA est ensuite configuré selon votre contexte spécifique : votre secteur, votre jargon, vos processus, vos outils. Un agent configuré pour une agence de communication ne ressemble pas à un agent configuré pour un cabinet d'expertise comptable.
 
-OpenClaw permet cette personnalisation profonde, avec un déploiement 100% local — vos données ne transitent jamais par des serveurs tiers.
+[OpenClaw](https://openclaw.ai) permet cette personnalisation profonde, avec un déploiement 100% local — vos données ne transitent jamais par des serveurs tiers. Pour comprendre comment fonctionne l'installation technique, consultez notre [guide d'installation OpenClaw sur Mac Mini](/blog/installer-openclaw-mac-mini-2025).
 
 ### 3. Formation et onboarding
 
@@ -337,7 +341,9 @@ L'objectif n'est pas de supprimer des postes — c'est de libérer du temps pour
 
 ---
 
-Vous souhaitez évaluer le potentiel d'automatisation dans votre entreprise ? [Discutons.](/contact)
+Pour aller plus loin sur la partie technique, lisez notre guide sur la [maintenance d'agents OpenClaw en production](/blog/maintenance-openclaw-agents-ia-stables).
+
+Vous souhaitez évaluer le potentiel d'automatisation dans votre entreprise ? [Discutons.](/#contact)
 `,
   },
 ];
