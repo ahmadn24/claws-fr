@@ -2,210 +2,303 @@ export default function Home() {
   return (
     <>
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 md:px-12 bg-brand/95 backdrop-blur-sm">
-        <span className="text-xl font-bold tracking-tight text-ink">Claws</span>
+      <nav
+        style={{
+          position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          padding: "20px 48px",
+          backgroundColor: "rgba(245,242,238,0.95)",
+          backdropFilter: "blur(8px)",
+          borderBottom: "1px solid rgba(14,14,14,0.08)",
+        }}
+      >
+        <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "18px", letterSpacing: "-0.02em", color: "#0E0E0E" }}>
+          Claws
+        </span>
         <a
           href="#contact"
-          className="text-sm font-medium text-accent hover:underline underline-offset-4 transition-all"
+          style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "14px", fontWeight: 500, color: "#E85D04", letterSpacing: "0.01em" }}
         >
           Contact →
         </a>
       </nav>
 
-      <main className="pt-24">
+      <main style={{ paddingTop: "80px" }}>
 
-        {/* SECTION 1 — OUVERTURE */}
-        <section className="px-6 md:px-12 pt-16 pb-24 md:pt-24 md:pb-32 border-b border-ink/10">
-          <div className="max-w-5xl">
-            <p className="font-mono text-xs tracking-widest uppercase text-muted mb-10">
-              Paris · 2025 · Agents IA autonomes
+        {/* 001 — OUVERTURE */}
+        <section style={{
+          padding: "80px 48px 96px",
+          borderBottom: "1px solid rgba(14,14,14,0.1)",
+          minHeight: "85vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+        }}>
+          <div style={{ marginBottom: "auto", paddingTop: "40px" }}>
+            <p style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "11px",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "#6B6560",
+              marginBottom: "64px",
+            }}>
+              Paris &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Agents IA autonomes
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.0] tracking-tight text-ink max-w-4xl">
-              87 % des tâches répétitives de votre équipe
-              <span className="text-accent"> sont automatisables.</span>
+          </div>
+
+          <div>
+            <h1 style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "clamp(52px, 9vw, 120px)",
+              fontWeight: 700,
+              lineHeight: 1.0,
+              letterSpacing: "-0.03em",
+              color: "#0E0E0E",
+              maxWidth: "1100px",
+              marginBottom: "48px",
+            }}>
+              87 % des tâches répétitives de votre équipe{" "}
+              <span style={{ color: "#E85D04" }}>sont automatisables.</span>
             </h1>
-            <div className="mt-12 md:mt-16 border-l-2 border-accent pl-6">
-              <p className="text-xl md:text-2xl font-medium text-ink/80 leading-relaxed max-w-xl">
+
+            <div style={{
+              borderLeft: "3px solid #E85D04",
+              paddingLeft: "24px",
+              maxWidth: "480px",
+            }}>
+              <p style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "22px",
+                fontWeight: 500,
+                color: "#0E0E0E",
+                lineHeight: 1.4,
+              }}>
                 Claws les automatise.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 2 — LE PROBLÈME */}
-        <section className="px-6 md:px-12 py-24 md:py-32 border-b border-ink/10">
-          <div className="max-w-5xl grid md:grid-cols-12 gap-8">
-            <div className="md:col-span-4">
-              <p className="font-mono text-xs tracking-widest uppercase text-muted">
-                Le problème
+        {/* 002 — LE PROBLÈME */}
+        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", maxWidth: "1100px" }}>
+            <div>
+              <p style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "11px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#6B6560",
+              }}>
+                002 / Le problème
               </p>
             </div>
-            <div className="md:col-span-8">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-8">
+            <div>
+              <h2 style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
+                fontWeight: 700,
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+                color: "#0E0E0E",
+                marginBottom: "32px",
+              }}>
                 Ce que vos outils actuels ne font pas.
               </h2>
-              <p className="text-lg md:text-xl text-ink/70 leading-relaxed max-w-2xl">
+              <p style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.7,
+                color: "rgba(14,14,14,0.65)",
+                marginBottom: "20px",
+                maxWidth: "600px",
+              }}>
                 ChatGPT répond. Votre agent Claws{" "}
-                <span className="text-ink font-medium">agit</span>. Il envoie,
-                planifie, analyse et revient avec un résultat — sans que vous
-                ayez ouvert un seul onglet.
+                <strong style={{ color: "#0E0E0E" }}>agit</strong>.
+                Il envoie, planifie, analyse et revient avec un résultat — sans que vous ayez ouvert un seul onglet.
               </p>
-              <p className="mt-6 text-lg md:text-xl text-ink/70 leading-relaxed max-w-2xl">
-                Un agent IA n'est pas un chatbot. C'est un collaborateur
-                disponible 24h/24, connecté à vos outils, qui prend des
-                initiatives et vous rend compte.
+              <p style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "18px",
+                lineHeight: 1.7,
+                color: "rgba(14,14,14,0.65)",
+                maxWidth: "600px",
+              }}>
+                Un agent IA n&apos;est pas un chatbot. C&apos;est un collaborateur disponible 24h/24, connecté à vos outils, qui prend des initiatives et vous rend compte.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 3 — OFFRES */}
-        <section className="px-6 md:px-12 py-24 md:py-32 border-b border-ink/10">
-          <div className="max-w-5xl">
-            <div className="grid md:grid-cols-12 gap-8 mb-16">
-              <div className="md:col-span-4">
-                <p className="font-mono text-xs tracking-widest uppercase text-muted">
-                  Offres
-                </p>
-              </div>
-              <div className="md:col-span-8">
-                <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                  Ce qu'on fait pour vous.
-                </h2>
-              </div>
+        {/* 003 — OFFRES */}
+        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
+          <div style={{ maxWidth: "1100px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", marginBottom: "64px" }}>
+              <p style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "11px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#6B6560",
+              }}>
+                003 / Offres
+              </p>
+              <h2 style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
+                fontWeight: 700,
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+              }}>
+                Ce qu&apos;on fait pour vous.
+              </h2>
             </div>
 
-            <div className="divide-y divide-ink/10 border-t border-ink/10">
-
-              {/* Offre 1 */}
-              <div className="py-10 grid md:grid-cols-12 gap-6 group">
-                <div className="md:col-span-4">
-                  <p className="font-mono text-sm font-medium text-muted tracking-wide">
-                    — SETUP
+            {/* Fiche 1 */}
+            {[
+              { code: "SETUP", price: "199 €", title: "Installation OpenClaw", desc: "Installation et configuration d'OpenClaw sur votre machine. Canal Telegram ou WhatsApp connecté. Opérationnel en 48h." },
+              { code: "AGENT SUR MESURE", price: "Sur devis", title: "Un agent pensé pour votre workflow", desc: "Analyse de vos processus, configuration d'un agent entièrement personnalisé, intégrations avec vos outils existants, formation de votre équipe." },
+              { code: "RETAINER", price: "149 €/mois", title: "Maintenance et évolutions continues", desc: "Maintenance, mises à jour, support direct. Un interlocuteur — pas un ticket. Votre agent évolue avec votre activité." },
+            ].map((offer, i) => (
+              <div key={i} style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 2fr",
+                gap: "48px",
+                padding: "40px 0",
+                borderTop: "1px solid rgba(14,14,14,0.1)",
+              }}>
+                <div>
+                  <p style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "11px",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "#6B6560",
+                    marginBottom: "12px",
+                  }}>
+                    — {offer.code}
                   </p>
-                  <p className="font-mono text-3xl font-bold text-accent mt-2">
-                    199 €
+                  <p style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "32px",
+                    fontWeight: 700,
+                    color: "#E85D04",
+                    lineHeight: 1,
+                  }}>
+                    {offer.price}
                   </p>
                 </div>
-                <div className="md:col-span-8">
-                  <h3 className="text-xl font-semibold mb-3">
-                    Installation OpenClaw
+                <div>
+                  <h3 style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "22px",
+                    fontWeight: 600,
+                    letterSpacing: "-0.01em",
+                    marginBottom: "16px",
+                  }}>
+                    {offer.title}
                   </h3>
-                  <p className="text-ink/60 leading-relaxed">
-                    Installation et configuration d'OpenClaw sur votre machine.
-                    Canal Telegram ou WhatsApp connecté. Opérationnel en 48h.
+                  <p style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "16px",
+                    lineHeight: 1.7,
+                    color: "rgba(14,14,14,0.6)",
+                    marginBottom: "24px",
+                  }}>
+                    {offer.desc}
                   </p>
                   <a
                     href="#contact"
-                    className="inline-block mt-5 text-sm font-medium text-accent border border-accent px-5 py-2.5 hover:bg-accent hover:text-brand transition-all"
+                    style={{
+                      display: "inline-block",
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      letterSpacing: "0.05em",
+                      color: "#E85D04",
+                      border: "1px solid #E85D04",
+                      padding: "10px 20px",
+                      transition: "all 0.15s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = "#E85D04";
+                      (e.target as HTMLElement).style.color = "#F5F2EE";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = "transparent";
+                      (e.target as HTMLElement).style.color = "#E85D04";
+                    }}
                   >
                     Démarrer →
                   </a>
                 </div>
               </div>
-
-              {/* Offre 2 */}
-              <div className="py-10 grid md:grid-cols-12 gap-6">
-                <div className="md:col-span-4">
-                  <p className="font-mono text-sm font-medium text-muted tracking-wide">
-                    — AGENT SUR MESURE
-                  </p>
-                  <p className="font-mono text-3xl font-bold text-accent mt-2">
-                    Sur devis
-                  </p>
-                </div>
-                <div className="md:col-span-8">
-                  <h3 className="text-xl font-semibold mb-3">
-                    Un agent pensé pour votre workflow
-                  </h3>
-                  <p className="text-ink/60 leading-relaxed">
-                    Analyse de vos processus, configuration d'un agent
-                    entièrement personnalisé, intégrations avec vos outils
-                    existants, formation de votre équipe.
-                  </p>
-                  <a
-                    href="#contact"
-                    className="inline-block mt-5 text-sm font-medium text-accent border border-accent px-5 py-2.5 hover:bg-accent hover:text-brand transition-all"
-                  >
-                    Discutons →
-                  </a>
-                </div>
-              </div>
-
-              {/* Offre 3 */}
-              <div className="py-10 grid md:grid-cols-12 gap-6">
-                <div className="md:col-span-4">
-                  <p className="font-mono text-sm font-medium text-muted tracking-wide">
-                    — RETAINER
-                  </p>
-                  <p className="font-mono text-3xl font-bold text-accent mt-2">
-                    149 €<span className="text-lg font-normal text-muted">/mois</span>
-                  </p>
-                </div>
-                <div className="md:col-span-8">
-                  <h3 className="text-xl font-semibold mb-3">
-                    Maintenance et évolutions continues
-                  </h3>
-                  <p className="text-ink/60 leading-relaxed">
-                    Maintenance, mises à jour, support direct. Un interlocuteur
-                    — pas un ticket. Votre agent évolue avec votre activité.
-                  </p>
-                  <a
-                    href="#contact"
-                    className="inline-block mt-5 text-sm font-medium text-accent border border-accent px-5 py-2.5 hover:bg-accent hover:text-brand transition-all"
-                  >
-                    En savoir plus →
-                  </a>
-                </div>
-              </div>
-
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* SECTION 4 — COMMENT ÇA MARCHE */}
-        <section className="px-6 md:px-12 py-24 md:py-32 border-b border-ink/10">
-          <div className="max-w-5xl">
-            <div className="grid md:grid-cols-12 gap-8 mb-16">
-              <div className="md:col-span-4">
-                <p className="font-mono text-xs tracking-widest uppercase text-muted">
-                  Comment
-                </p>
-              </div>
-              <div className="md:col-span-8">
-                <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                  Trois étapes. Pas plus.
-                </h2>
-              </div>
+        {/* 004 — COMMENT */}
+        <section style={{ padding: "96px 48px", borderBottom: "1px solid rgba(14,14,14,0.1)" }}>
+          <div style={{ maxWidth: "1100px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px", marginBottom: "64px" }}>
+              <p style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "11px",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#6B6560",
+              }}>
+                004 / Process
+              </p>
+              <h2 style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
+                fontWeight: 700,
+                lineHeight: 1.1,
+                letterSpacing: "-0.02em",
+              }}>
+                Trois étapes. Pas plus.
+              </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-0 border-t border-ink/10">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0", borderTop: "1px solid rgba(14,14,14,0.1)" }}>
               {[
-                {
-                  num: "01",
-                  title: "On écoute.",
-                  desc: "Appel de 30 minutes pour comprendre votre activité, vos outils, vos points de friction.",
-                },
-                {
-                  num: "02",
-                  title: "On installe.",
-                  desc: "Configuration complète de l'agent sur votre machine. Sécurisé, local, aucune donnée dans le cloud.",
-                },
-                {
-                  num: "03",
-                  title: "Votre agent travaille.",
-                  desc: "Pendant que vous dormez, votre agent gère, planifie, répond. Vous vous concentrez sur l'essentiel.",
-                },
-              ].map((step) => (
-                <div
-                  key={step.num}
-                  className="py-10 pr-10 border-b md:border-b-0 md:border-r border-ink/10 last:border-r-0"
-                >
-                  <p className="font-mono text-5xl font-bold text-ink/10 mb-6">
+                { num: "01", title: "On écoute.", desc: "Appel de 30 minutes pour comprendre votre activité, vos outils, vos points de friction." },
+                { num: "02", title: "On installe.", desc: "Configuration complète de l'agent sur votre machine. Sécurisé, local, aucune donnée dans le cloud." },
+                { num: "03", title: "Votre agent travaille.", desc: "Pendant que vous dormez, votre agent gère, planifie, répond. Vous vous concentrez sur l'essentiel." },
+              ].map((step, i) => (
+                <div key={i} style={{
+                  padding: "40px 40px 40px 0",
+                  borderRight: i < 2 ? "1px solid rgba(14,14,14,0.1)" : "none",
+                  paddingRight: "40px",
+                  paddingLeft: i > 0 ? "40px" : "0",
+                }}>
+                  <p style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    color: "rgba(14,14,14,0.08)",
+                    marginBottom: "24px",
+                    lineHeight: 1,
+                  }}>
                     {step.num}
                   </p>
-                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-ink/60 leading-relaxed text-sm">
+                  <h3 style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "20px",
+                    fontWeight: 700,
+                    marginBottom: "12px",
+                    letterSpacing: "-0.01em",
+                  }}>
+                    {step.title}
+                  </h3>
+                  <p style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: "15px",
+                    lineHeight: 1.7,
+                    color: "rgba(14,14,14,0.6)",
+                  }}>
                     {step.desc}
                   </p>
                 </div>
@@ -214,25 +307,51 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 5 — CONTACT */}
-        <section id="contact" className="px-6 md:px-12 py-24 md:py-40">
-          <div className="max-w-5xl grid md:grid-cols-12 gap-8">
-            <div className="md:col-span-4">
-              <p className="font-mono text-xs tracking-widest uppercase text-muted">
-                Contact
-              </p>
-            </div>
-            <div className="md:col-span-8">
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+        {/* 005 — CONTACT */}
+        <section id="contact" style={{ padding: "120px 48px 160px" }}>
+          <div style={{ maxWidth: "1100px", display: "grid", gridTemplateColumns: "1fr 2fr", gap: "48px" }}>
+            <p style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "11px",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "#6B6560",
+              paddingTop: "12px",
+            }}>
+              005 / Contact
+            </p>
+            <div>
+              <h2 style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(52px, 7vw, 88px)",
+                fontWeight: 700,
+                letterSpacing: "-0.03em",
+                lineHeight: 1.0,
+                color: "#0E0E0E",
+                marginBottom: "32px",
+              }}>
                 Discutons.
               </h2>
               <a
                 href="mailto:contact@claws.fr"
-                className="text-2xl md:text-3xl font-medium text-accent hover:underline underline-offset-4 transition-all block mb-4"
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "24px",
+                  fontWeight: 500,
+                  color: "#E85D04",
+                  display: "block",
+                  marginBottom: "16px",
+                  textDecoration: "underline",
+                  textUnderlineOffset: "4px",
+                }}
               >
                 contact@claws.fr
               </a>
-              <p className="font-mono text-sm text-muted">
+              <p style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "13px",
+                color: "#6B6560",
+              }}>
                 Réponse sous 24h.
               </p>
             </div>
@@ -241,11 +360,19 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="px-6 md:px-12 py-6 border-t border-ink/10 flex items-center justify-between">
-        <p className="font-mono text-xs text-muted">© 2025 Claws — Paris</p>
+      <footer style={{
+        padding: "24px 48px",
+        borderTop: "1px solid rgba(14,14,14,0.1)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}>
+        <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: "#6B6560" }}>
+          © 2025 Claws — Paris
+        </p>
         <a
           href="mailto:contact@claws.fr"
-          className="font-mono text-xs text-muted hover:text-accent transition-colors"
+          style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "12px", color: "#6B6560" }}
         >
           contact@claws.fr
         </a>
