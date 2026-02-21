@@ -27,3 +27,20 @@ body {
 
 ::selection { background-color: #E85D04; color: #F5F2EE; }
 a { color: inherit; text-decoration: none; }
+
+.claws-btn {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #E85D04;
+  border: 1px solid #E85D04;
+  padding: 10px 20px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.claws-btn:hover {
+  background-color: #E85D04;
+  color: #F5F2EE;
+}

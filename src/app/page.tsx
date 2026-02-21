@@ -208,28 +208,7 @@ export default function Home() {
                   }}>
                     {offer.desc}
                   </p>
-                  <a
-                    href="#contact"
-                    style={{
-                      display: "inline-block",
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      fontSize: "13px",
-                      fontWeight: 600,
-                      letterSpacing: "0.05em",
-                      color: "#E85D04",
-                      border: "1px solid #E85D04",
-                      padding: "10px 20px",
-                      transition: "all 0.15s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = "#E85D04";
-                      (e.target as HTMLElement).style.color = "#F5F2EE";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = "transparent";
-                      (e.target as HTMLElement).style.color = "#E85D04";
-                    }}
-                  >
+                  <a href="#contact" className="claws-btn">
                     Démarrer →
                   </a>
                 </div>
