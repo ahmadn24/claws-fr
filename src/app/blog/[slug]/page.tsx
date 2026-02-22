@@ -3,6 +3,12 @@ import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { marked } from "marked";
 
+function getRelatedPosts(currentSlug: string, count = 3) {
+  return getAllPosts()
+    .filter((p) => p.slug !== currentSlug)
+    .slice(0, count);
+}
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -35,6 +41,7 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   const html = await marked(post.content);
+  const relatedPosts = getRelatedPosts(slug);
 
   const jsonLd = [
     {
@@ -115,10 +122,25 @@ export default async function PostPage({ params }: Props) {
         <div className="article-cta">
           <h3>Vous souhaitez un agent IA pour votre entreprise ?</h3>
           <p>
-            Claws installe, configure et maintient vos agents IA autonomes OpenClaw. Installation en 48h, support francophone, données 100 % locales.
+            Claws installe, configure et maintient vos agents IA autonomes OpenClaw. Opérationnel en 48h, support francophone, données 100 % locales.
           </p>
-          <a href="/#contact" className="btn-primary">Discutons →</a>
+          <a href="/#contact" className="btn-primary">Installation en 48h — à partir de 189 € →</a>
         </div>
+
+        {relatedPosts.length > 0 && (
+          <section className="related-articles">
+            <h3 className="related-title">Articles liés</h3>
+            <div className="related-grid">
+              {relatedPosts.map((rp) => (
+                <a key={rp.slug} href={`/blog/${rp.slug}`} className="related-card">
+                  <span className="related-category">{rp.category}</span>
+                  <span className="related-card-title">{rp.title}</span>
+                  <span className="related-readtime">{rp.readTime}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       <footer className="footer">
