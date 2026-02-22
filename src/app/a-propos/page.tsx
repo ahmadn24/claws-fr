@@ -139,7 +139,7 @@ export default function AboutPage() {
 
           <h2>Contact</h2>
           <p>
-            <a href="mailto:contact@claws.fr">contact@claws.fr</a> — on répond dans la journée.
+            <a href="mailto:contact@claws.fr">contact@claws.fr</a>. On répond dans la journée.
           </p>
         </div>
 

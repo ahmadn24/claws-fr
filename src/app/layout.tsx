@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Claws",
   },
   description:
-    "Claws installe, configure et maintient vos agents IA autonomes sur OpenClaw. Première agence française spécialisée en automatisation par agents IA — pour PME et entreprises.",
+    "Claws installe, configure et maintient vos agents IA autonomes sur OpenClaw. Première agence française spécialisée en automatisation par agents IA, pour PME et entreprises.",
   keywords: [
     "installation OpenClaw",
     "maintenance OpenClaw",
@@ -88,7 +88,7 @@ const jsonLd = [
       {
         "@type": "Question",
         name: "Quelle est la différence entre un agent IA et ChatGPT ?",
-        acceptedAnswer: { "@type": "Answer", text: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte — sans supervision constante." },
+        acceptedAnswer: { "@type": "Answer", text: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte, sans supervision constante." },
       },
       {
         "@type": "Question",

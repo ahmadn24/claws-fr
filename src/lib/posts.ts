@@ -22,9 +22,9 @@ export const posts: Post[] = [
     content: `
 ## Qu'est-ce qu'OpenClaw et pourquoi l'installer sur Mac Mini ?
 
-[OpenClaw](https://openclaw.ai) est la plateforme open-source de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud comme ChatGPT ou Gemini, vos données ne quittent jamais votre infrastructure — un avantage décisif pour les entreprises soucieuses de confidentialité et de conformité RGPD.
+[OpenClaw](https://openclaw.ai) est la plateforme open-source de référence pour déployer des agents IA autonomes directement sur votre machine locale. Contrairement aux solutions cloud comme ChatGPT ou Gemini, vos données ne quittent jamais votre infrastructure, un avantage décisif pour les entreprises soucieuses de confidentialité et de conformité RGPD.
 
-**Pourquoi le Mac Mini ?** C'est la machine idéale pour OpenClaw : silencieux, économe en énergie (10 à 20W seulement), et suffisamment puissant pour faire tourner des agents IA Claude en continu. Un Mac Mini M4 à 800€ est suffisant pour gérer plusieurs agents en parallèle — là où un serveur GPU équivalent coûterait 5 000€ ou plus.
+**Pourquoi le Mac Mini ?** C'est la machine idéale pour OpenClaw : silencieux, économe en énergie (10 à 20W seulement), et suffisamment puissant pour faire tourner des agents IA Claude en continu. Un Mac Mini M4 à 800€ est suffisant pour gérer plusieurs agents en parallèle, là où un serveur GPU équivalent coûterait 5 000€ ou plus.
 
 En résumé : Mac Mini + OpenClaw = agent IA autonome, disponible 24h/24, pour un coût d'infrastructure minimal.
 
@@ -87,7 +87,7 @@ Pour activer le canal et autoriser votre compte Telegram :
 openclaw gateway restart
 \`\`\`
 
-Envoyez \`/start\` à votre bot — il vous donnera un code de pairing à approuver :
+Envoyez \`/start\` à votre bot, il vous donnera un code de pairing à approuver :
 
 \`\`\`bash
 openclaw pairing approve telegram VOTRE_CODE
@@ -137,7 +137,7 @@ lsof -i :18789
 \`\`\`
 
 ### Stocker les clés API en sécurité
-Ne stockez jamais vos clés API dans des fichiers versionnés (git). OpenClaw stocke les clés dans \`~/.openclaw/openclaw.json\` — vérifiez que ce fichier n'est pas accessible publiquement.
+Ne stockez jamais vos clés API dans des fichiers versionnés (git). OpenClaw stocke les clés dans \`~/.openclaw/openclaw.json\`, vérifiez que ce fichier n'est pas accessible publiquement.
 
 ## Questions fréquentes sur l'installation OpenClaw
 
@@ -145,7 +145,7 @@ Ne stockez jamais vos clés API dans des fichiers versionnés (git). OpenClaw st
 A : OpenClaw fonctionne sur macOS (recommandé), Linux et Windows via WSL2. Le Mac Mini reste la plateforme recommandée pour sa simplicité de gestion et sa fiabilité.
 
 **Q : Quelle est la différence entre OpenClaw et d'autres solutions d'agents IA ?**
-A : OpenClaw est 100% local — vos données ne quittent jamais votre machine. Les alternatives cloud (AutoGPT, AgentGPT, etc.) envoient vos données sur des serveurs tiers, ce qui pose des problèmes de confidentialité et de conformité RGPD.
+A : OpenClaw est 100% local, vos données ne quittent jamais votre machine. Les alternatives cloud (AutoGPT, AgentGPT, etc.) envoient vos données sur des serveurs tiers, ce qui pose des problèmes de confidentialité et de conformité RGPD.
 
 **Q : Combien coûte l'utilisation d'OpenClaw au quotidien ?**
 A : Le coût principal est l'API Anthropic. Pour un usage professionnel modéré (quelques centaines d'interactions par jour), comptez entre 20 et 80€/mois en tokens API. OpenClaw lui-même est gratuit et open-source.
@@ -169,14 +169,14 @@ L'installation d'OpenClaw sur Mac Mini est accessible en moins de 30 minutes en 
 
 Une fois installé, pensez à mettre en place une routine de [maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) pour garder votre agent fiable sur le long terme.
 
-Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h** — configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/#contact)
+Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h**, configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/#contact)
 `,
   },
   {
     slug: "maintenance-openclaw-agents-ia-stables",
     title: "Maintenance OpenClaw : guide pour des agents IA fiables en production",
     description:
-      "Comment maintenir vos agents IA OpenClaw en production ? Mises à jour, monitoring, rotation des clés API, sauvegardes — les bonnes pratiques pour une disponibilité maximale.",
+      "Comment maintenir vos agents IA OpenClaw en production ? Mises à jour, monitoring, rotation des clés API, sauvegardes, les bonnes pratiques pour une disponibilité maximale.",
     date: "2025-02-20",
     category: "Maintenance",
     readTime: "6 min",
@@ -190,7 +190,7 @@ Ce guide couvre les 5 axes de la maintenance OpenClaw en production.
 
 ## 1. Mises à jour régulières
 
-OpenClaw publie des mises à jour fréquentes — nouvelles fonctionnalités, correctifs de sécurité, support de nouveaux modèles IA. Pour vérifier votre version :
+OpenClaw publie des mises à jour fréquentes, nouvelles fonctionnalités, correctifs de sécurité, support de nouveaux modèles IA. Pour vérifier votre version :
 
 \`\`\`bash
 openclaw --version
@@ -256,7 +256,7 @@ Cette commande vérifie les ports exposés, les permissions des fichiers de conf
 
 ## Déléguer la maintenance
 
-La maintenance d'un système IA de production demande du temps et de l'expertise. Si vous préférez vous concentrer sur votre cœur de métier, notre formule **Retainer à partir de 149€/mois** couvre l'ensemble de ces opérations — mises à jour, monitoring, rotation des clés, support direct.
+La maintenance d'un système IA de production demande du temps et de l'expertise. Si vous préférez vous concentrer sur votre cœur de métier, notre formule **Retainer à partir de 149€/mois** couvre l'ensemble de ces opérations, mises à jour, monitoring, rotation des clés, support direct.
 
 [Découvrir le Retainer Claws](/#contact)
 `,
@@ -273,9 +273,9 @@ La maintenance d'un système IA de production demande du temps et de l'expertise
     content: `
 ## Un agent IA n'est pas un chatbot
 
-La confusion est fréquente. Quand on parle d'IA en entreprise, beaucoup pensent à ChatGPT — un outil auquel on pose des questions et qui répond. C'est utile. Mais ce n'est pas un agent.
+La confusion est fréquente. Quand on parle d'IA en entreprise, beaucoup pensent à ChatGPT, un outil auquel on pose des questions et qui répond. C'est utile. Mais ce n'est pas un agent.
 
-Un **agent IA autonome** est fondamentalement différent. Il ne répond pas à des questions — il exécute des tâches. Il consulte votre boîte mail, triage les messages, répond aux demandes standards, planifie des rendez-vous dans votre agenda, génère des rapports et vous notifie des points d'attention. Le tout sans que vous ayez ouvert un seul outil.
+Un **agent IA autonome** est fondamentalement différent. Il ne répond pas à des questions, il exécute des tâches. Il consulte votre boîte mail, triage les messages, répond aux demandes standards, planifie des rendez-vous dans votre agenda, génère des rapports et vous notifie des points d'attention. Le tout sans que vous ayez ouvert un seul outil.
 
 C'est la différence entre un moteur de recherche et un assistant personnel.
 
@@ -296,11 +296,11 @@ Avant d'automatiser quoi que ce soit, il faut comprendre où votre équipe passe
 
 L'agent IA est ensuite configuré selon votre contexte spécifique : votre secteur, votre jargon, vos processus, vos outils. Un agent configuré pour une agence de communication ne ressemble pas à un agent configuré pour un cabinet d'expertise comptable.
 
-[OpenClaw](https://openclaw.ai) permet cette personnalisation profonde, avec un déploiement 100% local — vos données ne transitent jamais par des serveurs tiers.
+[OpenClaw](https://openclaw.ai) permet cette personnalisation profonde, avec un déploiement 100% local, vos données ne transitent jamais par des serveurs tiers.
 
 ### 3. Formation et onboarding
 
-Un agent IA n'est utile que si votre équipe sait comment interagir avec lui. Nous formons vos équipes à déléguer intelligemment — quoi confier à l'agent, comment vérifier son travail, comment l'affiner.
+Un agent IA n'est utile que si votre équipe sait comment interagir avec lui. Nous formons vos équipes à déléguer intelligemment, quoi confier à l'agent, comment vérifier son travail, comment l'affiner.
 
 ### 4. Maintenance continue
 
@@ -320,7 +320,7 @@ La compétition s'accélère. Vos concurrents commencent à automatiser. Les ent
 
 Un agent IA autonome excelle dans les tâches répétitives, structurées et à fort volume. Il ne remplace pas le jugement humain dans les situations complexes, la créativité, la relation client à haute valeur ajoutée, ou les décisions stratégiques.
 
-L'objectif n'est pas de supprimer des postes — c'est de libérer du temps pour ce qui compte vraiment.
+L'objectif n'est pas de supprimer des postes, c'est de libérer du temps pour ce qui compte vraiment.
 
 Vous souhaitez évaluer le potentiel d'automatisation dans votre entreprise ? [Discutons.](/#contact)
 `,
@@ -340,13 +340,13 @@ Vous souhaitez évaluer le potentiel d'automatisation dans votre entreprise ? [D
     content: `
 ## OpenClaw, en deux phrases
 
-OpenClaw est un logiciel open-source qui fait tourner un agent IA directement sur votre machine. Pas sur un serveur quelque part dans un datacenter américain — sur votre ordinateur, chez vous ou dans votre bureau.
+OpenClaw est un logiciel open-source qui fait tourner un agent IA directement sur votre machine. Pas sur un serveur quelque part dans un datacenter américain, sur votre ordinateur, chez vous ou dans votre bureau.
 
 Ça a l'air d'un détail technique. Ce n'en est pas un.
 
 ## Ce que ça change concrètement
 
-Quand vous utilisez ChatGPT ou n'importe quel outil IA en ligne, vos données partent sur des serveurs tiers. Vos questions, vos documents que vous collez dedans, les emails que vous lui faites lire — tout ça transite par une infrastructure que vous ne contrôlez pas. Pour beaucoup d'usages, c'est acceptable. Pour une entreprise, ça l'est moins. Pour un cabinet médical ou un avocat, ça peut franchement poser problème.
+Quand vous utilisez ChatGPT ou n'importe quel outil IA en ligne, vos données partent sur des serveurs tiers. Vos questions, vos documents que vous collez dedans, les emails que vous lui faites lire, tout ça transite par une infrastructure que vous ne contrôlez pas. Pour beaucoup d'usages, c'est acceptable. Pour une entreprise, ça l'est moins. Pour un cabinet médical ou un avocat, ça peut franchement poser problème.
 
 OpenClaw inverse ça. L'agent vit chez vous. Il lit vos emails depuis votre machine. Il accède à vos fichiers depuis votre machine. Quand il appelle l'API d'Anthropic pour "réfléchir", il envoie uniquement la question, pas tout le contexte accumulé de votre vie professionnelle.
 
@@ -356,11 +356,11 @@ C'est une différence d'architecture qui a des conséquences réelles sur la con
 
 L'agent OpenClaw a trois composants principaux.
 
-Il y a le **gateway** — le serveur local qui tourne en permanence sur votre machine et qui gère tout le reste. C'est lui qui écoute vos messages Telegram, qui orchestre les tâches, qui fait le lien entre vous et l'agent.
+Il y a le **gateway**, le serveur local qui tourne en permanence sur votre machine et qui gère tout le reste. C'est lui qui écoute vos messages Telegram, qui orchestre les tâches, qui fait le lien entre vous et l'agent.
 
-Il y a le **modèle IA** — par défaut Claude d'Anthropic, qui est aujourd'hui le meilleur modèle pour des agents autonomes fiables. C'est le "cerveau". Il reçoit les instructions et le contexte, il décide quoi faire, il répond.
+Il y a le **modèle IA**, par défaut Claude d'Anthropic, qui est aujourd'hui le meilleur modèle pour des agents autonomes fiables. C'est le "cerveau". Il reçoit les instructions et le contexte, il décide quoi faire, il répond.
 
-Et il y a les **skills** — des modules spécialisés qui donnent à l'agent de nouvelles capacités. Un skill pour lire et écrire des emails. Un skill pour faire de la veille RSS. Un skill pour parler à voix haute. Un skill pour contrôler vos lumières connectées, si c'est votre truc. Vous activez ce dont vous avez besoin, vous laissez le reste.
+Et il y a les **skills**, des modules spécialisés qui donnent à l'agent de nouvelles capacités. Un skill pour lire et écrire des emails. Un skill pour faire de la veille RSS. Un skill pour parler à voix haute. Un skill pour contrôler vos lumières connectées, si c'est votre truc. Vous activez ce dont vous avez besoin, vous laissez le reste.
 
 ## Concrètement, qu'est-ce que l'agent fait ?
 
@@ -368,7 +368,7 @@ La question qui revient le plus souvent. La réponse honnête : ça dépend de c
 
 Il gère les emails. Il lit la boîte, classe par priorité, répond aux demandes standard (disponibilités, informations produit, accusés de réception), et vous signale ce qui mérite votre attention. Beaucoup de gens récupèrent 30 à 45 minutes par jour rien qu'avec ça.
 
-Il fait de la veille. Vous lui dites quelles sources surveiller — blogs sectoriels, flux RSS, sites concurrents — et chaque matin il vous résume ce qui a bougé. Sans que vous ayez à ouvrir un seul onglet.
+Il fait de la veille. Vous lui dites quelles sources surveiller, blogs sectoriels, flux RSS, sites concurrents, et chaque matin il vous résume ce qui a bougé. Sans que vous ayez à ouvrir un seul onglet.
 
 Il prend des notes et les organise. Vous lui dictez via Telegram en rentrant d'une réunion. Il structure, classe, archive. Vous retrouvez tout propre quand vous en avez besoin.
 
@@ -382,20 +382,20 @@ Les indépendants et freelances qui veulent un assistant IA sérieux sans payer 
 
 Les PME qui veulent automatiser des processus sans dépendre d'un éditeur logiciel. Elles posent l'agent sur un Mac Mini, elles le configurent pour leur contexte, et il tourne. Pas de serveur à louer, pas de contrat à renouveler.
 
-Les professions réglementées — avocats, médecins, experts-comptables — qui ont besoin d'IA mais ne peuvent pas mettre leurs données n'importe où. OpenClaw local est souvent la seule option viable.
+Les professions réglementées, avocats, médecins, experts-comptables, qui ont besoin d'IA mais ne peuvent pas mettre leurs données n'importe où. OpenClaw local est souvent la seule option viable.
 
 ## Combien ça coûte
 
 OpenClaw est gratuit. C'est de l'open-source sous licence MIT.
 
-Le seul coût récurrent, c'est l'API Anthropic — le moteur qui fait "réfléchir" l'agent. Pour un usage professionnel modéré, comptez entre 20 et 80€ par mois. Pour un usage léger, moins de 10€. Il n'y a pas d'abonnement logiciel, pas de coût par utilisateur, pas de fonctionnalités cachées derrière un plan payant.
+Le seul coût récurrent, c'est l'API Anthropic, le moteur qui fait "réfléchir" l'agent. Pour un usage professionnel modéré, comptez entre 20 et 80€ par mois. Pour un usage léger, moins de 10€. Il n'y a pas d'abonnement logiciel, pas de coût par utilisateur, pas de fonctionnalités cachées derrière un plan payant.
 
 L'infrastructure, c'est un Mac Mini M4 (environ 800€ une fois) et 15W d'électricité. C'est tout.
 
 ## Questions fréquentes
 
 **Q : Faut-il être développeur pour utiliser OpenClaw ?**
-A : Pour une installation de base, quelques heures de Terminal et de patience suffisent. Pour une configuration avancée avec des intégrations métier spécifiques, il faut soit des compétences techniques soit quelqu'un qui s'en charge — c'est précisément ce que fait Claws.
+A : Pour une installation de base, quelques heures de Terminal et de patience suffisent. Pour une configuration avancée avec des intégrations métier spécifiques, il faut soit des compétences techniques soit quelqu'un qui s'en charge, c'est précisément ce que fait Claws.
 
 **Q : OpenClaw tourne-t-il 24h/24 ?**
 A : Oui, si votre machine reste allumée. Sur Mac Mini configuré pour ne jamais se mettre en veille, l'agent est disponible en permanence. C'est l'un des avantages du Mac Mini sur un laptop.
@@ -404,7 +404,7 @@ A : Oui, si votre machine reste allumée. Sur Mac Mini configuré pour ne jamais
 A : OpenClaw est optimisé pour Claude. D'autres intégrations sont techniquement possibles, mais Claude reste le choix le plus stable et le plus performant pour des agents autonomes en 2025.
 
 **Q : Mes données sont-elles vraiment en sécurité ?**
-A : Vos données restent sur votre machine. Ce qui sort vers Anthropic, c'est uniquement le texte de l'échange en cours — pas vos fichiers, pas votre historique complet, pas vos données clients. C'est la même chose que d'utiliser un traducteur en ligne pour une phrase : vous envoyez la phrase, pas votre agenda.
+A : Vos données restent sur votre machine. Ce qui sort vers Anthropic, c'est uniquement le texte de l'échange en cours, pas vos fichiers, pas votre historique complet, pas vos données clients. C'est la même chose que d'utiliser un traducteur en ligne pour une phrase : vous envoyez la phrase, pas votre agenda.
 
 ---
 
@@ -416,7 +416,7 @@ Vous voulez voir OpenClaw en action dans votre contexte ? [On organise une démo
     slug: "openclaw-vs-make-vs-n8n-comparatif",
     title: "OpenClaw vs Make vs n8n : lequel choisir pour automatiser en 2025 ?",
     description:
-      "Comparatif entre OpenClaw, Make (ex-Integromat) et n8n pour l'automatisation IA en entreprise. Pas de tableau PowerPoint — une comparaison honnête pour choisir le bon outil selon votre situation.",
+      "Comparatif entre OpenClaw, Make (ex-Integromat) et n8n pour l'automatisation IA en entreprise. Pas de tableau PowerPoint, une comparaison honnête pour choisir le bon outil selon votre situation.",
     date: "2025-03-05",
     category: "Comparatif",
     readTime: "8 min",
@@ -432,13 +432,13 @@ Make (anciennement Integromat) est un outil visuel. Vous dessinez des workflows 
 
 L'interface est claire, il y a plus de 1 500 connecteurs, et vous n'avez pas besoin d'écrire une ligne de code. Pour des automations simples et déterministes, c'est imbattable en rapidité de mise en place.
 
-Le problème : Make est un outil de tuyauterie. Il connecte des choses. Il ne pense pas. Si le formulaire reçoit une réponse inattendue, si le contexte change, si la situation est un peu hors des clous — il fait n'importe quoi ou il plante. Et vos données sont hébergées sur les serveurs de Make, aux États-Unis.
+Le problème : Make est un outil de tuyauterie. Il connecte des choses. Il ne pense pas. Si le formulaire reçoit une réponse inattendue, si le contexte change, si la situation est un peu hors des clous, il fait n'importe quoi ou il plante. Et vos données sont hébergées sur les serveurs de Make, aux États-Unis.
 
 **Make convient si** : vous voulez connecter des SaaS entre eux pour des flux de données structurés, votre équipe n'est pas technique, et vous n'avez pas de contrainte RGPD forte.
 
 ## n8n : la version open-source pour les équipes tech
 
-n8n, c'est le même concept que Make, mais open-source et auto-hébergeable. Vous pouvez le faire tourner sur votre propre serveur, ce qui règle la question des données. L'interface est moins soignée que Make, mais la flexibilité est bien supérieure — vous pouvez insérer du code JavaScript ou Python dans vos workflows, construire des nœuds personnalisés, créer des automatisations vraiment complexes.
+n8n, c'est le même concept que Make, mais open-source et auto-hébergeable. Vous pouvez le faire tourner sur votre propre serveur, ce qui règle la question des données. L'interface est moins soignée que Make, mais la flexibilité est bien supérieure, vous pouvez insérer du code JavaScript ou Python dans vos workflows, construire des nœuds personnalisés, créer des automatisations vraiment complexes.
 
 Il y a une communauté active, des centaines de templates, et un modèle économique honnête : gratuit en self-hosted, payant si vous voulez la version cloud hébergée par eux.
 
@@ -448,7 +448,7 @@ Même limite que Make : c'est du workflow déterministe. Vous définissez les r�
 
 ## OpenClaw : l'agent IA, pas le workflow
 
-OpenClaw est une autre catégorie d'outil. Ce n'est pas un outil de workflow — c'est une plateforme pour faire tourner un agent IA autonome sur votre machine.
+OpenClaw est une autre catégorie d'outil. Ce n'est pas un outil de workflow, c'est une plateforme pour faire tourner un agent IA autonome sur votre machine.
 
 La différence fondamentale : un workflow fait ce que vous avez programmé. Un agent comprend ce que vous voulez, et décide comment le faire. Si votre email habituel arrive de façon inhabituelle, l'agent s'adapte. Si une situation sort des clous prévus, il improvise dans les limites que vous lui avez fixées, ou il vous demande.
 
@@ -468,7 +468,7 @@ Make si votre équipe n'est pas technique et que vous avez besoin de quelque cho
 
 Pas "quel outil est le meilleur ?" mais "qu'est-ce que je veux automatiser ?"
 
-Si la réponse, c'est "connecter mon CRM à mon outil de facturation quand une commande est passée" — Make ou n8n. Si la réponse c'est "je veux un assistant qui gère mes emails, suit mes projets et m'alerte sur ce qui mérite mon attention" — OpenClaw.
+Si la réponse, c'est "connecter mon CRM à mon outil de facturation quand une commande est passée", Make ou n8n. Si la réponse c'est "je veux un assistant qui gère mes emails, suit mes projets et m'alerte sur ce qui mérite mon attention", OpenClaw.
 
 Et si c'est les deux, les deux.
 
@@ -476,14 +476,14 @@ Et si c'est les deux, les deux.
 A : Non, et ce n'est pas son objectif. Pour des flux de données structurés à fort volume, Make et n8n sont plus adaptés. OpenClaw excelle là où il faut du jugement et de l'adaptabilité.
 
 **Q : Peut-on utiliser OpenClaw sans aucune connaissance technique ?**
-A : L'installation requiert un minimum de Terminal. C'est pourquoi Claws existe — on gère la partie technique pour vous.
+A : L'installation requiert un minimum de Terminal. C'est pourquoi Claws existe, on gère la partie technique pour vous.
 
 **Q : n8n est gratuit, OpenClaw aussi. Où est le piège ?**
 A : Le coût réel de ces outils, c'est le temps de configuration et de maintenance. Un outil gratuit mal configuré ne vaut rien. C'est là que l'accompagnement fait la différence.
 
 ---
 
-Vous hésitez encore sur l'outil adapté à votre situation ? [Décrivez-nous votre cas](/#contact) — on vous dit honnêtement ce qu'on recommande, même si ce n'est pas nous.
+Vous hésitez encore sur l'outil adapté à votre situation ? [Décrivez-nous votre cas](/#contact), on vous dit honnêtement ce qu'on recommande, même si ce n'est pas nous.
 `,
   },
 
@@ -515,7 +515,7 @@ La communication client est souvent chronophage pour des questions banales. "On 
 
 ## Un exemple réaliste
 
-Un plombier indépendant avec trois compagnons. Il gère une quinzaine de chantiers en simultané, dont plusieurs en phase de chiffrage. Avant l'agent, il consacrait deux heures par soir à l'administratif — devis, emails, facturation, relances. Certaines relances n'étaient tout simplement jamais envoyées.
+Un plombier indépendant avec trois compagnons. Il gère une quinzaine de chantiers en simultané, dont plusieurs en phase de chiffrage. Avant l'agent, il consacrait deux heures par soir à l'administratif, devis, emails, facturation, relances. Certaines relances n'étaient tout simplement jamais envoyées.
 
 Après configuration d'un agent OpenClaw sur son Mac Mini au bureau : les devis partent dans les 24h qui suivent le diagnostic, les relances sont systématiques, et il a récupéré l'équivalent d'une demi-journée par semaine. Ce qu'il en fait, c'est son affaire.
 
@@ -541,7 +541,7 @@ A : OpenClaw fonctionne aussi sur Linux et Windows. Le Mac Mini est recommandé 
 A : Il vous transfère le message avec le contexte du dossier. Il ne prend pas de décision seul sur les situations ambiguës.
 
 **Q : C'est adapté à une TPE ou seulement aux entreprises plus grandes ?**
-A : C'est particulièrement adapté aux TPE et artisans. Les grandes entreprises ont des ERP. Un artisan ou une petite équipe n'a pas les moyens d'un ERP — mais peut avoir un agent IA pour 149€/mois.
+A : C'est particulièrement adapté aux TPE et artisans. Les grandes entreprises ont des ERP. Un artisan ou une petite équipe n'a pas les moyens d'un ERP, mais peut avoir un agent IA pour 149€/mois.
 
 ---
 
@@ -571,23 +571,23 @@ C'est le point central et il faut le traiter avant tout le reste.
 
 Les données de santé sont des données sensibles au sens du RGPD. Elles ne peuvent pas être traitées sur des serveurs tiers sans contrat de sous-traitance conforme, et en pratique, elles ne devraient pas quitter votre infrastructure.
 
-Le problème avec des outils comme ChatGPT, Copilot ou la plupart des assistants IA en ligne : ils envoient vos données sur des serveurs américains. Utiliser ces outils pour traiter des informations patients, même indirectement, expose à un risque réel — réglementaire et déontologique.
+Le problème avec des outils comme ChatGPT, Copilot ou la plupart des assistants IA en ligne : ils envoient vos données sur des serveurs américains. Utiliser ces outils pour traiter des informations patients, même indirectement, expose à un risque réel, réglementaire et déontologique.
 
 OpenClaw déployé localement résout ce problème à la racine. L'agent tourne sur votre machine. Vos données patients ne quittent jamais votre infrastructure. Il n'y a pas de cloud intermédiaire, pas de tiers à prévenir, pas de risque de fuite.
 
 ## Ce que l'agent prend en charge
 
-Sur les rendez-vous, il peut confirmer par email ou SMS, envoyer des rappels 24h à l'avance, gérer les demandes de décalage ou d'annulation. Un patient qui écrit pour modifier son rendez-vous reçoit une réponse rapide et une proposition de créneau alternatif — sans que vous ayez eu à ouvrir votre messagerie.
+Sur les rendez-vous, il peut confirmer par email ou SMS, envoyer des rappels 24h à l'avance, gérer les demandes de décalage ou d'annulation. Un patient qui écrit pour modifier son rendez-vous reçoit une réponse rapide et une proposition de créneau alternatif, sans que vous ayez eu à ouvrir votre messagerie.
 
 Pour les patients en traitement long, il peut envoyer des rappels personnalisés entre les séances : rappel d'exercices pour un kiné, message de suivi post-consultation pour un médecin, rappel de bilan annuel pour un suivi chronique. Ces messages sont rédigés selon votre ton, validés par vous, et partent automatiquement.
 
-Les questions courantes que vous recevez en boucle — horaires, adresse, mutuelles acceptées, délais pour un premier rendez-vous, comment se préparer à la consultation — l'agent y répond 24h/24 depuis les informations que vous lui avez données. Votre messagerie ne se retrouve plus encombrée de demandes qui ne nécessitaient pas votre attention directe.
+Les questions courantes que vous recevez en boucle, horaires, adresse, mutuelles acceptées, délais pour un premier rendez-vous, comment se préparer à la consultation, l'agent y répond 24h/24 depuis les informations que vous lui avez données. Votre messagerie ne se retrouve plus encombrée de demandes qui ne nécessitaient pas votre attention directe.
 
 ## Adapter l'agent à votre spécialité
 
 Un kinésithérapeute et un généraliste n'ont pas les mêmes besoins. La configuration de l'agent reflète ça.
 
-Pour un kiné, l'agent peut gérer le planning de rééducation, envoyer les exercices à faire entre les séances, et relancer les patients qui abandonnent en cours de traitement — ce qui arrive souvent quand la douleur diminue avant la fin du protocole.
+Pour un kiné, l'agent peut gérer le planning de rééducation, envoyer les exercices à faire entre les séances, et relancer les patients qui abandonnent en cours de traitement, ce qui arrive souvent quand la douleur diminue avant la fin du protocole.
 
 Pour un ostéopathe, il gère les créneaux, envoie des rappels de consultation préventive annuelle, et répond aux questions post-séance (est-ce que c'est normal d'avoir des courbatures, que faire si la douleur revient).
 
@@ -628,15 +628,15 @@ Vous êtes professionnel de santé et vous voulez récupérer du temps sur l'adm
     content: `
 ## L'expertise se vend à l'heure, pas à la tâche administrative
 
-Un avocat facture son temps. Un expert-comptable aussi. Un consultant indépendant pareil. Le problème : une partie significative de ce temps ne produit pas vraiment de valeur — il va dans la boîte mail, dans la relance de clients pour des documents manquants, dans la rédaction de comptes rendus de réunion, dans la coordination administrative.
+Un avocat facture son temps. Un expert-comptable aussi. Un consultant indépendant pareil. Le problème : une partie significative de ce temps ne produit pas vraiment de valeur, il va dans la boîte mail, dans la relance de clients pour des documents manquants, dans la rédaction de comptes rendus de réunion, dans la coordination administrative.
 
 Ce n'est pas du temps facturable. Et c'est souvent le même profil de tâches, semaine après semaine.
 
 ## Ce qu'un agent prend en charge
 
-La gestion de la relation client, d'abord. Un agent configuré devient votre premier filtre sur la messagerie entrante. Pour un avocat, il identifie si c'est une nouvelle demande de consultation, une question sur un dossier en cours, ou une demande administrative. Il répond à ce qui peut l'être — délais standards, informations tarifaires, procédures courantes. Pour le reste, il vous prépare un résumé du contexte avant que vous ouvriez l'email.
+La gestion de la relation client, d'abord. Un agent configuré devient votre premier filtre sur la messagerie entrante. Pour un avocat, il identifie si c'est une nouvelle demande de consultation, une question sur un dossier en cours, ou une demande administrative. Il répond à ce qui peut l'être, délais standards, informations tarifaires, procédures courantes. Pour le reste, il vous prépare un résumé du contexte avant que vous ouvriez l'email.
 
-Le suivi de dossiers, ensuite. Vous rentrez d'une réunion client, vous lui dictez les points clés par Telegram en deux minutes dans la voiture. Il structure les notes, les archive dans le bon dossier, et liste les actions à faire. Il peut aussi surveiller des deadlines — une date d'audience, une échéance fiscale, un délai de réponse — et vous alerter suffisamment à l'avance.
+Le suivi de dossiers, ensuite. Vous rentrez d'une réunion client, vous lui dictez les points clés par Telegram en deux minutes dans la voiture. Il structure les notes, les archive dans le bon dossier, et liste les actions à faire. Il peut aussi surveiller des deadlines, une date d'audience, une échéance fiscale, un délai de réponse, et vous alerter suffisamment à l'avance.
 
 La préparation des réunions. Avant un rendez-vous important, l'agent vous sort un résumé du dossier : historique des échanges, dernières décisions prises, points encore en suspens. Vous arrivez briefé en 5 minutes au lieu de 20.
 
@@ -652,11 +652,11 @@ OpenClaw déployé localement résout ce problème. Vos données, vos échanges 
 
 ## Ce que ça représente concrètement
 
-Pour un avocat en cabinet solo, récupérer deux heures par jour sur la gestion administrative, c'est dix heures par semaine. Sur un an, c'est l'équivalent de six semaines de travail récupérées — soit plus de facturation, soit moins d'heures supplémentaires. Selon les priorités.
+Pour un avocat en cabinet solo, récupérer deux heures par jour sur la gestion administrative, c'est dix heures par semaine. Sur un an, c'est l'équivalent de six semaines de travail récupérées, soit plus de facturation, soit moins d'heures supplémentaires. Selon les priorités.
 
 Pour un expert-comptable, éliminer les relances manuelles clients (pièces manquantes, documents en retard) et automatiser la préparation des rappels d'échéances, c'est une charge mentale significative qui disparaît.
 
-Pour un consultant indépendant, automatiser le suivi commercial — relances de propositions, mise à jour du pipeline, facturation — permet de rester focus sur la production et la relation client plutôt que sur l'administratif commercial.
+Pour un consultant indépendant, automatiser le suivi commercial, relances de propositions, mise à jour du pipeline, facturation, permet de rester focus sur la production et la relation client plutôt que sur l'administratif commercial.
 
 ## Questions fréquentes
 
@@ -682,7 +682,7 @@ L'administratif prend trop de place dans votre activité ? [Voyons ensemble ce q
     slug: "agent-ia-mode-retail",
     title: "Agent IA dans la mode et le retail : gérer le SAV sans y passer ses journées",
     description:
-      "Pour les marques DTC et les retailers, le service client déborde vite. Un agent IA OpenClaw absorbe les demandes répétitives, automatise les retours et surveille les tendances — pour que votre équipe se concentre sur ce qui compte.",
+      "Pour les marques DTC et les retailers, le service client déborde vite. Un agent IA OpenClaw absorbe les demandes répétitives, automatise les retours et surveille les tendances, pour que votre équipe se concentre sur ce qui compte.",
     date: "2025-03-14",
     category: "Secteur",
     readTime: "6 min",
@@ -692,29 +692,29 @@ L'administratif prend trop de place dans votre activité ? [Voyons ensemble ce q
 
 Lancer une marque de mode, ça demande de l'énergie sur la création, sur la production, sur la communication. Ce que personne ne dit vraiment : à partir d'un certain volume de ventes, le SAV devient un travail à part entière.
 
-"Ma commande est où ?" "Est-ce que ce modèle est disponible en 40 ?" "Comment je fais un retour ?" Ces messages arrivent tous les jours, en boucle, souvent les mêmes. Et chacun demande une réponse rapide — parce que le client qui attend 48h pour une réponse, il est déjà sur le site d'un concurrent.
+"Ma commande est où ?" "Est-ce que ce modèle est disponible en 40 ?" "Comment je fais un retour ?" Ces messages arrivent tous les jours, en boucle, souvent les mêmes. Et chacun demande une réponse rapide, parce que le client qui attend 48h pour une réponse, il est déjà sur le site d'un concurrent.
 
-Un agent IA absorbe ce flux. Pas en remplaçant votre équipe — en lui donnant du temps pour les situations qui méritent vraiment son attention.
+Un agent IA absorbe ce flux. Pas en remplaçant votre équipe, en lui donnant du temps pour les situations qui méritent vraiment son attention.
 
 ## Ce que l'agent traite automatiquement
 
-Sur les questions courantes, l'agent répond en quelques secondes, 24h/24. Statuts de commande, politique de retour, guide des tailles, délais de livraison, modalités d'échange. Ces informations existent déjà dans votre système — l'agent les lit et les communique avec le bon ton, en votre nom.
+Sur les questions courantes, l'agent répond en quelques secondes, 24h/24. Statuts de commande, politique de retour, guide des tailles, délais de livraison, modalités d'échange. Ces informations existent déjà dans votre système, l'agent les lit et les communique avec le bon ton, en votre nom.
 
 Sur les retours, il peut guider le client à travers tout le processus : vérification de l'éligibilité selon vos conditions, génération d'une étiquette retour, confirmation de réception, déclenchement du remboursement ou de l'échange. Sans que votre équipe ait à intervenir sur chaque cas.
 
-Ce qui mérite une vraie attention humaine — une réclamation sur un article défectueux, un litige, une demande hors politique — il vous l'escalade avec le contexte complet du client.
+Ce qui mérite une vraie attention humaine, une réclamation sur un article défectueux, un litige, une demande hors politique, il vous l'escalade avec le contexte complet du client.
 
 ## Un signal qu'on rate souvent
 
 Les retours ne servent pas seulement à satisfaire les clients. Ils contiennent de l'information produit que la plupart des marques ignorent parce que personne n'a le temps de l'analyser.
 
-Si 18% des retours d'un modèle spécifique mentionnent "taille grande", vous avez un problème de guide des tailles ou de coupe — pas de SAV. Si les questions sur un produit particulier explosent après un post Instagram, vous avez peut-être un problème de description ou de photo.
+Si 18% des retours d'un modèle spécifique mentionnent "taille grande", vous avez un problème de guide des tailles ou de coupe, pas de SAV. Si les questions sur un produit particulier explosent après un post Instagram, vous avez peut-être un problème de description ou de photo.
 
 L'agent agrège ces données et vous alerte quand un signal dépasse un seuil. Ce type d'information change des décisions produit, pas juste des décisions SAV.
 
 ## La veille tendances en arrière-plan
 
-En mode, savoir ce qui se passe avant que ça devienne évident, c'est un avantage réel. L'agent peut surveiller des sources que vous lui indiquez — comptes de directeurs artistiques, médias spécialisés, signaux sur les réseaux — et vous résumer chaque semaine ce qui mérite votre attention. Pas une agrégation de flux RSS, une vraie synthèse orientée sur ce qui est pertinent pour votre positionnement.
+En mode, savoir ce qui se passe avant que ça devienne évident, c'est un avantage réel. L'agent peut surveiller des sources que vous lui indiquez, comptes de directeurs artistiques, médias spécialisés, signaux sur les réseaux, et vous résumer chaque semaine ce qui mérite votre attention. Pas une agrégation de flux RSS, une vraie synthèse orientée sur ce qui est pertinent pour votre positionnement.
 
 ## Questions fréquentes
 
@@ -727,7 +727,7 @@ A : Oui. L'agent détecte la langue du message et répond dans la même langue. 
 **Q : Comment on s'assure qu'il ne fait pas de promesses qu'on ne peut pas tenir ?**
 A : La configuration définit strictement ce qu'il peut et ne peut pas promettre. Il ne sort pas de son périmètre, et tout ce qui est ambigu vous est remonté avant d'être envoyé.
 
-**Q : On est une équipe de 3 — c'est fait pour nous ?**
+**Q : On est une équipe de 3, c'est fait pour nous ?**
 A : C'est exactement pour vous. Les grandes marques ont des équipes SAV dédiées. Une marque de 3 personnes qui gère 50 à 100 messages par jour sans agent, c'est deux personnes mangées par le SAV.
 
 ---
@@ -740,7 +740,7 @@ Votre SAV prend trop de place ? [Voyons comment l'alléger.](/#contact)
     slug: "agent-ia-productivite-personnelle",
     title: "Un assistant IA personnel avec OpenClaw : ce que ça change au quotidien",
     description:
-      "Un agent IA personnel OpenClaw ne répond pas à des questions — il travaille pendant que vous faites autre chose. Emails, veille, notes, rappels : ce que ça change vraiment dans une journée de travail.",
+      "Un agent IA personnel OpenClaw ne répond pas à des questions, il travaille pendant que vous faites autre chose. Emails, veille, notes, rappels : ce que ça change vraiment dans une journée de travail.",
     date: "2025-03-16",
     category: "Productivité",
     readTime: "6 min",
@@ -748,9 +748,9 @@ Votre SAV prend trop de place ? [Voyons comment l'alléger.](/#contact)
     content: `
 ## La différence entre un outil et un assistant
 
-ChatGPT est utile. Vous lui posez une question, il répond bien. Mais pour l'utiliser, vous devez y aller, ouvrir l'onglet, coller votre texte, attendre. C'est un outil que vous consultez — pas un assistant qui travaille pour vous.
+ChatGPT est utile. Vous lui posez une question, il répond bien. Mais pour l'utiliser, vous devez y aller, ouvrir l'onglet, coller votre texte, attendre. C'est un outil que vous consultez, pas un assistant qui travaille pour vous.
 
-Un agent IA personnel OpenClaw fonctionne différemment. Il tourne en permanence sur votre machine. Pendant que vous travaillez, il surveille votre boîte mail. Pendant que vous dormez, il prépare votre briefing du matin. Quand vous lui dictez une note de trois phrases en sortant d'une réunion, il la structure et l'archive à la bonne place. Vous n'avez pas besoin d'aller quelque part — c'est lui qui vient à vous, via Telegram.
+Un agent IA personnel OpenClaw fonctionne différemment. Il tourne en permanence sur votre machine. Pendant que vous travaillez, il surveille votre boîte mail. Pendant que vous dormez, il prépare votre briefing du matin. Quand vous lui dictez une note de trois phrases en sortant d'une réunion, il la structure et l'archive à la bonne place. Vous n'avez pas besoin d'aller quelque part, c'est lui qui vient à vous, via Telegram.
 
 ## Ce que ça change dans une journée
 
@@ -762,13 +762,13 @@ Le soir, pas de session d'email rattrapage. L'agent a répondu aux demandes simp
 
 ## Les gains concrets, chiffrés
 
-Sur un profil type — indépendant, consultant, entrepreneur — voici ce qu'on observe en pratique.
+Sur un profil type, indépendant, consultant, entrepreneur, voici ce qu'on observe en pratique.
 
-La gestion des emails représente souvent 45 minutes à 1h par jour. Avec un agent qui trifie, répond au standard et escalade les urgences, ça tombe à 10-15 minutes. Ce n'est pas de la magie — c'est juste que 70% des emails ne nécessitent pas votre attention directe.
+La gestion des emails représente souvent 45 minutes à 1h par jour. Avec un agent qui trifie, répond au standard et escalade les urgences, ça tombe à 10-15 minutes. Ce n'est pas de la magie, c'est juste que 70% des emails ne nécessitent pas votre attention directe.
 
 La veille sectorielle, si vous la faites sérieusement, prend facilement 30 minutes par jour. Avec un agent qui surveille vos sources et vous résume ce qui compte, ça prend 5 minutes de lecture.
 
-La prise de notes et l'organisation sont diffuses et invisibles — mais chronophages. Retrouver un document, se souvenir de ce qui a été décidé en réunion la semaine dernière, mettre à jour une liste de tâches. Un agent qui structure en temps réel ce que vous lui dictez économise facilement 20 minutes par jour.
+La prise de notes et l'organisation sont diffuses et invisibles, mais chronophages. Retrouver un document, se souvenir de ce qui a été décidé en réunion la semaine dernière, mettre à jour une liste de tâches. Un agent qui structure en temps réel ce que vous lui dictez économise facilement 20 minutes par jour.
 
 Total : 1h à 1h30 par jour. Sur un an, c'est six à huit semaines de travail.
 
@@ -780,7 +780,7 @@ Vous pouvez aussi lui envoyer des messages vocaux. Il transcrit, comprend, agit.
 
 ## Ce qu'il faut pour que ça marche
 
-Une machine qui tourne en permanence. Un Mac Mini est idéal — silencieux, économe (15W), fiable. OpenClaw installé dessus, un bot Telegram configuré, et une demi-journée de paramétrage avec nous pour que l'agent comprenne votre contexte, vos outils, votre façon de travailler.
+Une machine qui tourne en permanence. Un Mac Mini est idéal, silencieux, économe (15W), fiable. OpenClaw installé dessus, un bot Telegram configuré, et une demi-journée de paramétrage avec nous pour que l'agent comprenne votre contexte, vos outils, votre façon de travailler.
 
 Après, il s'affine. Plus vous lui déléguez, mieux il comprend ce que vous voulez. Au bout de deux semaines, il commence à anticiper.
 
@@ -813,7 +813,7 @@ Vous voulez un agent opérationnel rapidement ? [On s'en occupe.](/#contact)
     content: `
 ## L'IA en entreprise : au mauvais endroit
 
-On parle beaucoup d'IA pour les dirigeants — stratégie, synthèses, présentations. Mais l'impact réel de l'IA sur une organisation, il se joue dans les équipes opérationnelles. Là où les mêmes tâches se répètent 50 fois par semaine, là où la valeur ajoutée est noyée dans le volume.
+On parle beaucoup d'IA pour les dirigeants, stratégie, synthèses, présentations. Mais l'impact réel de l'IA sur une organisation, il se joue dans les équipes opérationnelles. Là où les mêmes tâches se répètent 50 fois par semaine, là où la valeur ajoutée est noyée dans le volume.
 
 Un commercial qui passe 30% de son temps à mettre à jour son CRM et à rédiger des comptes rendus n'est commercial que 70% du temps. Un RH qui répond aux mêmes questions de salariés sur les congés et les notes de frais plusieurs fois par jour passe une partie de sa semaine sur des tâches qui n'ont pas besoin de lui.
 
@@ -823,7 +823,7 @@ L'agent peut reprendre tout ce qui entoure la vente sans être de la vente.
 
 Après chaque rendez-vous, le commercial lui dicte les points clés en deux minutes dans la voiture. L'agent rédige le compte rendu, met à jour le CRM, planifie la prochaine relance. Le commercial n'ouvre pas son ordinateur pour ça.
 
-Les relances de devis partent automatiquement au bon moment — pas trop tôt, pas trop tard — avec le bon message selon le stade de la relation. Les dossiers clients sont préparés avant les réunions importantes, avec un résumé de l'historique et des points en suspens.
+Les relances de devis partent automatiquement au bon moment, pas trop tôt, pas trop tard, avec le bon message selon le stade de la relation. Les dossiers clients sont préparés avant les réunions importantes, avec un résumé de l'historique et des points en suspens.
 
 Résultat : le commercial passe plus de temps en face de clients. C'est la seule métrique qui compte.
 
@@ -831,29 +831,29 @@ Résultat : le commercial passe plus de temps en face de clients. C'est la seule
 
 C'est souvent là que le gain est le plus visible et le plus rapide.
 
-Un agent configuré sur votre base de connaissance répond aux questions de niveau 1 — les 60 à 70% de demandes qui ont une réponse standard. Il le fait 24h/24, avec une cohérence irréprochable, sans jamais être de mauvaise humeur. Les cas complexes, les réclamations, les situations hors standard : il les escalade à l'équipe avec le contexte complet.
+Un agent configuré sur votre base de connaissance répond aux questions de niveau 1, les 60 à 70% de demandes qui ont une réponse standard. Il le fait 24h/24, avec une cohérence irréprochable, sans jamais être de mauvaise humeur. Les cas complexes, les réclamations, les situations hors standard : il les escalade à l'équipe avec le contexte complet.
 
 Pour une équipe de cinq personnes qui gère 200 demandes par jour, absorber 140 demandes automatiquement change complètement la nature du travail restant.
 
 ## Pour les équipes RH
 
-Les RH répondent aux mêmes questions de salariés en boucle. Solde de congés, procédure de remboursement de frais, règles de télétravail, dates des prochaines formations, comment fonctionne tel avantage. Toutes ces réponses existent dans vos documents internes — l'agent les connaît et les communique instantanément.
+Les RH répondent aux mêmes questions de salariés en boucle. Solde de congés, procédure de remboursement de frais, règles de télétravail, dates des prochaines formations, comment fonctionne tel avantage. Toutes ces réponses existent dans vos documents internes, l'agent les connaît et les communique instantanément.
 
-Sur l'onboarding des nouveaux arrivants, l'agent peut prendre en charge l'aspect logistique : envoi des documents à signer, rappels des étapes, réponses aux questions des premières semaines. Les RH gardent la relation humaine — le reste est géré.
+Sur l'onboarding des nouveaux arrivants, l'agent peut prendre en charge l'aspect logistique : envoi des documents à signer, rappels des étapes, réponses aux questions des premières semaines. Les RH gardent la relation humaine, le reste est géré.
 
 ## Comment ça se déploie concrètement
 
-On ne déploie pas un agent générique. On part de votre contexte — votre secteur, vos outils, vos procédures, votre jargon — et on configure un agent qui connaît votre entreprise.
+On ne déploie pas un agent générique. On part de votre contexte, votre secteur, vos outils, vos procédures, votre jargon, et on configure un agent qui connaît votre entreprise.
 
 Les premières semaines, l'agent fonctionne avec supervision : les réponses importantes sont soumises à validation avant envoi. Au bout de deux à trois semaines, selon le niveau de confiance que vous avez établi, on bascule progressivement en autonomie sur les sujets bien couverts.
 
-Les accès sont définis précisément. L'agent touche uniquement ce que vous lui permettez de toucher — boîte email partagée, base documentaire, CRM, agenda d'équipe. Rien de plus.
+Les accès sont définis précisément. L'agent touche uniquement ce que vous lui permettez de toucher, boîte email partagée, base documentaire, CRM, agenda d'équipe. Rien de plus.
 
 ## Ce que ça coûte et ce que ça rapporte
 
 Un retainer Claws commence à 149€ par mois. Pour une équipe de cinq personnes, récupérer une heure par personne et par jour, c'est 25 heures par semaine de productivité en plus. Au SMIC horaire, c'est plus de 600€ par semaine. Même en évaluant de façon très conservative, le ratio est favorable dès le premier mois.
 
-La vraie question n'est pas le coût — c'est ce que votre équipe fait de ce temps récupéré.
+La vraie question n'est pas le coût, c'est ce que votre équipe fait de ce temps récupéré.
 
 ## Questions fréquentes
 
@@ -884,25 +884,25 @@ Vous voulez explorer ça pour votre équipe ? [Contactez-nous pour un audit.](/#
     content: `
 ## Le temps que prend ce qui n'est pas la conception
 
-Dans un cabinet d'architecture, la création c'est le coeur du métier — et c'est souvent ce qui prend le moins de temps dans une semaine. Le reste, c'est de la coordination. Relancer un bureau structure pour un retour de visa. Envoyer le compte rendu de la réunion de chantier de ce matin. Mettre à jour le planning pour intégrer un retard de livraison. Répondre au maître d'ouvrage qui veut savoir où en est son permis.
+Dans un cabinet d'architecture, la création c'est le coeur du métier, et c'est souvent ce qui prend le moins de temps dans une semaine. Le reste, c'est de la coordination. Relancer un bureau structure pour un retour de visa. Envoyer le compte rendu de la réunion de chantier de ce matin. Mettre à jour le planning pour intégrer un retard de livraison. Répondre au maître d'ouvrage qui veut savoir où en est son permis.
 
-Ces tâches ne sont pas insignifiantes — un oubli peut coûter cher. Mais elles sont répétitives, et elles mordent sur le temps de conception et de réflexion.
+Ces tâches ne sont pas insignifiantes, un oubli peut coûter cher. Mais elles sont répétitives, et elles mordent sur le temps de conception et de réflexion.
 
 ## Comptes rendus : l'exemple le plus concret
 
-C'est souvent le premier sujet qui revient dans les conversations avec des architectes. Après une réunion de chantier de deux heures, il faut encore rédiger le compte rendu — présents, décisions, actions, responsables, prochaine réunion. Selon le niveau de détail et le nombre d'entreprises, ça prend 30 à 60 minutes. Et c'est souvent fait le soir, quand l'énergie est déjà basse.
+C'est souvent le premier sujet qui revient dans les conversations avec des architectes. Après une réunion de chantier de deux heures, il faut encore rédiger le compte rendu, présents, décisions, actions, responsables, prochaine réunion. Selon le niveau de détail et le nombre d'entreprises, ça prend 30 à 60 minutes. Et c'est souvent fait le soir, quand l'énergie est déjà basse.
 
 Avec un agent : vous lui dictez vos notes par Telegram en sortant du chantier, en deux ou trois minutes de message vocal ou texte. Il structure selon votre format habituel, vous soumet le résultat pour validation, et l'envoie aux participants. Ce qui prenait une heure prend maintenant cinq minutes de votre attention.
 
 ## Coordination et relances
 
-Un projet d'architecture mobilise une dizaine d'intervenants — bureaux d'étude structure, fluides, acoustique, économiste, géomètre. Chacun a des livrables à transmettre, des délais à tenir, des questions à répondre.
+Un projet d'architecture mobilise une dizaine d'intervenants, bureaux d'étude structure, fluides, acoustique, économiste, géomètre. Chacun a des livrables à transmettre, des délais à tenir, des questions à répondre.
 
 L'agent peut tenir le fil de cette coordination. Il sait quels documents sont attendus de qui et pour quand. Il envoie les relances quand ça tarde. Il vous alerte si un retard risque d'affecter le planning général. Vous restez informé sans avoir à traquer manuellement chaque intervenant.
 
 ## Veille réglementaire : un travail continu
 
-Le cadre réglementaire de la construction bouge en permanence. RE2020, évolutions des DTU, mises à jour des normes d'accessibilité, modifications de PLU dans les communes où vous intervenez. Rester à jour est une obligation professionnelle — et c'est chronophage si vous le faites manuellement.
+Le cadre réglementaire de la construction bouge en permanence. RE2020, évolutions des DTU, mises à jour des normes d'accessibilité, modifications de PLU dans les communes où vous intervenez. Rester à jour est une obligation professionnelle, et c'est chronophage si vous le faites manuellement.
 
 L'agent surveille les sources officielles (CEREMA, Légifrance, sites des DDT, bulletins officiels des collectivités) et vous remonte chaque semaine les changements pertinents pour vos projets en cours ou vos zones d'intervention habituelles. Vous lisez un résumé ciblé plutôt que d'éplucher des textes officiels.
 
@@ -910,11 +910,11 @@ L'agent surveille les sources officielles (CEREMA, Légifrance, sites des DDT, b
 
 Les MOA ont besoin de suivre l'avancement de leur projet. Souvent, leurs questions sont légitimes mais prévisibles : où en est le permis, quand commence le gros oeuvre, pourquoi ce retard.
 
-L'agent peut répondre à ces questions depuis les informations du projet, en votre nom, avec votre ton. Les situations qui nécessitent votre réponse directe — une décision à prendre, un imprévu à expliquer, une discussion technique — vous sont remontées avec le contexte complet.
+L'agent peut répondre à ces questions depuis les informations du projet, en votre nom, avec votre ton. Les situations qui nécessitent votre réponse directe, une décision à prendre, un imprévu à expliquer, une discussion technique, vous sont remontées avec le contexte complet.
 
 ## Pour un cabinet de deux personnes
 
-Les grands cabinets ont des assistants de gestion de projet, des assistants de direction, des équipes administratives. Un cabinet de deux ou trois architectes n'a pas ça — et c'est souvent l'associé senior qui fait la conception ET la gestion ET l'administratif.
+Les grands cabinets ont des assistants de gestion de projet, des assistants de direction, des équipes administratives. Un cabinet de deux ou trois architectes n'a pas ça, et c'est souvent l'associé senior qui fait la conception ET la gestion ET l'administratif.
 
 C'est précisément ce profil qui bénéficie le plus d'un agent. Pas pour remplacer un poste, mais pour absorber la charge qui s't accumule quand on fait tout.
 
@@ -924,7 +924,7 @@ C'est précisément ce profil qui bénéficie le plus d'un agent. Pas pour rempl
 A : Il peut lire des documents textuels et des données exportées. Pour les plans CAD ou les modèles BIM, il travaille depuis les informations que vous en extrayez et lui transmettez.
 
 **Q : Peut-il s'intégrer à nos outils habituels ?**
-A : Il s'intègre aux outils qui exposent des données accessibles — boîte email, Google Drive ou OneDrive, agenda, Notion. Pour des outils plus spécifiques au secteur, on évalue au cas par cas.
+A : Il s'intègre aux outils qui exposent des données accessibles, boîte email, Google Drive ou OneDrive, agenda, Notion. Pour des outils plus spécifiques au secteur, on évalue au cas par cas.
 
 **Q : La confidentialité des projets clients est-elle garantie ?**
 A : OpenClaw tourne en local sur votre machine. Vos données projets ne quittent pas votre infrastructure.

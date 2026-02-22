@@ -124,7 +124,7 @@ export default async function PostPage({ params }: Props) {
           <p>
             Claws installe, configure et maintient vos agents IA autonomes OpenClaw. Opérationnel en 48h, support francophone, données 100 % locales.
           </p>
-          <a href="/#contact" className="btn-primary">Installation en 48h — à partir de 189 € →</a>
+          <a href="/#contact" className="btn-primary">Installation en 48h, à partir de 189 € →</a>
         </div>
 
         {relatedPosts.length > 0 && (
