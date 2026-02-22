@@ -26,11 +26,20 @@ export const metadata: Metadata = {
     siteName: "Claws",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Claws — Agence d'agents IA autonomes en France",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Claws — Agents IA autonomes",
     description: "Première agence française spécialisée en agents IA autonomes OpenClaw.",
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: "https://claws.fr" },
   robots: { index: true, follow: true },
