@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: "https://claws.fr", lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: "https://claws.fr/blog", lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: "https://claws.fr/a-propos", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     ...blogEntries,
   ];
 }
