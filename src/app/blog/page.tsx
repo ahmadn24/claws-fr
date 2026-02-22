@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Blog | Agents IA, OpenClaw, automatisation",
@@ -47,6 +48,8 @@ export default function BlogPage() {
             </a>
           ))}
         </div>
+
+        <NewsletterForm />
       </main>
 
       <footer className="footer">
