@@ -16,19 +16,19 @@ export const metadata: Metadata = {
 
 const previews = [
   {
-    emoji: "💰",
-    title: "Anthropic valorisée 380 milliards",
-    desc: "Ce que ça change pour Claude et pour les PME qui l'utilisent.",
+    emoji: "🤖",
+    title: "Nouveautés des modèles IA",
+    desc: "GPT, Claude, Gemini : ce qui change vraiment et ce que ça implique pour votre travail.",
   },
   {
-    emoji: "🔍",
-    title: "Comment un agent surveille vos concurrents",
-    desc: "Un cas d'usage concret mis en place chez un client retail.",
+    emoji: "⚡",
+    title: "Mises à jour OpenClaw",
+    desc: "Les nouvelles fonctionnalités, bugs corrigés et améliorations à connaître chaque semaine.",
   },
   {
-    emoji: "⚙️",
-    title: "OpenClaw : les 3 erreurs de config les plus fréquentes",
-    desc: "Retour terrain après 20 installations. Ce qui plante, et comment l'éviter.",
+    emoji: "🏢",
+    title: "Use cases métiers concrets",
+    desc: "BTP, santé, retail, professions libérales : comment des entreprises automatisent avec des agents IA.",
   },
 ];
 
@@ -104,8 +104,8 @@ export default function NewsletterPage() {
           href="https://claws.fr/#contact"
           style={{
             display: "inline-block",
-            background: "var(--ink)",
-            color: "var(--bg)",
+            background: "#E85D04",
+            color: "#ffffff",
             padding: "14px 28px",
             fontWeight: 600,
             fontSize: "0.95rem",
