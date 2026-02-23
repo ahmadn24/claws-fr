@@ -11,6 +11,20 @@ export const metadata: Metadata = {
     description: "Une ressource IA par semaine. Cas d'usage, retours terrain, guides OpenClaw.",
     url: "https://claws.fr/newsletter",
     type: "website",
+    images: [
+      {
+        url: "https://claws.fr/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Newsletter IA | Claws",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Newsletter IA | Claws",
+    description: "Une ressource IA par semaine. Cas d'usage, retours terrain, guides OpenClaw.",
+    images: ["https://claws.fr/og-image.png"],
   },
 };
 
