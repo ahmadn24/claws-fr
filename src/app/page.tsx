@@ -7,7 +7,7 @@ const differentiators = [
   {
     icon: "01",
     title: "Spécialistes OpenClaw, pas généralistes IA",
-    desc: "On ne fait que ça. On connaît OpenClaw de l'intérieur — on le déploie, on le débugge, on suit chaque release. Vous n'êtes pas notre cobaye.",
+    desc: "On ne fait que ça. On connaît OpenClaw de l'intérieur, on le déploie, on le débugge, on suit chaque release. Vous n'êtes pas notre cobaye.",
   },
   {
     icon: "02",
@@ -32,7 +32,7 @@ const differentiators = [
   {
     icon: "06",
     title: "Telegram, WhatsApp, iMessage simultanément",
-    desc: "Un seul agent OpenClaw, accessible depuis tous vos canaux dès l'installation. Vous ne choisissez pas — vous avez tout.",
+    desc: "Un seul agent OpenClaw, accessible depuis tous vos canaux dès l'installation. Vous ne choisissez pas, vous avez tout.",
   },
 ];
 
@@ -94,19 +94,19 @@ const steps = [
 const faqItems = [
   {
     q: "C'est quoi OpenClaw ?",
-    a: "OpenClaw est une plateforme open source qui fait tourner des agents IA autonomes sur votre machine. Concrètement, c'est ce qui permet à un agent de lire vos emails, répondre à vos messages, gérer votre agenda ou surveiller des sites web — sans que vos données ne sortent de chez vous. Claws l'installe et le configure pour votre métier.",
+    a: "OpenClaw est une plateforme open source qui fait tourner des agents IA autonomes sur votre machine. Concrètement, c'est ce qui permet à un agent de lire vos emails, répondre à vos messages, gérer votre agenda ou surveiller des sites web, sans que vos données ne sortent de chez vous. Claws l'installe et le configure pour votre métier.",
   },
   {
     q: "En quoi c'est différent de ChatGPT ou Copilot ?",
-    a: "ChatGPT répond quand vous lui parlez. Votre agent OpenClaw travaille même quand vous ne lui parlez pas. Il surveille, agit, relance et vous prévient quand c'est fait. C'est la différence entre un outil et un collaborateur. Et contrairement à ChatGPT, Copilot ou Gemini, tout reste sur votre machine — aucune donnée n'est envoyée sur un serveur cloud.",
+    a: "ChatGPT répond quand vous lui parlez. Votre agent OpenClaw travaille même quand vous ne lui parlez pas. Il surveille, agit, relance et vous prévient quand c'est fait. C'est la différence entre un outil et un collaborateur. Et contrairement à ChatGPT, Copilot ou Gemini, tout reste sur votre machine, aucune donnée n'est envoyée sur un serveur cloud.",
   },
   {
     q: "Combien ça coûte vraiment ?",
-    a: "L'installation OpenClaw démarre à 189€ — une seule fois. Pas d'abonnement logiciel mensuel. Vous payez éventuellement votre clé API pour le modèle IA choisi (environ 10 à 30€/mois selon l'usage). ChatGPT Plus coûte 240€/an, Copilot Pro 264€/an, et recommencent chaque année. On fait un point avant de commencer pour qu'il n'y ait pas de surprise.",
+    a: "L'installation OpenClaw démarre à 189€, une seule fois. Pas d'abonnement logiciel mensuel. Vous payez éventuellement votre clé API pour le modèle IA choisi (environ 10 à 30€/mois selon l'usage). ChatGPT Plus coûte 240€/an, Copilot Pro 264€/an, et recommencent chaque année. On fait un point avant de commencer pour qu'il n'y ait pas de surprise.",
   },
   {
     q: "Est-ce que mes données sont vraiment privées ?",
-    a: "Oui, architecturalement. OpenClaw tourne en local sur votre machine — il n'y a pas de serveur Claws qui reçoit vos données. Le seul service externe qui voit vos requêtes, c'est le modèle IA que vous choisissez (Claude, GPT-4, ou un modèle local Llama/Mistral pour un usage 100% offline).",
+    a: "Oui, architecturalement. OpenClaw tourne en local sur votre machine, il n'y a pas de serveur Claws qui reçoit vos données. Le seul service externe qui voit vos requêtes, c'est le modèle IA que vous choisissez (Claude, GPT-4, ou un modèle local Llama/Mistral pour un usage 100% offline).",
   },
   {
     q: "Il faut quel matériel ?",
@@ -137,7 +137,7 @@ export default function Home() {
           </h1>
           <div className="hero-sub">
             <p>
-              OpenClaw est l&apos;agent IA open source qui agit à votre place — emails, relances, reporting, veille — en local, sans cloud.
+              OpenClaw est l&apos;agent IA open source qui agit à votre place : emails, relances, reporting, veille. En local, sans cloud.
               Claws l&apos;installe, le sécurise et le configure pour votre métier en 48h.
             </p>
           </div>
@@ -195,7 +195,7 @@ export default function Home() {
                 <li>Connecté à vos vrais outils</li>
                 <li>Autonome sur les tâches qu&apos;on lui confie</li>
                 <li>Mémoire et contexte persistants</li>
-                <li>100% local — zéro cloud obligatoire</li>
+                <li>100% local, zéro cloud obligatoire</li>
                 <li>189€ une fois, 0€/mois de logiciel</li>
               </ul>
             </div>
@@ -275,7 +275,7 @@ export default function Home() {
             <p className="section-tag light">005 / Sécurité</p>
             <h2 className="section-title light">Installé blindé. Garanti 90 jours.</h2>
             <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", maxWidth: 520, lineHeight: 1.75, marginBottom: 40 }}>
-              OpenClaw est open source — n&apos;importe qui peut l&apos;installer. Le problème : une mauvaise configuration expose votre machine entière.
+              OpenClaw est open source, n&apos;importe qui peut l&apos;installer. Le problème : une mauvaise configuration expose votre machine entière.
               Claws applique le Protocole Claws en 12 points sur chaque installation.
             </p>
           </div>

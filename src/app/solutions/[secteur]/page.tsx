@@ -33,11 +33,11 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
   const sharedFaq = [
     {
       q: `Qu'est-ce qu'OpenClaw ?`,
-      a: `OpenClaw est un agent IA autonome open source qui tourne directement sur votre machine. Contrairement à ChatGPT, Copilot ou Gemini, il n'envoie pas vos données sur un cloud — tout reste chez vous. Il peut lire vos emails, répondre, gérer votre agenda, envoyer des messages, surveiller des sites et enchaîner des tâches complexes sans intervention humaine à chaque étape.`,
+      a: `OpenClaw est un agent IA autonome open source qui tourne directement sur votre machine. Contrairement à ChatGPT, Copilot ou Gemini, il n'envoie pas vos données sur un cloud, tout reste chez vous. Il peut lire vos emails, répondre, gérer votre agenda, envoyer des messages, surveiller des sites et enchaîner des tâches complexes sans intervention humaine à chaque étape.`,
     },
     {
       q: `Pourquoi passer par Claws pour installer OpenClaw ?`,
-      a: `OpenClaw est open source : vous pouvez l'installer vous-même si vous êtes développeur. Mais l'installation sécurisée — chiffrement, permissions, configuration des intégrations, tests bout en bout — représente 4 à 8 heures de travail pour quelqu'un qui maîtrise l'outil. Claws le fait en 48h avec une garantie de 30 jours et un support en français. Vous vous concentrez sur votre métier, on s'occupe de la technique.`,
+      a: `OpenClaw est open source : vous pouvez l'installer vous-même si vous êtes développeur. Mais l'installation sécurisée, chiffrement, permissions, configuration des intégrations, tests bout en bout, représente 4 à 8 heures de travail pour quelqu'un qui maîtrise l'outil. Claws le fait en 48h avec une garantie de 30 jours et un support en français. Vous vous concentrez sur votre métier, on s'occupe de la technique.`,
     },
     {
       q: `OpenClaw respecte-t-il le RGPD ?`,
@@ -129,12 +129,12 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
                 {
                   num: "01",
                   title: "100% local",
-                  desc: "Vos données restent sur votre machine. Emails, documents, conversations — rien ne part sur un serveur externe.",
+                  desc: "Vos données restent sur votre machine. Emails, documents, conversations, rien ne part sur un serveur externe.",
                 },
                 {
                   num: "02",
                   title: "Agent autonome",
-                  desc: "OpenClaw agit sans supervision. Il surveille, déclenche, envoie, relance — pendant que vous travaillez.",
+                  desc: "OpenClaw agit sans supervision. Il surveille, déclenche, envoie, relance, pendant que vous travaillez.",
                 },
                 {
                   num: "03",
@@ -213,7 +213,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <p className="section-tag">Questions fréquentes</p>
             <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-0.5px", margin: "12px 0 40px" }}>
-              OpenClaw pour {s.name.toLowerCase()} — vos questions.
+              OpenClaw pour {s.name.toLowerCase()}, vos questions.
             </h2>
             {allFaq.map((f, i) => (
               <details key={i} style={{ borderBottom: "1px solid #F0EDE9", padding: "20px 0" }}>

@@ -26,7 +26,7 @@ export const sectors: Record<string, Sector> = {
     stat2: { value: "0", label: "donnée client sur un cloud tiers" },
     stat3: { value: "48h", label: "délai d'installation" },
     painPoints: [
-      { title: "Boite mail ingérable", desc: "Entre les clients, les opposants, les greffes et les huissiers — votre boite reçoit 80+ emails par jour. Trier ça prend 1h le matin. Chaque matin." },
+      { title: "Boite mail ingérable", desc: "Entre les clients, les opposants, les greffes et les huissiers, votre boite reçoit 80+ emails par jour. Trier ça prend 1h le matin. Chaque matin." },
       { title: "Relances chronophages", desc: "Les devis non signés, les honoraires impayés, les clients silencieux. Relancer manuellement est épuisant et ça passe souvent à la trappe." },
       { title: "RGPD et confidentialité", desc: "Vos dossiers sont couverts par le secret professionnel. Vous ne pouvez pas confier vos emails clients à ChatGPT ou Notion AI. C'est un risque déontologique réel." },
       { title: "Comptes-rendus de RDV", desc: "Après chaque consultation, il faut résumer, noter les prochaines étapes, mettre à jour le dossier. 15 min de travail répétitif après chaque rendez-vous." },
@@ -39,7 +39,7 @@ export const sectors: Record<string, Sector> = {
       },
       { emoji: "02",
         title: "Relances honoraires automatiques",
-        desc: "L'agent surveille vos factures impayées et envoie des relances graduelles — douce à J+15, ferme à J+30 — dans le ton que vous avez choisi. Il s'arrête dès réception du paiement.",
+        desc: "L'agent surveille vos factures impayées et envoie des relances graduelles, douce à J+15, ferme à J+30, dans le ton que vous avez choisi. Il s'arrête dès réception du paiement.",
         result: "Taux de recouvrement à 30 jours amélioré de 40%.",
       },
       { emoji: "03",
@@ -84,7 +84,7 @@ export const sectors: Record<string, Sector> = {
       { title: "Surcharge administrative", desc: "Ordonnances, comptes-rendus, certificats, courriers aux spécialistes. L'administratif représente jusqu'à 30% du temps d'un médecin généraliste. Du temps pris sur les patients." },
       { title: "Données de santé sensibles", desc: "Les données de santé sont parmi les plus protégées par le RGPD. Utiliser des outils cloud américains pour traiter des informations patients est un risque juridique et éthique majeur." },
       { title: "Gestion du secrétariat", desc: "Sans secrétaire ou avec un secrétariat débordé, les demandes de RDV s'accumulent, les relances sont oubliées, les messages ne sont pas triés par urgence." },
-      { title: "Veille médicale chronophage", desc: "Les recommandations HAS, les nouvelles études, les mises à jour de protocoles — rester à jour prend du temps que vous n'avez pas." },
+      { title: "Veille médicale chronophage", desc: "Les recommandations HAS, les nouvelles études, les mises à jour de protocoles, rester à jour prend du temps que vous n'avez pas." },
     ],
     useCases: [
       { emoji: "06",
@@ -129,14 +129,14 @@ export const sectors: Record<string, Sector> = {
     slug: "btp",
     name: "BTP & Artisans",
     headline: "L'agent IA qui gère vos devis, relances et chantiers.",
-    subheadline: "Votre agent OpenClaw automatise les devis, les relances et le suivi des chantiers. Vous posez les carreaux — OpenClaw gère l'administratif.",
+    subheadline: "Votre agent OpenClaw automatise les devis, les relances et le suivi des chantiers. Vous posez les carreaux, OpenClaw gère l'administratif.",
     metaTitle: "OpenClaw pour BTP et artisans | Automatisation devis et chantiers | Claws",
     metaDesc: "Claws installe OpenClaw pour les artisans et entreprises BTP. Devis automatisés, relances clients, suivi chantiers. Installation locale. À partir de 189€.",
     stat1: { value: "5h", label: "perdues par semaine en administratif" },
     stat2: { value: "60%", label: "des devis jamais relancés" },
     stat3: { value: "48h", label: "pour être opérationnel" },
     painPoints: [
-      { title: "Les devis prennent trop de temps", desc: "Répondre à chaque demande de devis prend 30 à 45 minutes. Multiplié par 10 demandes par semaine dont la moitié ne donnent rien — c'est un gouffre de temps." },
+      { title: "Les devis prennent trop de temps", desc: "Répondre à chaque demande de devis prend 30 à 45 minutes. Multiplié par 10 demandes par semaine dont la moitié ne donnent rien, c'est un gouffre de temps." },
       { title: "Les relances partent à la trappe", desc: "Un devis envoyé sans réponse. On se dit qu'on va rappeler. On oublie. Le chantier part chez un concurrent. Ça arrive à tout le monde, tout le temps." },
       { title: "Suivi des chantiers en cours", desc: "Plusieurs chantiers en parallèle, des sous-traitants, des livraisons à coordonner. Garder tout en tête est épuisant et les erreurs coûtent cher." },
       { title: "Les appels d'offres passés", desc: "Les appels d'offres publics et privés passent souvent inaperçus. Faire une veille manuelle prend du temps et reste incomplet." },
@@ -192,7 +192,7 @@ export const sectors: Record<string, Sector> = {
     stat3: { value: "48h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Le reporting prend trop de temps", desc: "Compiler les stats, rédiger les analyses, formatter les slides. Chaque client = plusieurs heures par mois. Pur temps non facturable, non différenciant." },
-      { title: "La veille est impossible à tenir", desc: "Surveiller les concurrents de vos clients, les tendances du marché, les mentions de leur marque — c'est un travail à plein temps que vous n'avez pas." },
+      { title: "La veille est impossible à tenir", desc: "Surveiller les concurrents de vos clients, les tendances du marché, les mentions de leur marque, c'est un travail à plein temps que vous n'avez pas." },
       { title: "La prospection tombe toujours", desc: "Quand les missions s'accumulent, la prospection s'arrête. Quand les missions se terminent, il faut repartir de zéro. Ce cycle boom-bust est épuisant." },
       { title: "Comptes-rendus interminables", desc: "Après chaque réunion client, il faut rédiger le compte-rendu, l'envoyer, s'assurer que tout le monde est aligné. 30 minutes qui s'allongent toujours." },
     ],
@@ -219,7 +219,7 @@ export const sectors: Record<string, Sector> = {
       },
       { emoji: "20",
         title: "Premiers jets de livrables",
-        desc: "Brief stratégique, analyse de marché, recommandations — l'agent produit un premier jet à partir de votre brief et des données disponibles. Vous affinez, vous signez.",
+        desc: "Brief stratégique, analyse de marché, recommandations, l'agent produit un premier jet à partir de votre brief et des données disponibles. Vous affinez, vous signez.",
         result: "Démarrez chaque livrable à 60%, pas à 0%.",
       },
     ],
@@ -239,16 +239,16 @@ export const sectors: Record<string, Sector> = {
     slug: "entrepreneurs",
     name: "Entrepreneurs & Startups",
     headline: "L'agent IA qui s'occupe de l'opérationnel pendant que vous construisez.",
-    subheadline: "Claws installe OpenClaw et le configure pour votre activité. Emails, prospection, reporting, veille — votre agent OpenClaw gère l'opérationnel. Vous construisez.",
+    subheadline: "Claws installe OpenClaw et le configure pour votre activité. Emails, prospection, reporting, veille, votre agent OpenClaw gère l'opérationnel. Vous construisez.",
     metaTitle: "OpenClaw pour entrepreneurs et startups | Installation Claws",
     metaDesc: "Claws installe OpenClaw pour les entrepreneurs et startups. Emails, prospection, reporting investisseurs, veille marché. Installation locale. À partir de 189€.",
     stat1: { value: "3h", label: "gagnées par jour sur l'opérationnel" },
     stat2: { value: "0", label: "donnée stratégique sur un cloud tiers" },
     stat3: { value: "48h", label: "pour être opérationnel" },
     painPoints: [
-      { title: "Vous faites tout vous-même", desc: "Répondre aux emails, relancer les prospects, préparer les reportings investisseurs, suivre les partenaires — chaque tâche vous vole du temps de construction produit ou business." },
+      { title: "Vous faites tout vous-même", desc: "Répondre aux emails, relancer les prospects, préparer les reportings investisseurs, suivre les partenaires, chaque tâche vous vole du temps de construction produit ou business." },
       { title: "La prospection tombe quand ça charge", desc: "Dès que les opérations s'emballent, la prospection s'arrête. Résultat : un pipeline qui se vide sans que vous vous en rendiez compte, jusqu'au creux suivant." },
-      { title: "La veille est impossible à tenir", desc: "Suivre les concurrents, les levées de fonds du secteur, les signaux faibles du marché — c'est stratégique mais personne n'a le temps de le faire correctement." },
+      { title: "La veille est impossible à tenir", desc: "Suivre les concurrents, les levées de fonds du secteur, les signaux faibles du marché, c'est stratégique mais personne n'a le temps de le faire correctement." },
       { title: "Le reporting investisseurs est chronophage", desc: "Compiler les métriques, rédiger l'update mensuel, préparer le deck. Des heures de travail à faible valeur ajoutée que vous ne pouvez pas déléguer facilement." },
     ],
     useCases: [
@@ -281,7 +281,7 @@ export const sectors: Record<string, Sector> = {
     faq: [
       { q: "Un agent IA peut-il remplacer mon premier recrutement ?", a: "Pour les tâches répétitives à faible valeur (gestion email, reporting, veille, relances), oui. Un agent peut absorber l'équivalent de 10 à 15h/semaine de travail administratif, ce qui repousse le moment où vous avez besoin d'un premier ops ou assistant." },
       { q: "L'agent peut-il accéder à mes outils (Notion, Slack, Linear) ?", a: "Oui. OpenClaw s'intègre avec les principaux outils SaaS via API. Claws configure les connexions lors de l'installation selon votre stack." },
-      { q: "Est-ce que mes données stratégiques sont en sécurité ?", a: "Oui. L'agent tourne sur votre propre machine. Vos plans, vos données clients, votre pipeline — rien ne part sur un serveur externe. C'est l'avantage structurel du local vs les outils cloud." },
+      { q: "Est-ce que mes données stratégiques sont en sécurité ?", a: "Oui. L'agent tourne sur votre propre machine. Vos plans, vos données clients, votre pipeline, rien ne part sur un serveur externe. C'est l'avantage structurel du local vs les outils cloud." },
       { q: "Est-ce adapté à une entreprise de 1 personne ?", a: "C'est même le cas d'usage le plus rentable. Un fondateur seul qui délègue l'opérationnel à un agent peut se consacrer à 100% à ce qui crée de la valeur. Le ROI est immédiat." },
     ],
     relatedPosts: [
@@ -302,9 +302,9 @@ export const sectors: Record<string, Sector> = {
     stat3: { value: "48h", label: "pour être opérationnel" },
     painPoints: [
       { title: "La prospection s'arrête quand vous êtes en mission", desc: "Vous êtes soit en train de travailler pour un client, soit en train d'en chercher un autre. Rarement les deux en même temps. Résultat : des creux d'activité évitables." },
-      { title: "Les relances vous mettent mal à l'aise", desc: "Relancer un devis non signé ou une facture impayée est inconfortable. Donc vous attendez. Et parfois l'argent ne rentre pas — ou arrive trop tard." },
+      { title: "Les relances vous mettent mal à l'aise", desc: "Relancer un devis non signé ou une facture impayée est inconfortable. Donc vous attendez. Et parfois l'argent ne rentre pas, ou arrive trop tard." },
       { title: "L'onboarding client recommence à zéro", desc: "Chaque nouveau client : le même questionnaire, les mêmes accès à demander, les mêmes documents à envoyer. 2 à 3 heures de travail non facturable à chaque fois." },
-      { title: "L'admin grignote vos soirées", desc: "Facturation, suivi des temps, réponses aux emails, mise à jour des propositions commerciales — des heures chaque semaine qui pourraient être facturées ou récupérées." },
+      { title: "L'admin grignote vos soirées", desc: "Facturation, suivi des temps, réponses aux emails, mise à jour des propositions commerciales, des heures chaque semaine qui pourraient être facturées ou récupérées." },
     ],
     useCases: [
       { emoji: "06",
@@ -356,9 +356,9 @@ export const sectors: Record<string, Sector> = {
     stat2: { value: "3x", label: "plus de contenus publiés avec le même effort" },
     stat3: { value: "48h", label: "pour être opérationnel" },
     painPoints: [
-      { title: "La veille prend autant de temps que la création", desc: "Suivre les tendances, surveiller les concurrents, identifier les sujets qui buzzent — sans système, c'est du scroll infini sans résultat clair." },
+      { title: "La veille prend autant de temps que la création", desc: "Suivre les tendances, surveiller les concurrents, identifier les sujets qui buzzent, sans système, c'est du scroll infini sans résultat clair." },
       { title: "Le repurposing ne se fait jamais", desc: "Vous savez qu'une vidéo YouTube pourrait devenir 5 posts LinkedIn, 3 threads Twitter et 1 newsletter. Mais transformer le contenu prend du temps. Donc ça ne se fait jamais." },
-      { title: "La communauté est impossible à suivre", desc: "Commentaires YouTube, DMs Instagram, réponses LinkedIn — quand ça décolle, répondre à tout devient un job à plein temps. Mais ne pas répondre tue l'engagement." },
+      { title: "La communauté est impossible à suivre", desc: "Commentaires YouTube, DMs Instagram, réponses LinkedIn, quand ça décolle, répondre à tout devient un job à plein temps. Mais ne pas répondre tue l'engagement." },
       { title: "Le planning éditorial se vide", desc: "Le lundi vous avez 10 idées. Le mercredi vous en cherchez une. Sans système de capture et de planification, l'inspiration est gaspillée et les calendriers restent vides." },
     ],
     useCases: [
@@ -414,7 +414,7 @@ export const sectors: Record<string, Sector> = {
       { title: "La consolidation mange les lundis", desc: "Récupérer les chiffres de chaque département, nettoyer les données, consolider dans Excel, corriger les erreurs de formule. C'est des heures de travail répétitif à faible valeur analytique." },
       { title: "Les alertes trésorerie arrivent trop tard", desc: "Vous découvrez un problème de trésorerie quand il est déjà là. Sans monitoring en temps réel, les signaux faibles passent inaperçus jusqu'à ce qu'ils deviennent urgents." },
       { title: "Les données financières sont hypersensibles", desc: "Confier vos données financières à des outils cloud américains (Notion, Airtable, Google Sheets partagés) est un risque de confidentialité majeur. Et souvent contraire à vos politiques internes." },
-      { title: "Le suivi budgétaire est manuel", desc: "Comparer budget vs réel par département, calculer les écarts, identifier les dérives — sans automatisation, c'est un travail hebdomadaire qui prend une demi-journée." },
+      { title: "Le suivi budgétaire est manuel", desc: "Comparer budget vs réel par département, calculer les écarts, identifier les dérives, sans automatisation, c'est un travail hebdomadaire qui prend une demi-journée." },
     ],
     useCases: [
       { emoji: "16",
@@ -469,7 +469,7 @@ export const sectors: Record<string, Sector> = {
       { title: "Service client débordant", desc: "Heures d'ouverture, disponibilité produit, délais de livraison, retours. Les mêmes questions reviennent en boucle et prennent un temps disproportionné." },
       { title: "Paniers abandonnés perdus", desc: "70% des paniers abandonnés ne sont jamais relancés. Chaque relance non envoyée est du chiffre d'affaires laissé sur la table." },
       { title: "Veille prix impossible", desc: "Surveiller les prix de vos concurrents en ligne est un travail quotidien. Impossible à faire manuellement sur des centaines de références." },
-      { title: "Gestion des avis clients", desc: "Répondre aux avis Google, aux messages Instagram, aux emails de réclamation — ça prend 1 à 2 heures par jour pour un commerce actif." },
+      { title: "Gestion des avis clients", desc: "Répondre aux avis Google, aux messages Instagram, aux emails de réclamation, ça prend 1 à 2 heures par jour pour un commerce actif." },
     ],
     useCases: [
       { emoji: "21",
@@ -501,7 +501,7 @@ export const sectors: Record<string, Sector> = {
     faq: [
       { q: "L'agent peut-il s'intégrer à Shopify, WooCommerce, PrestaShop ?", a: "Oui. OpenClaw dispose de connecteurs pour les principales plateformes e-commerce. L'agent peut lire les commandes, les stocks et les clients directement depuis votre plateforme." },
       { q: "Le service client automatique ne va-t-il pas frustrer mes clients ?", a: "Bien configuré, non. L'agent répond aux questions simples en quelques secondes (mieux qu'un humain qui répond en 24h). Pour les questions complexes, il transfère à un humain clairement identifié. La plupart des clients préfèrent une réponse rapide à une attente longue." },
-      { q: "Peut-on l'utiliser pour un commerce physique sans e-commerce ?", a: "Oui. L'agent peut gérer les messages Instagram, WhatsApp Business et les emails — même sans site de vente en ligne. Très utile pour les restaurateurs, fleuristes, coiffeurs, etc." },
+      { q: "Peut-on l'utiliser pour un commerce physique sans e-commerce ?", a: "Oui. L'agent peut gérer les messages Instagram, WhatsApp Business et les emails, même sans site de vente en ligne. Très utile pour les restaurateurs, fleuristes, coiffeurs, etc." },
       { q: "Comment l'agent connaît-il mes produits ?", a: "Vous lui fournissez votre catalogue (export CSV, Google Sheet ou lien vers votre site). Il apprend vos produits, vos prix et vos règles de retour lors de la configuration." },
     ],
     relatedPosts: [

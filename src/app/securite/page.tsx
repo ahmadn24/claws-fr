@@ -151,7 +151,7 @@ export default function SecuritePage() {
               <span style={{ color: "#E85D04" }}>La sécurité, elle, ne l&apos;est pas.</span>
             </h1>
             <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 560, marginBottom: 48 }}>
-              N&apos;importe qui peut installer OpenClaw. Le problème, c&apos;est que n&apos;importe qui peut le faire mal. Claws applique un protocole de sécurité en 12 points sur chaque installation. Voici exactement ce qu&apos;on fait — et pourquoi ça compte.
+              N&apos;importe qui peut installer OpenClaw. Le problème, c&apos;est que n&apos;importe qui peut le faire mal. Claws applique un protocole de sécurité en 12 points sur chaque installation. Voici exactement ce qu&apos;on fait, et pourquoi ça compte.
             </p>
             <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
               {[
@@ -192,7 +192,7 @@ export default function SecuritePage() {
             Ce qui cloche dans une installation DIY.
           </h2>
           <p style={{ fontSize: "1rem", color: "#666", lineHeight: 1.7, maxWidth: 560, marginBottom: 40 }}>
-            OpenClaw est puissant. Mal configuré, il devient un vecteur d&apos;attaque. Voici les erreurs les plus fréquentes — et les plus dangereuses.
+            OpenClaw est puissant. Mal configuré, il devient un vecteur d&apos;attaque. Voici les erreurs les plus fréquentes, et les plus dangereuses.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {risks.map((r, i) => (

@@ -115,7 +115,7 @@ export default function ContactTerminal() {
         <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#ff5f57", display: "inline-block" }} />
         <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#febc2e", display: "inline-block" }} />
         <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#28c840", display: "inline-block" }} />
-        <span style={{ marginLeft: 12, fontSize: 11, color: "rgba(255,255,255,0.3)", letterSpacing: "0.05em" }}>claws — contact</span>
+        <span style={{ marginLeft: 12, fontSize: 11, color: "rgba(255,255,255,0.3)", letterSpacing: "0.05em" }}>claws / contact</span>
       </div>
 
       {/* Terminal body */}

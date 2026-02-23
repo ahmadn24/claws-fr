@@ -33,10 +33,10 @@ const tableRows = [
   },
   {
     critere: "Autonomie",
-    claws: { v: "Agent — agit sans supervision", win: true },
-    chatgpt: { v: "Chatbot — répond seulement", win: false },
-    copilot: { v: "Assistant — actions Office limitées", win: null },
-    gemini: { v: "Assistant — actions Google limitées", win: null },
+    claws: { v: "Agent autonome", win: true },
+    chatgpt: { v: "Chatbot, répond seulement", win: false },
+    copilot: { v: "Assistant, actions Office limitées", win: null },
+    gemini: { v: "Assistant, actions Google limitées", win: null },
     siri: { v: "Assistant vocal basique", win: false },
   },
   {
@@ -58,10 +58,10 @@ const tableRows = [
   {
     critere: "Modèle IA modifiable",
     claws: { v: "Oui (Claude, GPT-4, Llama…)", win: true },
-    chatgpt: { v: "Non — OpenAI uniquement", win: false },
-    copilot: { v: "Non — Microsoft/OpenAI uniquement", win: false },
-    gemini: { v: "Non — Google uniquement", win: false },
-    siri: { v: "Non — Apple uniquement", win: false },
+    chatgpt: { v: "Non (OpenAI uniquement)", win: false },
+    copilot: { v: "Non (Microsoft/OpenAI uniquement)", win: false },
+    gemini: { v: "Non (Google uniquement)", win: false },
+    siri: { v: "Non (Apple uniquement)", win: false },
   },
   {
     critere: "Personnalisation",
@@ -73,7 +73,7 @@ const tableRows = [
   },
   {
     critere: "Open source",
-    claws: { v: "100% — code auditable", win: true },
+    claws: { v: "100%, code auditable", win: true },
     chatgpt: { v: "Non", win: false },
     copilot: { v: "Non", win: false },
     gemini: { v: "Non", win: false },
@@ -105,8 +105,8 @@ const tableRows = [
   },
   {
     critere: "Support en français",
-    claws: { v: "Oui — équipe Claws, Paris", win: true },
-    chatgpt: { v: "Non — support USA uniquement", win: false },
+    claws: { v: "Oui, équipe Claws, Paris", win: true },
+    chatgpt: { v: "Non (support USA)", win: false },
     copilot: { v: "Partiel", win: null },
     gemini: { v: "Partiel", win: null },
     siri: { v: "Oui", win: null },
@@ -119,34 +119,34 @@ const headToHead = [
     vs: "ChatGPT Plus / Team",
     verdict: "OpenClaw gagne sur l'autonomie et la vie privée. ChatGPT gagne sur la facilité d'accès immédiate.",
     openclaw_wins: [
-      "Agit sans supervision — lit vos emails, répond, relance, planifie",
+      "Agit sans supervision, lit vos emails, répond, relance, planifie",
       "Vos données restent sur votre machine. Zéro transit cloud.",
       "Pas d'abonnement mensuel. Vous payez l'installation une fois.",
-      "Changez de modèle quand vous voulez — vous n'êtes pas captif d'OpenAI",
+      "Changez de modèle quand vous voulez, vous n'êtes pas captif d'OpenAI",
     ],
     chatgpt_wins: [
-      "Aucune installation — accessible en 2 minutes sur chatgpt.com",
+      "Aucune installation, accessible en 2 minutes sur chatgpt.com",
       "Interface conversationnelle excellente pour la rédaction",
       "GPTs disponibles pour des cas d'usage précis",
     ],
-    bottom_line: "Si vous avez besoin d'un outil de rédaction ponctuel, ChatGPT suffit. Si vous voulez un collaborateur qui travaille à votre place — emails, relances, reporting — OpenClaw n'a pas d'équivalent.",
+    bottom_line: "Si vous avez besoin d'un outil de rédaction ponctuel, ChatGPT suffit. Si vous voulez un collaborateur qui travaille à votre place, emails, relances, reporting, OpenClaw n'a pas d'équivalent.",
   },
   {
     id: "copilot",
     vs: "Microsoft Copilot Pro",
     verdict: "OpenClaw gagne si vous sortez de l'écosystème Microsoft. Copilot gagne si vous êtes 100% Microsoft 365.",
     openclaw_wins: [
-      "Fonctionne avec tous vos outils — pas seulement Outlook et Teams",
-      "Données locales — vos fichiers ne passent pas par les serveurs Microsoft",
+      "Fonctionne avec tous vos outils, pas seulement Outlook et Teams",
+      "Données locales, vos fichiers ne passent pas par les serveurs Microsoft",
       "Automatisations cross-outils (email + CRM + agenda + SMS en une séquence)",
-      "Modèle IA au choix — pas forcément OpenAI via Microsoft",
+      "Modèle IA au choix, pas forcément OpenAI via Microsoft",
     ],
     chatgpt_wins: [
       "Intégration native dans Word, Excel, PowerPoint, Teams, Outlook",
       "Déploiement enterprise géré par IT sans configuration",
       "Génération de code dans GitHub Copilot inclus",
     ],
-    bottom_line: "Copilot est excellent si toute votre entreprise est sur Microsoft 365. Dès que vous utilisez d'autres outils, OpenClaw est plus polyvalent — et vos données n'entrent pas dans le modèle de Microsoft.",
+    bottom_line: "Copilot est excellent si toute votre entreprise est sur Microsoft 365. Dès que vous utilisez d'autres outils, OpenClaw est plus polyvalent, et vos données n'entrent pas dans le modèle de Microsoft.",
   },
   {
     id: "gemini",
@@ -156,14 +156,14 @@ const headToHead = [
       "Vos emails Gmail et documents Drive ne sont pas réentraînés par Google",
       "Fonctionne indépendamment de votre suite bureautique",
       "Automatisations hors écosystème Google (Notion, Slack, domotique…)",
-      "Aucun vendor lock-in — changez de modèle sans changer d'agent",
+      "Aucun vendor lock-in, changez de modèle sans changer d'agent",
     ],
     chatgpt_wins: [
       "Intégration native avec Gmail, Google Docs, Google Drive, Google Meet",
-      "Multimodal natif — images, audio, vidéo dans les mêmes workflows",
+      "Multimodal natif, images, audio, vidéo dans les mêmes workflows",
       "Recherche web Google en temps réel intégrée",
     ],
-    bottom_line: "Gemini Advanced est puissant dans Google Workspace. Mais Google devient alors l'opérateur de toutes vos données professionnelles — emails, documents, calendrier. OpenClaw garde cela chez vous.",
+    bottom_line: "Gemini Advanced est puissant dans Google Workspace. Mais Google devient alors l'opérateur de toutes vos données professionnelles, emails, documents, calendrier. OpenClaw garde cela chez vous.",
   },
 ];
 
@@ -189,14 +189,14 @@ const quandNonOpenClaw = [
   },
   {
     cas: "Vous cherchez uniquement un outil de génération d'images ou de vidéo",
-    conseil: "Midjourney, DALL-E, Sora. OpenClaw est un agent d'automatisation professionnelle — pas un outil créatif multimédia.",
+    conseil: "Midjourney, DALL-E, Sora. OpenClaw est un agent d'automatisation professionnelle, pas un outil créatif multimédia.",
   },
 ];
 
 const verdictProfils = [
   { profil: "Avocat, médecin, notaire", outil: "OpenClaw", raison: "Secret professionnel. Données sensibles. Aucune alternative locale au même niveau." },
   { profil: "Entrepreneur solo / fondateur", outil: "OpenClaw", raison: "L'agent qui gère l'opérationnel pendant que vous construisez." },
-  { profil: "Freelance", outil: "OpenClaw", raison: "Prospection continue, relances, facturation — sans recruter." },
+  { profil: "Freelance", outil: "OpenClaw", raison: "Prospection continue, relances, facturation, sans recruter." },
   { profil: "DAF / Directeur financier", outil: "OpenClaw", raison: "Données financières trop sensibles pour le cloud. Reporting automatisé en local." },
   { profil: "Utilisateur Microsoft 365 en entreprise", outil: "Copilot Pro", raison: "Intégration native Word/Excel/Teams difficile à battre dans ce contexte." },
   { profil: "Usage ponctuel de rédaction", outil: "ChatGPT", raison: "Accessible en 2 minutes, excellent pour la rédaction assistée." },
@@ -206,11 +206,11 @@ const verdictProfils = [
 const faq = [
   {
     q: "OpenClaw est-il vraiment plus sûr que ChatGPT pour la vie privée ?",
-    a: "Oui, architecturalement. ChatGPT envoie vos requêtes — et donc votre contenu — sur les serveurs d'OpenAI aux États-Unis. OpenClaw tourne sur votre machine : vos emails, documents et conversations ne quittent jamais votre disque dur. Ce n'est pas une question de confiance envers OpenAI — c'est une question d'architecture. Une donnée locale ne peut pas fuiter, même en cas de faille chez un prestataire cloud."
+    a: "Oui, architecturalement. ChatGPT envoie vos requêtes, et donc votre contenu, sur les serveurs d'OpenAI aux États-Unis. OpenClaw tourne sur votre machine : vos emails, documents et conversations ne quittent jamais votre disque dur. Ce n'est pas une question de confiance envers OpenAI, c'est une question d'architecture. Une donnée locale ne peut pas fuiter, même en cas de faille chez un prestataire cloud."
   },
   {
     q: "Quelle est concrètement la différence entre un chatbot et un agent ?",
-    a: "Un chatbot attend que vous lui parliez et répond. Un agent agit de façon proactive, sans intervention humaine à chaque étape. Exemple concret : vous dites à ChatGPT 'rédige un email de relance' — il le rédige, vous copiez-collez et envoyez. OpenClaw surveille votre CRM, détecte un prospect silencieux depuis 14 jours, rédige l'email dans votre style, l'envoie depuis votre adresse et note dans le CRM que la relance a été effectuée. Vous ne faites rien."
+    a: "Un chatbot attend que vous lui parliez et répond. Un agent agit de façon proactive, sans intervention humaine à chaque étape. Exemple concret : vous dites à ChatGPT 'rédige un email de relance', il le rédige, vous copiez-collez et envoyez. OpenClaw surveille votre CRM, détecte un prospect silencieux depuis 14 jours, rédige l'email dans votre style, l'envoie depuis votre adresse et note dans le CRM que la relance a été effectuée. Vous ne faites rien."
   },
   {
     q: "OpenClaw vs ChatGPT : lequel choisir pour mon entreprise ?",
@@ -218,11 +218,11 @@ const faq = [
   },
   {
     q: "Peut-on changer le modèle IA d'OpenClaw ?",
-    a: "Oui, et c'est l'un des avantages structurels d'OpenClaw. Il fonctionne avec Claude (Anthropic), GPT-4 (OpenAI via API), Llama 3, Mistral en local, et d'autres encore. Si Anthropic augmente ses tarifs, si un nouveau modèle sort, si vous avez besoin d'un modèle spécialisé pour votre secteur — vous changez en quelques minutes sans reconfigurer votre agent. Aucun des concurrents de ce comparatif n'offre cette flexibilité."
+    a: "Oui, et c'est l'un des avantages structurels d'OpenClaw. Il fonctionne avec Claude (Anthropic), GPT-4 (OpenAI via API), Llama 3, Mistral en local, et d'autres encore. Si Anthropic augmente ses tarifs, si un nouveau modèle sort, si vous avez besoin d'un modèle spécialisé pour votre secteur, vous changez en quelques minutes sans reconfigurer votre agent. Aucun des concurrents de ce comparatif n'offre cette flexibilité."
   },
   {
     q: "Combien coûte vraiment OpenClaw comparé à ChatGPT sur 3 ans ?",
-    a: "OpenClaw via Claws : 189€ d'installation (une seule fois) + environ 10 à 30€/mois d'API selon votre usage, soit ~549€ sur 3 ans — et vous possédez votre configuration, vos automatisations, vos données. ChatGPT Plus : 20€/mois = 720€ sur 3 ans, sans rien posséder. Copilot Pro : 22€/mois = 792€ sur 3 ans. L'écart se creuse chaque année. Et avec OpenClaw, si vous n'utilisez presque pas votre clé API un mois, vous ne payez quasiment rien."
+    a: "OpenClaw via Claws : 189€ d'installation (une seule fois) + environ 10 à 30€/mois d'API selon votre usage, soit ~549€ sur 3 ans, et vous possédez votre configuration, vos automatisations, vos données. ChatGPT Plus : 20€/mois = 720€ sur 3 ans, sans rien posséder. Copilot Pro : 22€/mois = 792€ sur 3 ans. L'écart se creuse chaque année. Et avec OpenClaw, si vous n'utilisez presque pas votre clé API un mois, vous ne payez quasiment rien."
   },
   {
     q: "OpenClaw fonctionne-t-il sans internet ?",
@@ -230,19 +230,19 @@ const faq = [
   },
   {
     q: "OpenClaw peut-il vraiment envoyer des emails à ma place ?",
-    a: "Oui. C'est l'une des automatisations les plus utilisées. L'agent peut lire votre boite mail, rédiger des réponses, les envoyer, archiver les emails traités et vous remonter uniquement ce qui nécessite votre attention. Il peut aussi envoyer des relances commerciales, des confirmations de RDV, des newsletters — selon les règles que vous définissez lors de la configuration. ChatGPT ne peut pas faire ça."
+    a: "Oui. C'est l'une des automatisations les plus utilisées. L'agent peut lire votre boite mail, rédiger des réponses, les envoyer, archiver les emails traités et vous remonter uniquement ce qui nécessite votre attention. Il peut aussi envoyer des relances commerciales, des confirmations de RDV, des newsletters, selon les règles que vous définissez lors de la configuration. ChatGPT ne peut pas faire ça."
   },
   {
     q: "Faut-il être développeur pour utiliser OpenClaw ?",
-    a: "Non. OpenClaw est open source et techniquement complexe à installer correctement — c'est précisément pour ça que Claws existe. Nous installons, configurons et testons tout en 48h. Une fois en place, vous interagissez avec votre agent via Telegram ou WhatsApp, comme vous envoyez un message à un collaborateur. Pas d'interface technique, pas de ligne de commande, pas de maintenance."
+    a: "Non. OpenClaw est open source et techniquement complexe à installer correctement, c'est précisément pour ça que Claws existe. Nous installons, configurons et testons tout en 48h. Une fois en place, vous interagissez avec votre agent via Telegram ou WhatsApp, comme vous envoyez un message à un collaborateur. Pas d'interface technique, pas de ligne de commande, pas de maintenance."
   },
   {
     q: "Est-ce que l'installation Claws inclut la maintenance et les mises à jour ?",
-    a: "Le tarif d'installation (à partir de 189€) couvre l'installation, la configuration initiale et 30 jours de garantie. Les retainers mensuels (à partir de 149€/mois) incluent la maintenance, les mises à jour d'OpenClaw, l'ajout de nouvelles automatisations et le support prioritaire. Beaucoup de clients gèrent eux-mêmes les mises à jour après l'installation — OpenClaw se met à jour en une commande."
+    a: "Le tarif d'installation (à partir de 189€) couvre l'installation, la configuration initiale et 30 jours de garantie. Les retainers mensuels (à partir de 149€/mois) incluent la maintenance, les mises à jour d'OpenClaw, l'ajout de nouvelles automatisations et le support prioritaire. Beaucoup de clients gèrent eux-mêmes les mises à jour après l'installation, OpenClaw se met à jour en une commande."
   },
   {
     q: "OpenClaw est-il RGPD conforme ?",
-    a: "OpenClaw en local est architecturalement conforme au principe de minimisation des données du RGPD — vos données ne quittent pas votre infrastructure. Il n'y a pas de sous-traitant cloud, pas de transfert vers des pays tiers. Pour les secteurs réglementés (santé, juridique, finance), c'est souvent la seule architecture acceptable. Claws peut fournir un document technique décrivant les flux de données pour vos DPO."
+    a: "OpenClaw en local est architecturalement conforme au principe de minimisation des données du RGPD, vos données ne quittent pas votre infrastructure. Il n'y a pas de sous-traitant cloud, pas de transfert vers des pays tiers. Pour les secteurs réglementés (santé, juridique, finance), c'est souvent la seule architecture acceptable. Claws peut fournir un document technique décrivant les flux de données pour vos DPO."
   },
 ];
 
@@ -271,7 +271,7 @@ export default function ComparatifPage() {
             OpenClaw vs ChatGPT, Copilot, Gemini :<br />le comparatif complet.
           </h1>
           <p style={{ fontSize: "1.1rem", color: "#555", lineHeight: 1.8, maxWidth: 640, marginBottom: 32 }}>
-            La plupart des comparatifs IA sont écrits par des gens qui n'ont jamais installé ces outils sur une machine réelle. Celui-ci non. On installe et maintient OpenClaw au quotidien — voici ce qu'on sait vraiment.
+            La plupart des comparatifs IA sont écrits par des gens qui n'ont jamais installé ces outils sur une machine réelle. Celui-ci non. On installe et maintient OpenClaw au quotidien, voici ce qu'on sait vraiment.
           </p>
           {/* Anchor nav */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 8 }}>

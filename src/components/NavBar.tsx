@@ -38,7 +38,7 @@ export default function NavBar() {
         }}>Contact →</a>
         </div>
 
-        {/* Mobile — hamburger */}
+        {/* Mobile, hamburger */}
         <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
           <span style={{ display: "block", width: 22, height: 2, background: "#0E0E0E", marginBottom: 5, transition: "all 0.2s", transform: open ? "rotate(45deg) translateY(7px)" : "none" }} />
           <span style={{ display: "block", width: 22, height: 2, background: "#0E0E0E", marginBottom: 5, transition: "all 0.2s", opacity: open ? 0 : 1 }} />
@@ -46,7 +46,7 @@ export default function NavBar() {
         </button>
       </nav>
 
-      {/* Overlay plein écran — en dehors de la nav pour couvrir tout */}
+      {/* Overlay plein écran, en dehors de la nav pour couvrir tout */}
       {open && (
         <div style={{
           position: "fixed", inset: 0, zIndex: 999,

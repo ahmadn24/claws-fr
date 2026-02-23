@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="site-footer-bottom">
-        <p>© 2026 Claws, Paris — Tous droits réservés</p>
+        <p>© 2026 Claws, Paris. Tous droits réservés.</p>
         <p>Agent IA OpenClaw · Installation locale · RGPD natif</p>
       </div>
     </footer>
