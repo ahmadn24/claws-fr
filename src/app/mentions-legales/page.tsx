@@ -50,11 +50,11 @@ export default function MentionsLegalesPage() {
             </>)}
 
             {section("2. Hébergement", <>
-              <p><strong>Hébergeur :</strong> Vercel Inc.</p>
-              <p><strong>Adresse :</strong> 340 Pine Street, Suite 701, San Francisco, CA 94104, États-Unis</p>
-              <p><strong>Site :</strong> https://vercel.com</p>
+              <p><strong>Hébergeur :</strong> OVHcloud</p>
+              <p><strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France</p>
+              <p><strong>Site :</strong> https://www.ovhcloud.com</p>
               <p style={{ marginTop: 12 }}>
-                Le site claws.fr est déployé sur l&apos;infrastructure Vercel via un réseau de distribution mondial (CDN). Les fichiers statiques peuvent être mis en cache dans des datacenters situés en Europe.
+                Le site claws.fr est hébergé sur l&apos;infrastructure OVHcloud, dont les datacenters sont situés en France et en Europe.
               </p>
             </>)}
 
