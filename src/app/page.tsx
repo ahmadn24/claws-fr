@@ -2,6 +2,7 @@ import { getAllPosts } from "@/lib/posts";
 import ContactTerminal from "@/components/ContactTerminal";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import AgentDemo from "@/components/AgentDemo";
 
 const differentiators = [
   {
@@ -128,22 +129,31 @@ export default function Home() {
       <main>
 
         {/* HERO */}
-        <section className="section hero-section">
-          <p className="eyebrow">Paris · 2026 · Spécialistes OpenClaw</p>
-          <h1 className="hero-title">
-            L&apos;agence française qui installe{" "}
-            <span className="accent">OpenClaw</span>{" "}
-            sur votre machine.
-          </h1>
-          <div className="hero-sub">
-            <p>
-              OpenClaw est l&apos;agent IA open source qui agit à votre place : emails, relances, reporting, veille. En local, sans cloud.
-              Claws l&apos;installe, le sécurise et le configure pour votre métier en 48h.
-            </p>
-          </div>
-          <div className="hero-actions">
-            <a href="#contact" className="btn-primary">Installer OpenClaw →</a>
-            <a href="#secteurs" className="btn-secondary">Voir mon profil</a>
+        <section className="section hero-section" style={{ display: "block" }}>
+          <div className="hero-layout">
+            {/* Texte */}
+            <div className="hero-text">
+              <p className="eyebrow">Paris · 2026 · Spécialistes OpenClaw</p>
+              <h1 className="hero-title">
+                L&apos;agence française qui installe{" "}
+                <span className="accent">OpenClaw</span>{" "}
+                sur votre machine.
+              </h1>
+              <div className="hero-sub">
+                <p>
+                  OpenClaw est l&apos;agent IA open source qui agit à votre place : emails, relances, reporting, veille. En local, sans cloud.
+                  Claws l&apos;installe, le sécurise et le configure pour votre métier en 48h.
+                </p>
+              </div>
+              <div className="hero-actions">
+                <a href="#contact" className="btn-primary">Installer OpenClaw →</a>
+                <a href="#secteurs" className="btn-secondary">Voir mon profil</a>
+              </div>
+            </div>
+            {/* Demo */}
+            <div className="hero-demo">
+              <AgentDemo />
+            </div>
           </div>
           <div className="hero-stats">
             <div className="stat-item">

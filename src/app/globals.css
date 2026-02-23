@@ -292,3 +292,16 @@ details[open] .faq-question::after { content: "−"; }
 /* ── Sector cards homepage ──────────────────────────────── */
 .sector-home-card:hover { background: #161616 !important; border-bottom-color: #E85D04 !important; }
 .sector-home-card:hover h3 { color: #E85D04 !important; }
+
+/* ── Hero two-column layout ─────────────────────────────── */
+.hero-layout { display: flex; align-items: center; gap: 64px; margin-bottom: 48px; }
+.hero-text { flex: 1; min-width: 0; }
+.hero-text .hero-title { margin-bottom: 24px; }
+.hero-text .hero-sub { margin-bottom: 32px; }
+.hero-text .hero-actions { margin-bottom: 0; }
+.hero-demo { flex-shrink: 0; display: flex; justify-content: center; }
+@media (max-width: 860px) {
+  .hero-layout { flex-direction: column; gap: 40px; }
+  .hero-demo { width: 100%; max-width: 340px; margin: 0 auto; }
+}
+@media (max-width: 480px) { .hero-demo { display: none; } }
