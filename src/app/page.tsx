@@ -7,33 +7,45 @@ const differentiators = [
   {
     icon: "01",
     title: "Spécialistes OpenClaw, pas généralistes IA",
-    desc: "On ne fait que ça. On connaît OpenClaw de l'intérieur parce qu'on l'utilise au quotidien, on suit ses évolutions, on le débugge. Vous n'êtes pas notre cobaye.",
+    desc: "On ne fait que ça. On connaît OpenClaw de l'intérieur — on le déploie, on le débugge, on suit chaque release. Vous n'êtes pas notre cobaye.",
   },
   {
     icon: "02",
-    title: "Vos données restent chez vous",
-    desc: "Pas de cloud, pas de serveur tiers, pas d'API qui aspire vos emails. Votre agent tourne sur votre machine. Ce n'est pas une promesse marketing, c'est l'architecture.",
+    title: "Vos données restent chez vous. Toujours.",
+    desc: "Pas de cloud, pas de serveur tiers, pas d'API qui aspire vos emails. Votre agent OpenClaw tourne sur votre machine. C'est l'architecture, pas une promesse marketing.",
   },
   {
     icon: "03",
     title: "La même personne du début à la fin",
-    desc: "Vous appelez, vous tombez sur quelqu'un qui connaît votre setup par cœur. Pas de centre d'appels, pas de numéro de ticket, pas d'escalade vers un N+1.",
+    desc: "Vous appelez, vous tombez sur quelqu'un qui connaît votre setup par cœur. Pas de centre d'appels, pas de numéro de ticket.",
   },
   {
     icon: "04",
-    title: "Des agents plus intelligents que la config de base",
-    desc: "On a passé des mois à optimiser les prompts et les paramètres sur des déploiements réels. Vos agents font moins d'erreurs et tiennent mieux dans le temps.",
+    title: "Des agents configurés pour votre métier",
+    desc: "On a déployé OpenClaw sur des dizaines de configurations réelles. Vos automatisations sont calibrées, pas copiées d'un template générique.",
   },
   {
     icon: "05",
-    title: "Si ça ne marche pas, on revient",
-    desc: "30 jours après l'installation, si votre agent ne fait pas ce qu'il devrait faire, on refait le travail gratuitement. Sans discussion.",
+    title: "Garantie 30 jours sans condition",
+    desc: "Si votre agent OpenClaw ne fait pas ce qu'il devrait faire dans les 30 jours, on refait le travail gratuitement. Sans discussion.",
   },
   {
     icon: "06",
-    title: "Telegram, WhatsApp et iMessage en même temps",
-    desc: "Un seul agent, accessible depuis tous vos canaux dès l'installation. Vous n'avez pas à choisir ni à payer en supplément pour chaque canal.",
+    title: "Telegram, WhatsApp, iMessage simultanément",
+    desc: "Un seul agent OpenClaw, accessible depuis tous vos canaux dès l'installation. Vous ne choisissez pas — vous avez tout.",
   },
+];
+
+const sectors = [
+  { slug: "entrepreneurs", name: "Entrepreneurs & Startups", tag: "Gagnez 3h/jour sur l'opérationnel" },
+  { slug: "freelances",    name: "Freelances & Indépendants", tag: "Prospection et facturation automatiques" },
+  { slug: "createurs",     name: "Créateurs de contenu",     tag: "Repurposing, veille, communauté" },
+  { slug: "cfo",           name: "DAF & Direction financière", tag: "Reporting et alertes trésorerie" },
+  { slug: "avocats",       name: "Avocats & Cabinets juridiques", tag: "Triage emails, relances, RGPD natif" },
+  { slug: "medecins",      name: "Médecins & Santé",         tag: "Comptes-rendus, RDV, veille médicale" },
+  { slug: "agences",       name: "Agences & Consultants",    tag: "Reporting clients, veille, prospection" },
+  { slug: "btp",           name: "BTP & Artisans",           tag: "Devis automatisés, relances, chantiers" },
+  { slug: "retail",        name: "Commerce & Retail",        tag: "Service client 24/7, paniers, stocks" },
 ];
 
 const offers = [
@@ -41,14 +53,14 @@ const offers = [
     code: "SETUP",
     price: "À partir de 189 €",
     title: "Installation OpenClaw",
-    desc: "On installe et configure OpenClaw sur votre machine, on connecte votre canal de communication, et on reste disponible jusqu'à ce que vous soyez à l'aise.",
+    desc: "On installe et sécurise OpenClaw sur votre machine, on connecte vos canaux, on configure les automatisations de base. Opérationnel en 48h.",
     cta: "Démarrer",
   },
   {
     code: "AGENT SUR MESURE",
     price: "Sur devis",
-    title: "Agent configuré pour votre métier",
-    desc: "On passe du temps à comprendre comment vous travaillez, puis on configure un agent qui fait vraiment ce dont vous avez besoin. Pas un template avec votre nom dessus.",
+    title: "OpenClaw configuré pour votre métier",
+    desc: "On passe du temps à comprendre votre activité, puis on configure un agent OpenClaw qui fait exactement ce dont vous avez besoin. Pas un template.",
     cta: "Nous contacter",
     featured: true,
   },
@@ -56,7 +68,7 @@ const offers = [
     code: "RETAINER",
     price: "À partir de 149 €/mois",
     title: "Suivi et évolutions dans le temps",
-    desc: "Les mises à jour, le monitoring, les ajustements quand votre activité change. Vous avez un interlocuteur fixe qui connaît votre système.",
+    desc: "Mises à jour OpenClaw, monitoring, ajustements quand votre activité change. Un interlocuteur fixe qui connaît votre système.",
     cta: "En savoir plus",
   },
 ];
@@ -69,40 +81,40 @@ const steps = [
   },
   {
     num: "02",
-    title: "On configure.",
-    desc: "Installation complète sur votre machine, sécurisée, testée. Vous ne touchez à rien.",
+    title: "On installe OpenClaw.",
+    desc: "Installation complète sur votre machine, sécurisée selon le Protocole Claws 12 points. Vous ne touchez à rien.",
   },
   {
     num: "03",
     title: "Votre agent prend le relai.",
-    desc: "Il gère, planifie, répond. Vous faites autre chose.",
+    desc: "Votre agent OpenClaw gère, planifie, répond. Vous faites autre chose.",
   },
 ];
 
 const faqItems = [
   {
-    q: "C'est quoi exactement OpenClaw ?",
-    a: "OpenClaw est une plateforme open-source qui fait tourner des agents IA sur votre machine. Concrètement, c'est ce qui permet à un agent de lire vos emails, répondre à vos messages Telegram ou chercher des infos sur le web, sans que vos données ne sortent de chez vous.",
+    q: "C'est quoi OpenClaw ?",
+    a: "OpenClaw est une plateforme open source qui fait tourner des agents IA autonomes sur votre machine. Concrètement, c'est ce qui permet à un agent de lire vos emails, répondre à vos messages, gérer votre agenda ou surveiller des sites web — sans que vos données ne sortent de chez vous. Claws l'installe et le configure pour votre métier.",
   },
   {
-    q: "En quoi c'est différent de ChatGPT ?",
-    a: "ChatGPT vous répond quand vous lui parlez. Un agent OpenClaw travaille même quand vous ne lui parlez pas. Il surveille, agit, et vous prévient quand il a besoin de vous. C'est la différence entre un outil et un collaborateur.",
+    q: "En quoi c'est différent de ChatGPT ou Copilot ?",
+    a: "ChatGPT répond quand vous lui parlez. Votre agent OpenClaw travaille même quand vous ne lui parlez pas. Il surveille, agit, relance et vous prévient quand c'est fait. C'est la différence entre un outil et un collaborateur. Et contrairement à ChatGPT, Copilot ou Gemini, tout reste sur votre machine — aucune donnée n'est envoyée sur un serveur cloud.",
   },
   {
-    q: "Combien ça coûte ?",
-    a: "L'installation démarre à partir de 189 €. Ça dépend de votre configuration et du nombre de canaux à connecter. On fait un point avant de commencer pour qu'il n'y ait pas de surprise.",
+    q: "Combien ça coûte vraiment ?",
+    a: "L'installation OpenClaw démarre à 189€ — une seule fois. Pas d'abonnement logiciel mensuel. Vous payez éventuellement votre clé API pour le modèle IA choisi (environ 10 à 30€/mois selon l'usage). ChatGPT Plus coûte 240€/an, Copilot Pro 264€/an, et recommencent chaque année. On fait un point avant de commencer pour qu'il n'y ait pas de surprise.",
   },
   {
     q: "Est-ce que mes données sont vraiment privées ?",
-    a: "Oui. L'agent tourne en local sur votre machine. Il n'y a pas de serveur Claws qui reçoit vos données, pas de logs stockés chez nous. Le seul service externe qui voit vos requêtes, c'est Anthropic pour le modèle IA.",
+    a: "Oui, architecturalement. OpenClaw tourne en local sur votre machine — il n'y a pas de serveur Claws qui reçoit vos données. Le seul service externe qui voit vos requêtes, c'est le modèle IA que vous choisissez (Claude, GPT-4, ou un modèle local Llama/Mistral pour un usage 100% offline).",
   },
   {
     q: "Il faut quel matériel ?",
-    a: "Un Mac Mini M4 est idéal : il consomme peu, ne fait aucun bruit et tient la charge en continu. Mais ça marche aussi sur n'importe quel autre Mac ou serveur Linux.",
+    a: "Un Mac Mini M4 est idéal : il consomme peu, ne fait aucun bruit et tient la charge en continu. Mais OpenClaw fonctionne aussi sur n'importe quel Mac ou serveur Linux. On vous guide sur le setup matériel lors de l'appel découverte.",
   },
   {
     q: "On peut connecter plusieurs applications en même temps ?",
-    a: "Oui, Telegram, WhatsApp, iMessage, Discord peuvent tous être actifs simultanément sur le même agent. Pas besoin d'en choisir un.",
+    a: "Oui. Telegram, WhatsApp, iMessage, Discord peuvent tous être actifs simultanément sur le même agent OpenClaw. Pas besoin d'en choisir un.",
   },
 ];
 
@@ -117,22 +129,26 @@ export default function Home() {
 
         {/* HERO */}
         <section className="section hero-section">
-          <p className="eyebrow">Paris · 2025 · Agents IA autonomes</p>
+          <p className="eyebrow">Paris · 2026 · Spécialistes OpenClaw</p>
           <h1 className="hero-title">
-            87 % des tâches répétitives de votre équipe{" "}
-            <span className="accent">sont automatisables.</span>
+            L&apos;agence française qui installe{" "}
+            <span className="accent">OpenClaw</span>{" "}
+            sur votre machine.
           </h1>
           <div className="hero-sub">
-            <p>Claws installe des agents IA qui travaillent à votre place, en continu, sans que vous ayez à surveiller quoi que ce soit.</p>
+            <p>
+              OpenClaw est l&apos;agent IA open source qui agit à votre place — emails, relances, reporting, veille — en local, sans cloud.
+              Claws l&apos;installe, le sécurise et le configure pour votre métier en 48h.
+            </p>
           </div>
           <div className="hero-actions">
-            <a href="#contact" className="btn-primary">Discutons →</a>
-            <a href="#offres" className="btn-secondary">Voir les offres</a>
+            <a href="#contact" className="btn-primary">Installer OpenClaw →</a>
+            <a href="#secteurs" className="btn-secondary">Voir mon profil</a>
           </div>
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-num">+200%</span>
-              <span className="stat-label">de productivité mesurée</span>
+              <span className="stat-num">189€</span>
+              <span className="stat-label">installation, une seule fois</span>
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
@@ -143,6 +159,11 @@ export default function Home() {
             <div className="stat-item">
               <span className="stat-num">0</span>
               <span className="stat-label">donnée dans le cloud</span>
+            </div>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <span className="stat-num">30j</span>
+              <span className="stat-label">garantie satisfait ou refait</span>
             </div>
           </div>
         </section>
@@ -157,24 +178,76 @@ export default function Home() {
             <div className="problem-card problem-card-bad">
               <p className="problem-label">ChatGPT, Copilot, Gemini</p>
               <h3>Ils répondent.</h3>
-              <p>Vous posez une question, ils répondent. Ensuite c'est vous qui devez agir.</p>
+              <p>Vous posez une question, ils répondent. Ensuite c&apos;est vous qui devez agir. Vos données partent sur leurs serveurs américains.</p>
               <ul className="problem-list">
-                <li>❌ Pas d&apos;accès à vos outils</li>
-                <li>❌ Aucune autonomie</li>
-                <li>❌ Pas de mémoire entre les sessions</li>
-                <li>❌ Vos données sur leurs serveurs</li>
+                <li>Pas d&apos;accès à vos vrais outils</li>
+                <li>Aucune autonomie réelle</li>
+                <li>Pas de mémoire entre les sessions</li>
+                <li>Vos données sur leur cloud</li>
+                <li>240 à 264€/an d&apos;abonnement, pour toujours</li>
               </ul>
             </div>
             <div className="problem-card problem-card-good">
-              <p className="problem-label">Votre agent Claws</p>
+              <p className="problem-label">Votre agent OpenClaw via Claws</p>
               <h3>Il <em>agit</em>.</h3>
-              <p>Il accède à vos outils, prend des décisions, exécute et vous rend compte quand c&apos;est fait.</p>
+              <p>Il accède à vos outils, prend des décisions, exécute et vous rend compte. Sur votre machine. Pendant que vous faites autre chose.</p>
               <ul className="problem-list">
-                <li>✓ Connecté à vos vrais outils</li>
-                <li>✓ Autonome sur les tâches qu&apos;on lui confie</li>
-                <li>✓ Il se souvient de votre contexte</li>
-                <li>✓ Tout reste sur votre machine</li>
+                <li>Connecté à vos vrais outils</li>
+                <li>Autonome sur les tâches qu&apos;on lui confie</li>
+                <li>Mémoire et contexte persistants</li>
+                <li>100% local — zéro cloud obligatoire</li>
+                <li>189€ une fois, 0€/mois de logiciel</li>
               </ul>
+            </div>
+          </div>
+          <div style={{ marginTop: 24, textAlign: "right" }}>
+            <a href="/comparatif" style={{ fontFamily: "var(--font-mono)", fontSize: "0.78rem", color: "var(--accent)", textDecoration: "none" }}>
+              Comparatif complet OpenClaw vs ChatGPT, Copilot, Gemini →
+            </a>
+          </div>
+        </section>
+
+        {/* PAR SECTEUR */}
+        <section id="secteurs" style={{ background: "#0E0E0E", padding: "80px 24px" }}>
+          <div style={{ maxWidth: "var(--max)", margin: "0 auto" }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>
+              003 / Votre métier
+            </p>
+            <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1px", margin: "0 0 12px", lineHeight: 1.1 }}>
+              OpenClaw configuré pour votre secteur.
+            </h2>
+            <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.4)", marginBottom: 48, maxWidth: 520, lineHeight: 1.7 }}>
+              Pas un template générique. Un agent configuré pour les tâches spécifiques à votre métier, vos outils et vos contraintes.
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 1, background: "rgba(255,255,255,0.06)" }}>
+              {sectors.map((s, i) => (
+                <a
+                  key={i}
+                  href={`/solutions/${s.slug}`}
+                  style={{
+                    display: "block",
+                    padding: "28px 28px 24px",
+                    background: "#0E0E0E",
+                    textDecoration: "none",
+                    borderBottom: "2px solid transparent",
+                    transition: "border-color 0.2s, background 0.2s",
+                  }}
+                  className="sector-home-card"
+                >
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 8px", lineHeight: 1.3 }}>
+                    {s.name}
+                  </h3>
+                  <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.4)", margin: "0 0 16px", lineHeight: 1.5 }}>
+                    {s.tag}
+                  </p>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.05em" }}>
+                    Voir la page →
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -182,7 +255,7 @@ export default function Home() {
         {/* DIFFÉRENCIATEURS */}
         <section className="section section-dark">
           <div className="section-header">
-            <p className="section-tag light">003 / Pourquoi Claws</p>
+            <p className="section-tag light">004 / Pourquoi Claws</p>
             <h2 className="section-title light">Ce qui nous distingue vraiment.</h2>
           </div>
           <div className="diff-grid">
@@ -196,14 +269,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* OFFRES */}
-        {/* Section Sécurité */}
+        {/* SÉCURITÉ */}
         <section className="section" style={{ background: "#0E0E0E" }}>
           <div className="section-header">
-            <p className="section-tag light">004 / Sécurité</p>
+            <p className="section-tag light">005 / Sécurité</p>
             <h2 className="section-title light">Installé blindé. Garanti 90 jours.</h2>
             <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", maxWidth: 520, lineHeight: 1.75, marginBottom: 40 }}>
-              OpenClaw est open-source. N&apos;importe qui peut l&apos;installer. Le problème : une mauvaise configuration expose votre machine entière. Claws applique un protocole de sécurité en 12 points sur chaque installation.
+              OpenClaw est open source — n&apos;importe qui peut l&apos;installer. Le problème : une mauvaise configuration expose votre machine entière.
+              Claws applique le Protocole Claws en 12 points sur chaque installation.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 0, border: "1px solid rgba(255,255,255,0.07)", marginBottom: 40 }}>
@@ -214,7 +287,7 @@ export default function Home() {
               { icon: "04", title: "Skills officiels uniquement", desc: "Aucun code tiers non audité." },
             ].map((item, i) => (
               <div key={i} style={{ padding: "28px 24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
-                <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", marginBottom: 12 }}>{item.icon}</p>
+                <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", marginBottom: 12 }}>{item.icon}</p>
                 <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 6px" }}>{item.title}</p>
                 <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.4)", margin: 0, lineHeight: 1.6 }}>{item.desc}</p>
               </div>
@@ -225,9 +298,10 @@ export default function Home() {
           </a>
         </section>
 
+        {/* OFFRES */}
         <section id="offres" className="section">
           <div className="section-header">
-            <p className="section-tag">005 / Offres</p>
+            <p className="section-tag">006 / Offres</p>
             <h2 className="section-title">Ce qu&apos;on fait pour vous.</h2>
           </div>
           <div className="offers-grid">
@@ -247,7 +321,7 @@ export default function Home() {
         {/* PROCESS */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">005 / Process</p>
+            <p className="section-tag">007 / Process</p>
             <h2 className="section-title">Comment ça se passe.</h2>
           </div>
           <div className="steps-grid">
@@ -264,7 +338,7 @@ export default function Home() {
         {/* BLOG PREVIEW */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">006 / Ressources</p>
+            <p className="section-tag">008 / Ressources</p>
             <h2 className="section-title">Ce qu&apos;on partage.</h2>
           </div>
           <div className="blog-grid">
@@ -285,7 +359,7 @@ export default function Home() {
         {/* FAQ */}
         <section className="section">
           <div className="section-header">
-            <p className="section-tag">Questions</p>
+            <p className="section-tag">009 / Questions</p>
             <h2 className="section-title">Ce qu&apos;on nous demande souvent.</h2>
           </div>
           <div className="faq-list">
@@ -296,22 +370,25 @@ export default function Home() {
               </details>
             ))}
           </div>
+          <div style={{ marginTop: 32 }}>
+            <a href="/faq" style={{ fontFamily: "var(--font-mono)", fontSize: "0.78rem", color: "var(--accent)", textDecoration: "none" }}>
+              Voir toutes les questions →
+            </a>
+          </div>
         </section>
 
         {/* CONTACT */}
         <section id="contact" className="section section-contact">
           <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 24px" }}>
-            {/* Header */}
             <div style={{ marginBottom: 48 }}>
               <p className="section-tag light">Contact</p>
               <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-1.5px", lineHeight: 1.1, margin: "12px 0 16px" }}>
                 Discutons.
               </h2>
               <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, maxWidth: 420, margin: 0 }}>
-                Une question, un projet, une installation à prévoir. On répond dans la journée.
+                Une question, un projet, une installation OpenClaw à prévoir. On répond dans la journée.
               </p>
             </div>
-            {/* Terminal centré */}
             <ContactTerminal />
             <p style={{ marginTop: 16, fontSize: "0.8rem", color: "rgba(255,255,255,0.2)" }}>
               Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "underline" }}>contact@claws.fr</a>

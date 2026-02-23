@@ -288,3 +288,7 @@ details[open] .faq-question::after { content: "−"; }
 
 .site-footer-bottom { max-width: 1040px; margin: 0 auto; padding: 20px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .site-footer-bottom p { font-family: var(--font-mono); font-size: 0.7rem; color: rgba(255,255,255,0.2); margin: 0; }
+
+/* ── Sector cards homepage ──────────────────────────────── */
+.sector-home-card:hover { background: #161616 !important; border-bottom-color: #E85D04 !important; }
+.sector-home-card:hover h3 { color: #E85D04 !important; }
