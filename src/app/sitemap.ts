@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
+import { sectorSlugs } from "./solutions/[secteur]/sectorData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
@@ -16,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://claws.fr/a-propos", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://claws.fr/faq", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: "https://claws.fr/newsletter", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    ...sectorSlugs.map((slug) => ({
+      url: `https://claws.fr/solutions/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
     ...blogEntries,
   ];
 }
