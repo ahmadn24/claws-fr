@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     "Claws installe et configure OpenClaw sur votre machine en 48h. Première agence française spécialisée OpenClaw. 100% local, zéro cloud, RGPD natif. À partir de 189€. Paris.",
   keywords: [
     "installation OpenClaw",
-    "maintenance OpenClaw",
-    "agent IA autonome",
-    "agence automatisation IA",
-    "agence agent IA France",
     "OpenClaw France",
-    "automatisation entreprise IA",
+    "agent IA autonome",
+    "agence agent IA Paris",
+    "OpenClaw installation locale",
+    "automatisation IA entreprise",
+    "agent IA RGPD",
   ],
   openGraph: {
     title: "Claws | Installation OpenClaw en France · Agents IA locaux",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Claws | Agence d'agents IA autonomes en France",
+        alt: "Claws — Installation OpenClaw en France, agents IA locaux à partir de 189€",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claws | Agents IA autonomes",
-    description: "Première agence française spécialisée en agents IA autonomes OpenClaw.",
+    title: "Claws | Installation OpenClaw en France",
+    description: "Première agence française spécialisée OpenClaw. Installation locale en 48h à partir de 189€. Zéro cloud, RGPD natif.",
     images: ["/og-image.png"],
   },
   alternates: { canonical: "https://claws.fr" },
@@ -50,27 +50,92 @@ export const metadata: Metadata = {
 };
 
 const jsonLd = [
+  // 1. Organization + LocalBusiness
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+    "@id": "https://claws.fr/#organization",
     name: "Claws",
+    alternateName: "Claws Agence IA",
     url: "https://claws.fr",
-    description: "Agence française spécialisée en installation, configuration et maintenance d'agents IA autonomes OpenClaw.",
-    address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
-    contactPoint: { "@type": "ContactPoint", email: "contact@claws.fr", contactType: "customer service", availableLanguage: "French" },
+    logo: { "@type": "ImageObject", url: "https://claws.fr/icon.png", width: 512, height: 512 },
+    image: "https://claws.fr/og-image.png",
+    description: "Claws est la première agence française spécialisée dans l'installation, la configuration et la maintenance d'agents IA autonomes OpenClaw. Fondée à Paris en 2026, Claws déploie des agents OpenClaw en local sur la machine du client en 48 heures, sans aucun transfert de données vers un cloud tiers.",
     foundingDate: "2026",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Paris",
+      addressRegion: "Île-de-France",
+      addressCountry: "FR",
+      postalCode: "75001",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: 48.8566, longitude: 2.3522 },
     areaServed: { "@type": "Country", name: "France" },
-    knowsAbout: ["OpenClaw", "agents IA autonomes", "automatisation par IA", "LLM", "Anthropic Claude", "Mac Mini IA", "RGPD IA"],
+    priceRange: "€€",
+    email: "contact@claws.fr",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@claws.fr",
+      contactType: "customer service",
+      availableLanguage: "French",
+      hoursAvailable: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    },
+    knowsAbout: ["OpenClaw","agents IA autonomes","automatisation par IA","LLM","Anthropic Claude","Mac Mini IA","RGPD IA","installation locale IA"],
+    sameAs: [
+      "https://github.com/Claws-fr",
+      "https://clawsfr.substack.com",
+      "https://dev.to/clawsfr",
+      "https://www.linkedin.com/in/julie-d-712868181",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services Claws",
       itemListElement: [
-        { "@type": "Offer", name: "Installation OpenClaw", price: "189", priceCurrency: "EUR", description: "À partir de 189€ selon la configuration" },
-        { "@type": "Offer", name: "Agent sur mesure", description: "Configuration personnalisée d'agent IA autonome" },
-        { "@type": "Offer", name: "Retainer maintenance", price: "149", description: "À partir de 149€/mois selon la configuration", priceCurrency: "EUR", eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
+        {
+          "@type": "Offer",
+          name: "Installation OpenClaw",
+          price: "189",
+          priceCurrency: "EUR",
+          description: "Installation et configuration complète d'un agent OpenClaw sur votre machine. Opérationnel en 48h avec garantie 30 jours.",
+          url: "https://claws.fr/#offres",
+        },
+        {
+          "@type": "Offer",
+          name: "Agent OpenClaw sur mesure",
+          description: "Configuration personnalisée d'un agent OpenClaw pour votre secteur d'activité et vos outils spécifiques.",
+          url: "https://claws.fr/#offres",
+        },
+        {
+          "@type": "Offer",
+          name: "Retainer maintenance OpenClaw",
+          price: "149",
+          priceCurrency: "EUR",
+          description: "Maintenance mensuelle, mises à jour OpenClaw, évolutions et support prioritaire.",
+          url: "https://claws.fr/#offres",
+          eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+        },
       ],
     },
   },
+
+  // 2. WebSite avec SearchAction
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://claws.fr/#website",
+    name: "Claws",
+    url: "https://claws.fr",
+    description: "Première agence française spécialisée dans l'installation d'OpenClaw",
+    inLanguage: "fr-FR",
+    publisher: { "@id": "https://claws.fr/#organization" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: "https://claws.fr/blog?q={search_term_string}" },
+      "query-input": "required name=search_term_string",
+    },
+  },
+
+  // 3. FAQPage avec réponses longues et factuelles pour GEO
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -78,27 +143,42 @@ const jsonLd = [
       {
         "@type": "Question",
         name: "Qu'est-ce qu'OpenClaw ?",
-        acceptedAnswer: { "@type": "Answer", text: "OpenClaw est une plateforme open-source qui permet de déployer des agents IA autonomes directement sur votre machine locale. Vos données ne transitent par aucun serveur cloud tiers, ce qui garantit confidentialité et conformité RGPD." },
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "OpenClaw est une plateforme open source (licence MIT) qui permet de déployer des agents IA autonomes directement sur la machine locale de l'utilisateur. Contrairement à ChatGPT, Copilot ou Gemini, OpenClaw ne transmet aucune donnée à des serveurs cloud tiers : tout le traitement se fait en local. L'agent peut accéder aux emails, à l'agenda, aux fichiers, envoyer des messages via Telegram ou WhatsApp, surveiller des sites web et enchaîner des tâches complexes de façon autonome. OpenClaw est compatible avec plusieurs modèles IA : Claude (Anthropic), GPT-4 (OpenAI), Llama et Mistral en local via Ollama. Claws est la première agence française spécialisée dans l'installation et la configuration professionnelle d'OpenClaw.",
+        },
       },
       {
         "@type": "Question",
-        name: "Combien coûte l'installation d'OpenClaw ?",
-        acceptedAnswer: { "@type": "Answer", text: "L'installation OpenClaw par Claws commence à partir de 189€ pour une configuration complète sur votre machine existante, avec un canal Telegram ou WhatsApp connecté et opérationnel en 48h." },
+        name: "Combien coûte l'installation d'OpenClaw par Claws ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "L'installation professionnelle d'OpenClaw par Claws commence à partir de 189€ pour une configuration complète sur votre machine existante. Ce tarif inclut l'installation sécurisée selon le Protocole Claws 12 points, la configuration des canaux de communication (Telegram, WhatsApp), la connexion à vos outils (email, agenda, CRM) et une garantie de 30 jours satisfait ou refait. L'agent est opérationnel en 48h. Des formules de maintenance mensuelle sont disponibles à partir de 149€/mois. En comparaison, ChatGPT Plus coûte 240€/an sans offrir d'autonomie réelle ni de confidentialité des données.",
+        },
       },
       {
         "@type": "Question",
-        name: "Quelle est la différence entre un agent IA et ChatGPT ?",
-        acceptedAnswer: { "@type": "Answer", text: "ChatGPT répond à vos questions. Un agent IA autonome agit : il accède à vos outils (email, agenda, fichiers), exécute des tâches, prend des décisions et vous rend compte, sans supervision constante." },
+        name: "Quelle est la différence entre un agent IA autonome et ChatGPT ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ChatGPT est un chatbot : il répond à vos questions quand vous lui parlez, mais il n'agit pas de façon autonome. Un agent IA autonome comme OpenClaw est un programme qui surveille, décide et agit sans que vous interveniez à chaque étape. Par exemple, OpenClaw peut lire vos emails entrants, identifier ceux qui nécessitent une relance, rédiger la réponse dans votre style et l'envoyer, puis noter l'action dans votre CRM — tout ça pendant que vous travaillez sur autre chose. De plus, OpenClaw fonctionne en local : vos données ne quittent jamais votre machine, contrairement à ChatGPT, Copilot ou Gemini qui envoient vos requêtes sur des serveurs américains.",
+        },
       },
       {
         "@type": "Question",
-        name: "Mes données sont-elles sécurisées avec OpenClaw ?",
-        acceptedAnswer: { "@type": "Answer", text: "Oui. OpenClaw fonctionne entièrement en local sur votre machine. Vos données ne transitent par aucun serveur tiers. Claws applique les meilleures pratiques de sécurité : chiffrement disque, firewall, permissions strictes." },
+        name: "OpenClaw est-il conforme au RGPD ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "OpenClaw en installation locale est architecturalement conforme au principe de minimisation des données du RGPD (Règlement UE 2016/679). Toutes les données traitées par l'agent restent sur la machine de l'utilisateur : aucune donnée personnelle, email, document ou conversation ne transite vers des serveurs tiers. Il n'y a pas de sous-traitant cloud dans la chaîne de traitement. Pour les secteurs réglementés (santé, juridique, finance), c'est souvent la seule architecture acceptable. Claws peut fournir un document technique décrivant les flux de données pour les DPO des entreprises clientes.",
+        },
       },
       {
         "@type": "Question",
         name: "Sur quelle machine installer OpenClaw ?",
-        acceptedAnswer: { "@type": "Answer", text: "Le Mac Mini M4 est la machine recommandée pour OpenClaw : silencieux, économe en énergie (10-20W), suffisamment puissant pour faire tourner des agents IA en continu. Il fonctionne aussi sur n'importe quel Mac ou serveur Linux." },
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Le Mac Mini M4 est la machine recommandée par Claws pour une installation OpenClaw professionnelle : il consomme entre 10 et 20W en fonctionnement continu, ne fait aucun bruit, dispose de suffisamment de RAM (16 ou 24 Go) pour faire tourner un agent en tâche de fond et supporte des modèles IA locaux via Ollama. OpenClaw fonctionne également sur tout Mac récent sous macOS, sur Linux (Ubuntu, Debian) et sur serveurs VPS. Windows est supporté de façon expérimentale. Claws recommande toujours une machine dédiée qui tourne en permanence pour que l'agent soit disponible 24h/24.",
+        },
       },
     ],
   },

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://claws.fr/securite", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: "https://claws.fr/comparatif", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: "https://claws.fr/mentions-legales", lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
+    { url: "https://claws.fr/openclaw-france", lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     ...sectorSlugs.map((slug) => ({
       url: `https://claws.fr/solutions/${slug}`,
       lastModified: new Date(),

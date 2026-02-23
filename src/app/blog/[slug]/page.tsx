@@ -5,10 +5,37 @@ import type { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { marked } from "marked";
 
-function getRelatedPosts(currentSlug: string, count = 3) {
-  return getAllPosts()
-    .filter((p) => p.slug !== currentSlug)
-    .slice(0, count);
+// Liens sectoriels par catégorie/keyword pour le maillage interne
+const sectorLinks: Record<string, { href: string; label: string }> = {
+  "agent IA avocat": { href: "/solutions/avocats", label: "OpenClaw pour les avocats" },
+  "agent IA santé": { href: "/solutions/medecins", label: "OpenClaw pour les médecins" },
+  "agent IA BTP": { href: "/solutions/btp", label: "OpenClaw pour le BTP" },
+  "agent IA mode": { href: "/solutions/retail", label: "OpenClaw pour le retail" },
+  "agent IA personnel": { href: "/solutions/freelances", label: "OpenClaw pour les freelances" },
+  "automatisation consultant": { href: "/solutions/agences", label: "OpenClaw pour les agences" },
+  "agent IA salaries": { href: "/solutions/entrepreneurs", label: "OpenClaw pour les entrepreneurs" },
+};
+
+function getSectorLink(post: ReturnType<typeof getPostBySlug>) {
+  if (!post) return null;
+  for (const [kw, link] of Object.entries(sectorLinks)) {
+    if (post.keywords.some((k) => k.toLowerCase().includes(kw.split(" ").pop()!)) || post.slug.includes(kw.split(" ").pop()!)) {
+      return link;
+    }
+  }
+  return null;
+}
+
+function getRelatedPosts(currentSlug: string, currentPost: ReturnType<typeof getPostBySlug>, count = 3) {
+  const all = getAllPosts().filter((p) => p.slug !== currentSlug);
+  if (!currentPost) return all.slice(0, count);
+  // Prioritise same category, then keyword overlap
+  const sameCategory = all.filter((p) => p.category === currentPost.category);
+  const keywordMatch = all.filter((p) =>
+    p.keywords.some((k) => currentPost.keywords.includes(k)) && p.category !== currentPost.category
+  );
+  const rest = all.filter((p) => !sameCategory.includes(p) && !keywordMatch.includes(p));
+  return [...sameCategory, ...keywordMatch, ...rest].slice(0, count);
 }
 
 type Props = { params: Promise<{ slug: string }> };
@@ -43,7 +70,8 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   const html = await marked(post.content);
-  const relatedPosts = getRelatedPosts(slug);
+  const relatedPosts = getRelatedPosts(slug, post);
+  const sectorLink = getSectorLink(post);
 
   const jsonLd = [
     {
@@ -54,7 +82,9 @@ export default async function PostPage({ params }: Props) {
       datePublished: post.date,
       dateModified: post.date,
       author: { "@type": "Organization", name: "Claws", url: "https://claws.fr" },
-      publisher: { "@type": "Organization", name: "Claws", url: "https://claws.fr", logo: { "@type": "ImageObject", url: "https://claws.fr/favicon.ico" } },
+      publisher: { "@type": "Organization", name: "Claws", url: "https://claws.fr", "@id": "https://claws.fr/#organization", logo: { "@type": "ImageObject", url: "https://claws.fr/icon.png", width: 512, height: 512 } },
+      wordCount: Math.round(post.content.split(/\s+/).length),
+      speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".post-description", "h2"] },
       mainEntityOfPage: { "@type": "WebPage", "@id": `https://claws.fr/blog/${post.slug}` },
       keywords: post.keywords.join(", "),
       inLanguage: "fr-FR",
@@ -115,12 +145,21 @@ export default async function PostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
+        {sectorLink && (
+          <div style={{ margin: "32px 0", padding: "20px 24px", background: "rgba(232,93,4,0.06)", borderLeft: "3px solid #E85D04" }}>
+            <p style={{ fontSize: "0.78rem", fontFamily: "var(--font-mono)", color: "#E85D04", margin: "0 0 6px", letterSpacing: "0.06em" }}>PAGE DÉDIÉE</p>
+            <a href={sectorLink.href} style={{ fontSize: "0.95rem", fontWeight: 600, color: "#0E0E0E", textDecoration: "none" }}>
+              {sectorLink.label} — cas d&apos;usage, automatisations et FAQ sectorielles →
+            </a>
+          </div>
+        )}
+
         <div className="article-cta">
-          <h3>Vous souhaitez un agent IA pour votre entreprise ?</h3>
+          <h3>Vous souhaitez un agent OpenClaw pour votre entreprise ?</h3>
           <p>
-            Claws installe, configure et maintient vos agents IA autonomes OpenClaw. Opérationnel en 48h, support francophone, données 100 % locales.
+            Claws installe, configure et maintient votre agent OpenClaw en local. Opérationnel en 48h, support francophone, données 100% locales. Première agence française spécialisée OpenClaw.
           </p>
-          <a href="/#contact" className="btn-primary">Installation en 48h, à partir de 189 € →</a>
+          <a href="/#contact" className="btn-primary">Installation en 48h, à partir de 189€ →</a>
         </div>
 
         {relatedPosts.length > 0 && (

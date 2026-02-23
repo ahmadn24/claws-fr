@@ -38,6 +38,7 @@ export default function Footer() {
             <li><a href="/blog">Blog</a></li>
             <li><a href="/faq">FAQ</a></li>
             <li><a href="/comparatif">Comparatif 2026</a></li>
+            <li><a href="/openclaw-france">OpenClaw en France</a></li>
             <li><a href="/securite">Sécurité & RGPD</a></li>
             <li><a href="/newsletter">Newsletter</a></li>
           </ul>
