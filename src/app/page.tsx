@@ -22,7 +22,7 @@ const differentiators = [
   {
     icon: "04",
     title: "Des agents configurés pour votre métier",
-    desc: "On a déployé OpenClaw sur des dizaines de configurations réelles. Vos automatisations sont calibrées, pas copiées d'un template générique.",
+    desc: "On configure OpenClaw sur des setups réels, pas sur des démos. Vos automatisations sont calibrées pour votre activité, pas copiées d'un template générique.",
   },
   {
     icon: "05",

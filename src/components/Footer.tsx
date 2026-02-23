@@ -44,6 +44,7 @@ export default function Footer() {
           <p className="site-footer-heading" style={{ marginTop: 28 }}>Agence</p>
           <ul className="site-footer-list">
             <li><a href="/a-propos">À propos</a></li>
+            <li><a href="/comparatif">Comparatif outils IA</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="/mentions-legales">Mentions légales</a></li>
           </ul>

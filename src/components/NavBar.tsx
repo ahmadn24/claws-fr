@@ -11,10 +11,11 @@ export default function NavBar() {
   }, [open]);
 
   const links = [
+    { href: "/#secteurs", label: "Solutions" },
+    { href: "/comparatif", label: "Comparatif" },
     { href: "/blog", label: "Blog" },
     { href: "/securite", label: "Sécurité" },
     { href: "/faq", label: "FAQ" },
-    { href: "/a-propos", label: "À propos" },
   ];
 
   return (

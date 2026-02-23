@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://claws.fr"),
   title: {
-    default: "Claws | Agence d'agents IA autonomes en France",
+    default: "Claws | Installation OpenClaw en France · Agents IA locaux",
     template: "%s | Claws",
   },
   description:
-    "Claws installe, configure et maintient vos agents IA autonomes sur OpenClaw. Première agence française spécialisée en automatisation par agents IA, pour PME et entreprises.",
+    "Claws installe et configure OpenClaw sur votre machine en 48h. Première agence française spécialisée OpenClaw. 100% local, zéro cloud, RGPD natif. À partir de 189€. Paris.",
   keywords: [
     "installation OpenClaw",
     "maintenance OpenClaw",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "automatisation entreprise IA",
   ],
   openGraph: {
-    title: "Claws | Agence d'agents IA autonomes en France",
+    title: "Claws | Installation OpenClaw en France · Agents IA locaux",
     description:
-      "Nous installons, configurons et maintenons vos agents IA autonomes. Première agence française spécialisée OpenClaw.",
+      "Installation OpenClaw en 48h à partir de 189€. Première agence française spécialisée. 100% local, RGPD natif, garantie 30 jours.",
     url: "https://claws.fr",
     siteName: "Claws",
     locale: "fr_FR",
@@ -58,7 +58,7 @@ const jsonLd = [
     description: "Agence française spécialisée en installation, configuration et maintenance d'agents IA autonomes OpenClaw.",
     address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
     contactPoint: { "@type": "ContactPoint", email: "contact@claws.fr", contactType: "customer service", availableLanguage: "French" },
-    foundingDate: "2025",
+    foundingDate: "2026",
     areaServed: { "@type": "Country", name: "France" },
     knowsAbout: ["OpenClaw", "agents IA autonomes", "automatisation par IA", "LLM", "Anthropic Claude", "Mac Mini IA", "RGPD IA"],
     hasOfferCatalog: {
