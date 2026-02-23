@@ -17,7 +17,12 @@ export default function ContactTerminal() {
   const inputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
+  const isFirstRender = useRef(true);
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return; // Ne pas scroller au premier rendu
+    }
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     inputRef.current?.focus();
   }, [lines]);
