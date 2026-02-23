@@ -1037,6 +1037,139 @@ Vous avez une question spécifique sur un cas d'usage ou une installation ? [Con
   },
 ];
 
+  {
+    slug: "erreurs-securite-openclaw-installation",
+    title: "Les 8 erreurs de sécurité qui exposent votre installation OpenClaw",
+    description:
+      "Gateway mal configuré, clés API en clair, skills non vérifiés... Voici les 8 vulnérabilités les plus fréquentes sur les installations DIY d'OpenClaw et comment les corriger.",
+    date: "2026-02-23",
+    category: "Sécurité",
+    readTime: "7 min",
+    keywords: ["sécurité OpenClaw", "vulnérabilités OpenClaw", "configurer OpenClaw sécurisé", "OpenClaw RGPD", "installation OpenClaw erreurs"],
+    content: `
+OpenClaw est open-source. N'importe qui peut l'installer. Et c'est précisément là que réside le problème.
+
+Un outil puissant mal configuré est plus dangereux qu'un outil médiocre bien configuré. Un agent IA qui tourne sur votre machine avec des permissions trop larges ou un accès réseau non sécurisé est un vecteur d'attaque réel.
+
+Voici les 8 erreurs que Claws corrige systématiquement sur les installations qu'on audite.
+
+---
+
+## Erreur 1 : Le gateway exposé sur 0.0.0.0
+
+C'est l'erreur la plus critique et la plus fréquente.
+
+Par défaut, OpenClaw doit écouter sur \`127.0.0.1\` (loopback uniquement). Si la configuration est \`0.0.0.0\`, le gateway est accessible depuis n'importe quelle adresse de votre réseau — et potentiellement depuis internet si votre routeur n'est pas correctement configuré.
+
+**Comment vérifier :**
+\`\`\`bash
+netstat -an | grep 18789
+\`\`\`
+
+Si vous voyez \`0.0.0.0:18789\` au lieu de \`127.0.0.1:18789\`, votre gateway est exposé.
+
+**Comment corriger :**
+Dans votre \`openclaw.json\`, vérifiez la configuration \`bind\` et forcez \`loopback\`.
+
+---
+
+## Erreur 2 : Les clés API stockées en clair
+
+Les clés API (Anthropic, OpenAI, Brevo, etc.) sont des credentials sensibles. Les stocker directement dans les fichiers de configuration — surtout si ce répertoire est synchronisé sur un cloud ou versionné sur Git — est une faute de sécurité grave.
+
+**Ce qu'on voit souvent :**
+\`\`\`json
+{
+  "ANTHROPIC_API_KEY": "sk-ant-oat01-..."
+}
+\`\`\`
+
+**Ce qu'il faut faire :**
+Stocker les clés dans des variables d'environnement (\`.env.local\`), avec ce fichier listé dans \`.gitignore\`. Jamais dans un fichier de config versionnable.
+
+---
+
+## Erreur 3 : Les permissions fichiers trop larges
+
+Les fichiers de configuration d'OpenClaw contiennent des informations sensibles. Si ces fichiers sont lisibles par tous les utilisateurs du système (\`chmod 644\`), n'importe quel script ou processus tournant sur la machine peut les lire.
+
+**Comment vérifier :**
+\`\`\`bash
+ls -la ~/.openclaw/
+\`\`\`
+
+**Ce qu'il faut :**
+- Fichiers de config : \`600\` (lecture/écriture pour le propriétaire uniquement)
+- Répertoires : \`700\` (accès complet pour le propriétaire, rien pour les autres)
+
+---
+
+## Erreur 4 : Des skills communautaires non audités
+
+L'écosystème OpenClaw dispose d'un registre de skills communautaires. Ces skills sont du code exécuté par votre agent avec ses permissions. Installer un skill tiers sans vérifier son code revient à télécharger et exécuter un script inconnu sur votre machine.
+
+Des recherches indépendantes ont montré qu'une proportion non négligeable des skills communautaires contient des vulnérabilités — de l'exposition de données à l'exfiltration silencieuse.
+
+**La règle :** N'installez que des skills du registre officiel OpenClaw, ou des skills dont vous avez audité le code vous-même.
+
+---
+
+## Erreur 5 : Pas de chiffrement du disque
+
+Si votre machine est volée ou perdue sans chiffrement disque activé, toutes vos données — fichiers de config, historiques de conversation, clés API — sont accessibles en quelques minutes avec un outil de démarrage externe.
+
+**Sur macOS :** Activez FileVault dans Réglages Système > Confidentialité et sécurité.
+**Sur Linux :** LUKS doit être configuré à l'installation du système.
+
+C'est une protection de base, mais beaucoup d'installations DIY l'oublient.
+
+---
+
+## Erreur 6 : Les mises à jour automatiques activées
+
+Activer les mises à jour automatiques d'OpenClaw semble raisonnable. C'est en réalité risqué.
+
+Une mise à jour peut introduire des breaking changes dans votre configuration, modifier des comportements de sécurité, ou — dans le pire des cas — introduire une régression. Sans test préalable, une mise à jour automatique peut casser votre agent en production à n'importe quel moment.
+
+**La bonne pratique :** Désactiver les mises à jour automatiques. Tester chaque mise à jour sur un environnement de staging avant de la déployer en production.
+
+---
+
+## Erreur 7 : Permissions agent trop larges
+
+Beaucoup d'installations DIY accordent à l'agent un accès en écriture à l'ensemble du répertoire home. C'est pratique à la configuration. C'est dangereux en production.
+
+Un agent IA peut faire des erreurs. Un prompt injection mal géré peut amener l'agent à exécuter une action non prévue. Si l'agent a accès à tout, les conséquences peuvent être irréversibles.
+
+**La bonne pratique :** Définir explicitement les répertoires et ressources auxquels l'agent a accès. Utiliser le principe du moindre privilège — l'agent n'a accès qu'à ce dont il a besoin pour ses tâches définies.
+
+---
+
+## Erreur 8 : Pas de logs d'activité
+
+Sans logging des actions de l'agent, il est impossible de savoir ce qu'il a fait, quand, et pourquoi. En cas de comportement anormal ou de question d'un client, vous n'avez aucun moyen de retracer les actions.
+
+Les logs sont aussi votre première ligne de défense contre une compromission : un comportement inhabituel dans les logs (volume de requêtes anormal, accès à des fichiers inattendus) est souvent le premier signe d'un problème.
+
+**La bonne pratique :** S'assurer que le logging OpenClaw est activé et que les logs sont conservés dans un répertoire avec les bonnes permissions.
+
+---
+
+## Ce que Claws vérifie sur chaque installation
+
+Ces 8 points font partie du [Protocole Claws](/securite) — une checklist de 12 vérifications appliquées sur chaque installation. Après chaque setup, un rapport de vérification vous est remis.
+
+Si vous avez installé OpenClaw vous-même et voulez savoir où vous en êtes, **Claws propose un audit gratuit de 30 minutes**. On vous dit exactement ce qui est exposé et comment le corriger.
+
+[Demander un audit gratuit →](/#contact)
+
+---
+
+*Article rédigé par l'équipe Claws, basé sur les installations auditées depuis le lancement de l'agence.*
+`,
+  },
+];
+
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
 }
