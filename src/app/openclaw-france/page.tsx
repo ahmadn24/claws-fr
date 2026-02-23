@@ -6,19 +6,19 @@ export const metadata: Metadata = {
   title: "OpenClaw en France : installation, configuration, support | Claws",
   description: "Tout sur OpenClaw en France : présentation de la plateforme, installation locale, cas d'usage par secteur, RGPD, prix. Claws, première agence française spécialisée OpenClaw. Paris.",
   alternates: { canonical: "https://claws.fr/openclaw-france" },
-  keywords: ["OpenClaw France", "installation OpenClaw", "OpenClaw Paris", "agence OpenClaw", "OpenClaw francais", "agent IA local France", "OpenClaw RGPD"],
+  keywords: ["OpenClaw France", "installation OpenClaw", "OpenClaw Paris", "agence OpenClaw", "OpenClaw francais", "agent IA local France", "OpenClaw RGPD", "Clawdbot", "Moltbot", "Clawdbot France", "Moltbot OpenClaw"],
   openGraph: {
-    title: "OpenClaw en France — Le guide complet 2026",
+    title: "OpenClaw en France : le guide complet 2026",
     description: "Présentation, installation, cas d'usage, prix et support OpenClaw en France. Par Claws, première agence française spécialisée.",
     url: "https://claws.fr/openclaw-france",
-    images: [{ url: "https://claws.fr/og-image.png", width: 1200, height: 630, alt: "OpenClaw France — Claws agence spécialisée Paris" }],
+    images: [{ url: "https://claws.fr/og-image.png", width: 1200, height: 630, alt: "OpenClaw France, Claws agence spécialisée Paris" }],
   },
 };
 
 const faq = [
   {
     q: "OpenClaw est-il disponible en français ?",
-    a: "Oui. OpenClaw supporte le français nativement depuis la version 2024. L'interface de configuration, les messages de l'agent et les canaux de communication (Telegram, WhatsApp, iMessage) fonctionnent tous en français. Claws configure par défaut l'agent en français lors de chaque installation.",
+    a: "Oui. OpenClaw supporte le français nativement depuis son lancement en 2025. L'interface de configuration, les messages de l'agent et les canaux de communication (Telegram, WhatsApp, iMessage) fonctionnent tous en français. Claws configure par défaut l'agent en français lors de chaque installation.",
   },
   {
     q: "OpenClaw est-il conforme au RGPD pour les entreprises françaises ?",
@@ -26,11 +26,11 @@ const faq = [
   },
   {
     q: "Qui peut installer OpenClaw en France ?",
-    a: "OpenClaw est open source — n'importe qui peut l'installer. En pratique, une installation professionnelle sécurisée nécessite des compétences en administration système, sécurité et configuration IA. Claws est la première agence française spécialisée dans ce service, basée à Paris.",
+    a: "OpenClaw est open source : n'importe qui peut l'installer. En pratique, une installation professionnelle sécurisée nécessite des compétences en administration système, sécurité et configuration IA. Claws est la première agence française spécialisée dans ce service, basée à Paris.",
   },
   {
     q: "Quelle est la différence entre OpenClaw et Zapier ou Make ?",
-    a: "Zapier et Make sont des outils d'automatisation basés sur des déclencheurs et des actions prédéfinis — vous créez des workflows manuellement. OpenClaw est un agent IA autonome : il comprend le langage naturel, prend des décisions contextuelles et peut gérer des situations imprévues. Il agit comme un collaborateur, pas comme un simple script d'automatisation.",
+    a: "Zapier et Make sont des outils d'automatisation basés sur des déclencheurs et des actions prédéfinis : vous créez des workflows manuellement. OpenClaw est un agent IA autonome : il comprend le langage naturel, prend des décisions contextuelles et peut gérer des situations imprévues. Il agit comme un collaborateur, pas comme un simple script d'automatisation.",
   },
   {
     q: "OpenClaw fonctionne-t-il hors ligne ?",
@@ -39,6 +39,10 @@ const faq = [
   {
     q: "Quel modèle IA OpenClaw utilise-t-il ?",
     a: "OpenClaw est compatible avec plusieurs modèles : Claude (Anthropic), GPT-4 et GPT-4o (OpenAI), Llama 3 et Mistral en local via Ollama. Vous n'êtes pas lié à un fournisseur. Claws configure le modèle le plus adapté à votre usage lors de l'installation.",
+  },
+  {
+    q: "Clawdbot et Moltbot, c'est la même chose qu'OpenClaw ?",
+    a: "Oui. OpenClaw s'est d'abord appelé Clawdbot, puis Moltbot, avant d'adopter le nom OpenClaw en 2025. Si vous trouvez des tutoriels ou des références à Clawdbot ou Moltbot, il s'agit bien du même logiciel. Le projet a gardé la même architecture et la même philosophie open source tout au long de son évolution.",
   },
 ];
 
@@ -133,8 +137,11 @@ export default function OpenClawFrancePage() {
           <p style={{ fontSize: "0.97rem", color: "#444", lineHeight: 1.85, marginBottom: 20 }}>
             Un agent OpenClaw peut accéder à vos emails, votre agenda, vos fichiers, envoyer des messages via Telegram ou WhatsApp, surveiller des sites web, exécuter des scripts et enchaîner des tâches complexes sans intervention humaine à chaque étape. C'est la différence fondamentale avec un chatbot : OpenClaw agit, il ne se contente pas de répondre.
           </p>
-          <p style={{ fontSize: "0.97rem", color: "#444", lineHeight: 1.85 }}>
+          <p style={{ fontSize: "0.97rem", color: "#444", lineHeight: 1.85, marginBottom: 20 }}>
             OpenClaw est compatible avec plusieurs modèles IA : Claude (Anthropic), GPT-4 (OpenAI), Llama 3 et Mistral en local via Ollama. Vous n'êtes pas lié à un fournisseur unique. Le projet est maintenu activement sur GitHub et dispose d'une communauté internationale croissante.
+          </p>
+          <p style={{ fontSize: "0.9rem", color: "#888", lineHeight: 1.8, borderLeft: "2px solid #E8E4DF", paddingLeft: 16 }}>
+            Note historique : avant de s'appeler OpenClaw, la plateforme s'est successivement appelée <strong>Clawdbot</strong>, puis <strong>Moltbot</strong>. Le nom OpenClaw a été adopté en 2025. Si vous cherchez des ressources sur ces anciens noms, elles correspondent bien au même projet.
           </p>
         </section>
 
