@@ -115,6 +115,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="/blog" className="nav-link">Blog</a>
           <a href="/faq" className="nav-link">FAQ</a>
+          <a href="/securite" className="nav-link">Sécurité</a>
           <a href="/a-propos" className="nav-link">À propos</a>
           <a href="#contact" className="nav-cta">Contact →</a>
         </div>
@@ -204,9 +205,37 @@ export default function Home() {
         </section>
 
         {/* OFFRES */}
+        {/* Section Sécurité */}
+        <section className="section" style={{ background: "#0E0E0E" }}>
+          <div className="section-header">
+            <p className="section-tag light">004 / Sécurité</p>
+            <h2 className="section-title light">Installé blindé. Garanti 90 jours.</h2>
+            <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", maxWidth: 520, lineHeight: 1.75, marginBottom: 40 }}>
+              OpenClaw est open-source. N&apos;importe qui peut l&apos;installer. Le problème : une mauvaise configuration expose votre machine entière. Claws applique un protocole de sécurité en 12 points sur chaque installation.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 0, border: "1px solid rgba(255,255,255,0.07)", marginBottom: 40 }}>
+            {[
+              { icon: "🔒", title: "Gateway loopback uniquement", desc: "Jamais exposé sur le réseau." },
+              { icon: "🔑", title: "Clés API en variables d'env", desc: "Jamais en clair dans les fichiers." },
+              { icon: "👁️", title: "Zéro backdoor, zéro monitoring", desc: "La machine est 100% à vous après le setup." },
+              { icon: "✅", title: "Skills officiels uniquement", desc: "Aucun code tiers non audité." },
+            ].map((item, i) => (
+              <div key={i} style={{ padding: "28px 24px", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
+                <p style={{ fontSize: "1.4rem", marginBottom: 12 }}>{item.icon}</p>
+                <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 6px" }}>{item.title}</p>
+                <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.4)", margin: 0, lineHeight: 1.6 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <a href="/securite" style={{ display: "inline-block", border: "1.5px solid rgba(232,93,4,0.6)", color: "#E85D04", padding: "12px 24px", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
+            Voir le Protocole Claws complet →
+          </a>
+        </section>
+
         <section id="offres" className="section">
           <div className="section-header">
-            <p className="section-tag">004 / Offres</p>
+            <p className="section-tag">005 / Offres</p>
             <h2 className="section-title">Ce qu&apos;on fait pour vous.</h2>
           </div>
           <div className="offers-grid">
