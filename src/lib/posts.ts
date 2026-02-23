@@ -1035,8 +1035,6 @@ Pour une comparaison détaillée, voir [OpenClaw vs Make vs n8n](/blog/openclaw-
 Vous avez une question spécifique sur un cas d'usage ou une installation ? [Contactez Claws directement.](/#contact)
 `,
   },
-];
-
   {
     slug: "erreurs-securite-openclaw-installation",
     title: "Les 8 erreurs de sécurité qui exposent votre installation OpenClaw",
