@@ -30,10 +30,27 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
   const s = sectors[secteur];
   if (!s) notFound();
 
+  const sharedFaq = [
+    {
+      q: `Qu'est-ce qu'OpenClaw ?`,
+      a: `OpenClaw est un agent IA autonome open source qui tourne directement sur votre machine. Contrairement à ChatGPT, Copilot ou Gemini, il n'envoie pas vos données sur un cloud — tout reste chez vous. Il peut lire vos emails, répondre, gérer votre agenda, envoyer des messages, surveiller des sites et enchaîner des tâches complexes sans intervention humaine à chaque étape.`,
+    },
+    {
+      q: `Pourquoi passer par Claws pour installer OpenClaw ?`,
+      a: `OpenClaw est open source : vous pouvez l'installer vous-même si vous êtes développeur. Mais l'installation sécurisée — chiffrement, permissions, configuration des intégrations, tests bout en bout — représente 4 à 8 heures de travail pour quelqu'un qui maîtrise l'outil. Claws le fait en 48h avec une garantie de 30 jours et un support en français. Vous vous concentrez sur votre métier, on s'occupe de la technique.`,
+    },
+    {
+      q: `OpenClaw respecte-t-il le RGPD ?`,
+      a: `OpenClaw en installation locale est architecturalement conforme au principe de minimisation des données du RGPD : vos données professionnelles ne quittent pas votre infrastructure. Pas de transfert vers des pays tiers, pas de sous-traitant cloud. Pour les secteurs réglementés, c'est souvent la seule architecture acceptable.`,
+    },
+  ];
+
+  const allFaq = [...s.faq, ...sharedFaq];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: s.faq.map((f) => ({
+    mainEntity: allFaq.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -61,8 +78,8 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
             <a href="/#contact" style={{ display: "inline-block", background: "#E85D04", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>
               Demander une démo →
             </a>
-            <a href="/faq" style={{ display: "inline-block", border: "1.5px solid #0E0E0E", color: "#0E0E0E", padding: "14px 28px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>
-              Voir la FAQ
+            <a href="/comparatif" style={{ display: "inline-block", border: "1.5px solid #0E0E0E", color: "#0E0E0E", padding: "14px 28px", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>
+              OpenClaw vs ChatGPT →
             </a>
           </div>
         </section>
@@ -95,10 +112,60 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
           </div>
         </section>
 
+        {/* Pourquoi OpenClaw */}
+        <section style={{ background: "#0E0E0E", padding: "64px 24px" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>
+              La technologie
+            </p>
+            <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.1rem)", fontWeight: 800, color: "#F5F2EE", letterSpacing: "-0.5px", margin: "0 0 12px" }}>
+              Pourquoi OpenClaw et pas ChatGPT ?
+            </h2>
+            <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, marginBottom: 40, maxWidth: 560 }}>
+              OpenClaw est un agent IA open source qui tourne sur votre machine. Claws l&apos;installe, le sécurise et le configure pour votre métier.
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 1, background: "rgba(255,255,255,0.06)" }}>
+              {[
+                {
+                  num: "01",
+                  title: "100% local",
+                  desc: "Vos données restent sur votre machine. Emails, documents, conversations — rien ne part sur un serveur externe.",
+                },
+                {
+                  num: "02",
+                  title: "Agent autonome",
+                  desc: "OpenClaw agit sans supervision. Il surveille, déclenche, envoie, relance — pendant que vous travaillez.",
+                },
+                {
+                  num: "03",
+                  title: "Open source",
+                  desc: "Le code est public et auditable. Changez de modèle IA (Claude, GPT-4, Llama) sans changer d'agent.",
+                },
+                {
+                  num: "04",
+                  title: "Configuré pour vous",
+                  desc: "Claws installe OpenClaw et le configure pour votre secteur en 48h. Garanti ou refait.",
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ padding: "28px 24px", background: "#0E0E0E" }}>
+                  <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "#E85D04", letterSpacing: "0.1em", margin: "0 0 10px" }}>{item.num}</p>
+                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#F5F2EE", margin: "0 0 8px" }}>{item.title}</h3>
+                  <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 28 }}>
+              <a href="/comparatif" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.78rem", color: "#E85D04", textDecoration: "none", letterSpacing: "0.05em" }}>
+                Voir le comparatif complet OpenClaw vs ChatGPT, Copilot, Gemini →
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Use Cases */}
         <section style={{ background: "#fff", padding: "64px 24px" }}>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <p className="section-tag">Ce que fait l'agent</p>
+            <p className="section-tag">Ce que fait votre agent OpenClaw</p>
             <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-0.5px", margin: "12px 0 48px" }}>
               5 automatisations opérationnelles dès le premier jour.
             </h2>
@@ -123,14 +190,14 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
         <section style={{ maxWidth: 760, margin: "0 auto", padding: "64px 24px" }}>
           <p className="section-tag">Comment ça marche</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-0.5px", margin: "12px 0 48px" }}>
-            Opérationnel en 48 heures. Sans technique.
+            OpenClaw opérationnel en 48 heures. Sans technique.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 0, border: "1px solid #E8E4DF" }}>
             {[
               { num: "01", title: "Appel découverte", desc: "30 min pour comprendre votre activité, vos outils et vos besoins prioritaires." },
-              { num: "02", title: "Installation", desc: "Claws installe et configure l'agent sur votre machine à distance, sans interruption." },
-              { num: "03", title: "Configuration", desc: "L'agent apprend votre contexte, vos règles et vos templates. Tout est testé avec vous." },
-              { num: "04", title: "C'est parti", desc: "L'agent tourne en autonomie. Vous l'avez sur Telegram ou WhatsApp. 30 jours de garantie." },
+              { num: "02", title: "Installation OpenClaw", desc: "Claws installe et sécurise OpenClaw sur votre machine à distance. Zéro interruption." },
+              { num: "03", title: "Configuration métier", desc: "L'agent apprend votre contexte, vos règles, vos templates. Configuré pour votre secteur." },
+              { num: "04", title: "Vous pilotez", desc: "Votre agent OpenClaw tourne. Disponible sur Telegram ou WhatsApp. 30 jours de garantie." },
             ].map((step, i) => (
               <div key={i} style={{ padding: "32px 24px", borderRight: i < 3 ? "1px solid #E8E4DF" : "none" }}>
                 <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#E85D04", letterSpacing: "0.1em", margin: "0 0 12px" }}>{step.num}</p>
@@ -146,9 +213,9 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <p className="section-tag">Questions fréquentes</p>
             <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-0.5px", margin: "12px 0 40px" }}>
-              Vos questions sur les agents IA pour {s.name.toLowerCase()}.
+              OpenClaw pour {s.name.toLowerCase()} — vos questions.
             </h2>
-            {s.faq.map((f, i) => (
+            {allFaq.map((f, i) => (
               <details key={i} style={{ borderBottom: "1px solid #F0EDE9", padding: "20px 0" }}>
                 <summary style={{ fontSize: "1rem", fontWeight: 600, color: "#0E0E0E", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
                   <span>{f.q}</span>
@@ -171,17 +238,18 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
             Prêt ?
           </p>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 800, color: "#F5F2EE", margin: "0 0 16px", letterSpacing: "-1px" }}>
-            Votre agent tourne en 48h.
+            Votre agent OpenClaw tourne en 48h.
           </h2>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>
-            Installation à partir de 189€. 30 jours de garantie. Si ça ne marche pas, on refait gratuitement.
+          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", maxWidth: 480, margin: "0 auto 40px", lineHeight: 1.7 }}>
+            Installation à partir de 189€. 30 jours de garantie.
+            Si ça ne marche pas, on refait gratuitement.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/#contact" style={{ display: "inline-block", background: "#E85D04", color: "#fff", padding: "16px 36px", fontWeight: 700, fontSize: "1rem", textDecoration: "none" }}>
               Démarrer maintenant →
             </a>
-            <a href="/faq" style={{ display: "inline-block", border: "1.5px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.7)", padding: "16px 36px", fontWeight: 600, fontSize: "1rem", textDecoration: "none" }}>
-              Lire la FAQ
+            <a href="/comparatif" style={{ display: "inline-block", border: "1.5px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.7)", padding: "16px 36px", fontWeight: 600, fontSize: "1rem", textDecoration: "none" }}>
+              OpenClaw vs ChatGPT →
             </a>
           </div>
         </section>
