@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const faq = [
   {
     q: "OpenClaw est-il disponible en français ?",
-    a: "Oui. OpenClaw supporte le français nativement depuis son lancement en 2025. L'interface de configuration, les messages de l'agent et les canaux de communication (Telegram, WhatsApp, iMessage) fonctionnent tous en français. Claws configure par défaut l'agent en français lors de chaque installation.",
+    a: "Oui. OpenClaw supporte le français nativement. L'interface de configuration, les messages de l'agent et les canaux de communication (Telegram, WhatsApp, iMessage) fonctionnent tous en français. Claws configure par défaut l'agent en français lors de chaque installation.",
   },
   {
     q: "OpenClaw est-il conforme au RGPD pour les entreprises françaises ?",
@@ -42,7 +42,7 @@ const faq = [
   },
   {
     q: "Clawdbot et Moltbot, c'est la même chose qu'OpenClaw ?",
-    a: "Oui. OpenClaw s'est d'abord appelé Clawdbot, puis Moltbot, avant d'adopter le nom OpenClaw en 2025. Si vous trouvez des tutoriels ou des références à Clawdbot ou Moltbot, il s'agit bien du même logiciel. Le projet a gardé la même architecture et la même philosophie open source tout au long de son évolution.",
+    a: "Oui. OpenClaw s'est d'abord appelé Clawdbot, puis Moltbot, avant d'adopter le nom OpenClaw en 2026. Si vous trouvez des tutoriels ou des références à Clawdbot ou Moltbot, il s'agit bien du même logiciel. Le projet a gardé la même architecture et la même philosophie open source tout au long de son évolution.",
   },
 ];
 
@@ -141,7 +141,7 @@ export default function OpenClawFrancePage() {
             OpenClaw est compatible avec plusieurs modèles IA : Claude (Anthropic), GPT-4 (OpenAI), Llama 3 et Mistral en local via Ollama. Vous n'êtes pas lié à un fournisseur unique. Le projet est maintenu activement sur GitHub et dispose d'une communauté internationale croissante.
           </p>
           <p style={{ fontSize: "0.9rem", color: "#888", lineHeight: 1.8, borderLeft: "2px solid #E8E4DF", paddingLeft: 16 }}>
-            Note historique : avant de s'appeler OpenClaw, la plateforme s'est successivement appelée <strong>Clawdbot</strong>, puis <strong>Moltbot</strong>. Le nom OpenClaw a été adopté en 2025. Si vous cherchez des ressources sur ces anciens noms, elles correspondent bien au même projet.
+            Note historique : avant de s'appeler OpenClaw, la plateforme s'est successivement appelée <strong>Clawdbot</strong>, puis <strong>Moltbot</strong>. Le nom OpenClaw a été adopté en 2026. Si vous cherchez des ressources sur ces anciens noms, elles correspondent bien au même projet.
           </p>
         </section>
 
