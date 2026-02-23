@@ -30,7 +30,7 @@ export default function NavBar() {
           {links.map((l) => (
             <a key={l.href} href={l.href} className="nav-link">{l.label}</a>
           ))}
-          <a href="#contact" className="nav-cta">Contact →</a>
+          <a href="/#contact" className="nav-cta">Contact →</a>
         </div>
 
         {/* Mobile — hamburger */}
@@ -56,7 +56,7 @@ export default function NavBar() {
               {l.label}
             </a>
           ))}
-          <a href="#contact"
+          <a href="/#contact"
             onClick={() => setOpen(false)}
             style={{ fontSize: "2rem", fontWeight: 800, color: "#E85D04", padding: "20px 0", textDecoration: "none", marginTop: 8, letterSpacing: "-0.5px" }}>
             Contact →
