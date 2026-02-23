@@ -1,4 +1,5 @@
 import { getAllPosts } from "@/lib/posts";
+import ContactTerminal from "@/components/ContactTerminal";
 
 const differentiators = [
   {
@@ -308,11 +309,18 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id="contact" className="section section-contact">
-          <div className="contact-inner">
-            <p className="section-tag light">Contact</p>
-            <h2 className="contact-title">Discutons.</h2>
-            <a href="mailto:contact@claws.fr" className="contact-email">contact@claws.fr</a>
-            <p className="contact-note">On répond dans la journée.</p>
+          <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "center" }}>
+            <div>
+              <p className="section-tag light">Contact</p>
+              <h2 className="contact-title">Discutons.</h2>
+              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.75, marginBottom: 24 }}>
+                Une question, un projet, une installation à prévoir. On répond dans la journée.
+              </p>
+              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.25)", margin: 0 }}>
+                Ou directement : <a href="mailto:contact@claws.fr" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "underline" }}>contact@claws.fr</a>
+              </p>
+            </div>
+            <ContactTerminal />
           </div>
         </section>
 
