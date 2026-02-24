@@ -78,6 +78,11 @@ export default function ContactTerminal() {
           addLine("", "response");
           addLine(`À bientôt, ${name}.`, "response");
           setStep("done");
+          // Google Ads conversion tracking
+          if (typeof window !== "undefined" && (window as any).gtag) {
+            (window as any).gtag("event", "conversion", { send_to: "AW-17974041887" });
+            (window as any).gtag("event", "generate_lead", { currency: "EUR", value: 189 });
+          }
         } else {
           addLine("Erreur lors de l'envoi. Réessayez ou écrivez à contact@claws.fr", "error");
           setStep("error");

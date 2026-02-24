@@ -195,6 +195,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {jsonLd.map((schema, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         ))}
+        {/* Google Ads global site tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17974041887" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17974041887');`,
+          }}
+        />
         {/* Google Tag Manager */}
         {gtmId && (
           <script
