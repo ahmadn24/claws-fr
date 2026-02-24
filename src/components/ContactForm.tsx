@@ -74,7 +74,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <style>{`
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr !important; } }
+        .contact-input:focus { border-color: #E85D04 !important; }
+      `}</style>
+      <div className="contact-grid">
         <div>
           <label style={{ display: "block", fontSize: "0.78rem", fontWeight: 600, color: "#0E0E0E", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>
             Prénom ou société *
