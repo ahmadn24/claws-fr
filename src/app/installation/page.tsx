@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactTerminal from "@/components/ContactTerminal";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Installer OpenClaw en 48h | Claws, première agence française",
@@ -162,7 +162,7 @@ export default function InstallationPage() {
             </div>
           </div>
 
-          <ContactTerminal />
+          <ContactForm />
         </section>
 
         {/* FAQ */}
