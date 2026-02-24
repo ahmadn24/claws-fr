@@ -185,7 +185,7 @@ const jsonLd = [
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-KCWLKDD8";
 
   return (
     <html lang="fr">
