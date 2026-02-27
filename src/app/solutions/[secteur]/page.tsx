@@ -37,7 +37,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
     },
     {
       q: `Pourquoi passer par Claws pour installer OpenClaw ?`,
-      a: `OpenClaw est open source : vous pouvez l'installer vous-même si vous êtes développeur. Mais l'installation sécurisée, chiffrement, permissions, configuration des intégrations, tests bout en bout, représente 4 à 8 heures de travail pour quelqu'un qui maîtrise l'outil. Claws le fait en 48h avec une garantie de 30 jours et un support en français. Vous vous concentrez sur votre métier, on s'occupe de la technique.`,
+      a: `OpenClaw est open source : vous pouvez l'installer vous-même si vous êtes développeur. Mais l'installation sécurisée, chiffrement, permissions, configuration des intégrations, tests bout en bout, représente 4 à 8 heures de travail pour quelqu'un qui maîtrise l'outil. Claws le fait en 2h avec une garantie de 30 jours et un support en français. Vous vous concentrez sur votre métier, on s'occupe de la technique.`,
     },
     {
       q: `OpenClaw respecte-t-il le RGPD ?`,
@@ -144,7 +144,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
                 {
                   num: "04",
                   title: "Configuré pour vous",
-                  desc: "Claws installe OpenClaw et le configure pour votre secteur en 48h. Garanti ou refait.",
+                  desc: "Claws installe OpenClaw et le configure pour votre secteur en 2h. Garanti ou refait.",
                 },
               ].map((item, i) => (
                 <div key={i} style={{ padding: "28px 24px", background: "#0E0E0E" }}>
@@ -190,7 +190,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
         <section style={{ maxWidth: 760, margin: "0 auto", padding: "64px 24px" }}>
           <p className="section-tag">Comment ça marche</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-0.5px", margin: "12px 0 48px" }}>
-            OpenClaw opérationnel en 48 heures. Sans technique.
+            OpenClaw opérationnel en 2 heures. Sans technique.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 0, border: "1px solid #E8E4DF" }}>
             {[
@@ -238,7 +238,7 @@ export default async function SectorPage({ params }: { params: Promise<{ secteur
             Prêt ?
           </p>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 800, color: "#F5F2EE", margin: "0 0 16px", letterSpacing: "-1px" }}>
-            Votre agent OpenClaw tourne en 48h.
+            Votre agent OpenClaw tourne en 2h.
           </h2>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", maxWidth: 480, margin: "0 auto 40px", lineHeight: 1.7 }}>
             Installation à partir de 189€. 30 jours de garantie.

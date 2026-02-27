@@ -234,7 +234,7 @@ const faq = [
   },
   {
     q: "Faut-il être développeur pour utiliser OpenClaw ?",
-    a: "Non. OpenClaw est open source et techniquement complexe à installer correctement, c'est précisément pour ça que Claws existe. Nous installons, configurons et testons tout en 48h. Une fois en place, vous interagissez avec votre agent via Telegram ou WhatsApp, comme vous envoyez un message à un collaborateur. Pas d'interface technique, pas de ligne de commande, pas de maintenance."
+    a: "Non. OpenClaw est open source et techniquement complexe à installer correctement, c'est précisément pour ça que Claws existe. Nous installons, configurons et testons tout en 2h. Une fois en place, vous interagissez avec votre agent via Telegram ou WhatsApp, comme vous envoyez un message à un collaborateur. Pas d'interface technique, pas de ligne de commande, pas de maintenance."
   },
   {
     q: "Est-ce que l'installation Claws inclut la maintenance et les mises à jour ?",
@@ -527,7 +527,7 @@ export default function ComparatifPage() {
             Prêt à passer à l'action ?
           </p>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 800, color: "#F5F2EE", margin: "0 0 16px", letterSpacing: "-1px" }}>
-            Votre agent. Sur votre machine. En 48h.
+            Votre agent. Sur votre machine. En 2h.
           </h2>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", maxWidth: 480, margin: "0 auto 40px", lineHeight: 1.7 }}>
             Installation à partir de 189€. Garantie 30 jours. Support en français.

@@ -201,7 +201,7 @@ export default function OpenClawFrancePage() {
               Installer OpenClaw en France.
             </h2>
             <p style={{ fontSize: "0.97rem", color: "#444", lineHeight: 1.85, marginBottom: 32 }}>
-              OpenClaw est open source : vous pouvez l'installer vous-même si vous avez les compétences techniques. Une installation professionnelle sécurisée nécessite environ 4 à 8 heures de configuration pour quelqu'un qui connaît bien l'outil. Claws propose un service d'installation complète en 48h, avec garantie 30 jours.
+              OpenClaw est open source : vous pouvez l'installer vous-même si vous avez les compétences techniques. Une installation professionnelle sécurisée nécessite environ 4 à 8 heures de configuration pour quelqu'un qui connaît bien l'outil. Claws propose un service d'installation complète en 2h, avec garantie 30 jours.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
               {[
@@ -221,7 +221,7 @@ export default function OpenClawFrancePage() {
               <a href="/#contact" style={{ display: "inline-block", background: "#E85D04", color: "#fff", padding: "14px 28px", fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>
                 Demander une installation →
               </a>
-              <span style={{ marginLeft: 16, fontSize: "0.85rem", color: "#888" }}>À partir de 189€ · Opérationnel en 48h</span>
+              <span style={{ marginLeft: 16, fontSize: "0.85rem", color: "#888" }}>À partir de 189€ · Opérationnel en 2h</span>
             </div>
           </div>
         </section>
@@ -274,7 +274,7 @@ export default function OpenClawFrancePage() {
             Première agence française spécialisée OpenClaw.
           </h2>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", maxWidth: 480, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            Basée à Paris. Installation en 48h à partir de 189€. Garantie 30 jours. Support en français.
+            Basée à Paris. Installation en 2h à partir de 189€. Garantie 30 jours. Support en français.
           </p>
           <a href="/#contact" style={{ display: "inline-block", background: "#E85D04", color: "#fff", padding: "16px 36px", fontWeight: 700, fontSize: "1rem", textDecoration: "none" }}>
             Installer OpenClaw →

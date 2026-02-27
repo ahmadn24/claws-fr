@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Installer OpenClaw en 48h | Claws, première agence française",
-  description: "Obtenez votre agent IA OpenClaw installé, sécurisé et configuré pour votre métier en 48h. À partir de 189€. Garantie 30 jours. Réponse sous 24h.",
+  title: "Installer OpenClaw en 2h | Claws, première agence française",
+  description: "Obtenez votre agent IA OpenClaw installé, sécurisé et configuré pour votre métier en 2h. À partir de 189€. Garantie 30 jours. Réponse sous 24h.",
   alternates: { canonical: "https://claws.fr/installation" },
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Installer OpenClaw en 48h | Claws",
-    description: "Agent IA local installé et configuré pour votre métier en 48h. À partir de 189€. Garantie 30 jours.",
+    title: "Installer OpenClaw en 2h | Claws",
+    description: "Agent IA local installé et configuré pour votre métier en 2h. À partir de 189€. Garantie 30 jours.",
     url: "https://claws.fr/installation",
     images: [{ url: "https://claws.fr/og-image.png", width: 1200, height: 630 }],
   },
 };
 
 const proofs = [
-  "Installation en 48h",
+  "Installation en 2h",
   "À partir de 189€",
   "Garantie 30 jours",
   "100% local, zéro cloud",
@@ -25,7 +25,7 @@ const steps = [
   { num: "01", title: "Appel découverte (30 min)", desc: "On comprend votre activité, vos outils, vos cas d'usage." },
   { num: "02", title: "Installation sécurisée", desc: "Claws installe OpenClaw à distance selon le Protocole 12 points." },
   { num: "03", title: "Configuration métier", desc: "L'agent est calibré pour votre secteur et vos règles." },
-  { num: "04", title: "Agent opérationnel", desc: "En production sous 48h. Support 30 jours inclus." },
+  { num: "04", title: "Agent opérationnel", desc: "En production sous 2h. Support 30 jours inclus." },
 ];
 
 const faqs = [
@@ -54,7 +54,7 @@ export default function InstallationPage() {
             Installation OpenClaw · Paris
           </p>
           <h1 style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 800, color: "#0E0E0E", letterSpacing: "-1.5px", lineHeight: 1.1, margin: "0 0 20px" }}>
-            Votre agent IA<br />opérationnel<br />en 48 heures.
+            Votre agent IA<br />opérationnel<br />en 2 heures.
           </h1>
           <p style={{ fontSize: "1rem", color: "#555", lineHeight: 1.8, marginBottom: 28 }}>
             Claws installe, sécurise et configure OpenClaw sur votre machine. Vous reprenez du temps. Vos données ne bougent pas.
@@ -144,7 +144,7 @@ export default function InstallationPage() {
           Prêt à gagner 2h par jour ?
         </h2>
         <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.8)", margin: "0 0 24px" }}>
-          Installation en 48h. À partir de 189€. Garantie 30 jours.
+          Installation en 2h. À partir de 189€. Garantie 30 jours.
         </p>
         <a href="#contact-form"
           style={{ display: "inline-block", background: "#fff", color: "#E85D04", padding: "14px 32px", fontWeight: 800, fontSize: "0.95rem", textDecoration: "none" }}>

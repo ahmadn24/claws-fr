@@ -157,9 +157,9 @@ export default async function PostPage({ params }: Props) {
         <div className="article-cta">
           <h3>Vous souhaitez un agent OpenClaw pour votre entreprise ?</h3>
           <p>
-            Claws installe, configure et maintient votre agent OpenClaw en local. Opérationnel en 48h, support francophone, données 100% locales. Première agence française spécialisée OpenClaw.
+            Claws installe, configure et maintient votre agent OpenClaw en local. Opérationnel en 2h, support francophone, données 100% locales. Première agence française spécialisée OpenClaw.
           </p>
-          <a href="/#contact" className="btn-primary">Installation en 48h, à partir de 189€ →</a>
+          <a href="/#contact" className="btn-primary">Installation en 2h, à partir de 189€ →</a>
         </div>
 
         {relatedPosts.length > 0 && (

@@ -54,7 +54,7 @@ const offers = [
     code: "SETUP",
     price: "À partir de 189 €",
     title: "Installation OpenClaw",
-    desc: "On installe et sécurise OpenClaw sur votre machine, on connecte vos canaux, on configure les automatisations de base. Opérationnel en 48h.",
+    desc: "On installe et sécurise OpenClaw sur votre machine, on connecte vos canaux, on configure les automatisations de base. Opérationnel en 2h.",
     cta: "Démarrer",
   },
   {
@@ -142,7 +142,7 @@ export default function Home() {
               <div className="hero-sub">
                 <p>
                   OpenClaw est l&apos;agent IA open source qui agit à votre place : emails, relances, reporting, veille. En local, sans cloud.
-                  Claws l&apos;installe, le sécurise et le configure pour votre métier en 48h.
+                  Claws l&apos;installe, le sécurise et le configure pour votre métier en 2h.
                 </p>
               </div>
               <div className="hero-actions">
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
-              <span className="stat-num">48h</span>
+              <span className="stat-num">2h</span>
               <span className="stat-label">pour être opérationnel</span>
             </div>
             <div className="stat-divider" />
@@ -355,7 +355,7 @@ export default function Home() {
                   name: "Ahmad C.", role: "Fondateur, Libcare", tags: "Stripe · Facturation · Qonto"
                 },
                 {
-                  quote: "Je pensais que c'était un outil pour les développeurs. En 48h mon agent relançait mes devis non signés et gérait mes emails de prospection. Mon taux de signature a clairement progressé.",
+                  quote: "Je pensais que c'était un outil pour les développeurs. En 2h mon agent relançait mes devis non signés et gérait mes emails de prospection. Mon taux de signature a clairement progressé.",
                   name: "Sophie M.", role: "Consultante indépendante, Paris", tags: "Relances · Prospection · Onboarding"
                 },
                 {

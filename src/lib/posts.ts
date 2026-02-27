@@ -169,7 +169,7 @@ L'installation d'OpenClaw sur Mac Mini est accessible en moins de 30 minutes en 
 
 Une fois installé, pensez à mettre en place une routine de [maintenance OpenClaw](/blog/maintenance-openclaw-agents-ia-stables) pour garder votre agent fiable sur le long terme.
 
-Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 48h**, configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/#contact)
+Vous préférez déléguer l'installation et la configuration à des experts ? **Claws intervient en remote en 2h**, configuration complète, sécurisation, et formation incluse à partir de 189€. [Contactez-nous.](/#contact)
 `,
   },
   {
@@ -608,7 +608,7 @@ A : Uniquement si vous lui donnez accès à vos outils de gestion et qu'ils expo
 A : Oui, sous conditions. L'essentiel est que les données restent sur votre infrastructure (d'où l'importance du déploiement local) et que vous restiez responsable de leur traitement. Nous vous aidons à configurer l'agent dans le respect de ces exigences.
 
 **Q : Combien de temps ça prend à mettre en place ?**
-A : De notre côté, une journée d'installation et de configuration. Vous êtes opérationnel sous 48h.
+A : De notre côté, une journée d'installation et de configuration. Vous êtes opérationnel sous 2h.
 
 ---
 
@@ -670,7 +670,7 @@ A : Vous définissez précisément les accès : telle boîte email, tel dossier 
 A : Oui, depuis votre email professionnel ou un canal dédié. Chaque message est rédigé à votre nom. Les sujets sensibles vous sont systématiquement remontés avant envoi.
 
 **Q : Quel est le délai avant d'avoir un agent opérationnel ?**
-A : 48h entre le premier contact et un agent actif, configuré pour votre contexte. La première semaine, on ajuste ensemble selon ce que vous observez.
+A : 2h entre le premier contact et un agent actif, configuré pour votre contexte. La première semaine, on ajuste ensemble selon ce que vous observez.
 
 ---
 
@@ -999,7 +999,7 @@ Trois options :
 
 **Option 1 : Installer soi-même**, La documentation officielle est disponible sur [openclaw.ai](https://openclaw.ai). Comptez une journée complète si vous êtes à l'aise avec le terminal.
 
-**Option 2 : Se faire accompagner par Claws**, Installation complète en 48h ouvrées à partir de 189 euros. Comprend la configuration d'un premier agent adapté à votre activité et 30 jours de garantie.
+**Option 2 : Se faire accompagner par Claws**, Installation complète en 2h ouvrées à partir de 189 euros. Comprend la configuration d'un premier agent adapté à votre activité et 30 jours de garantie.
 
 **Option 3 : Commencer par la version cloud**, OpenClaw propose une version hébergée pour tester avant de déployer en local.
 
@@ -1227,7 +1227,7 @@ En 2026, les cabinets qui ont adopté un agent IA ont commencé à libérer ces 
 
 Dans les trois cas, ils ont pris de l'avance sur les cabinets qui n'avaient pas fait le changement.
 
-La différence structurelle entre les deux ? Pas la qualité du conseil, pas la réputation, pas les diplômes. Juste 48 heures d'installation et quelques semaines de calibration.
+La différence structurelle entre les deux ? Pas la qualité du conseil, pas la réputation, pas les diplômes. Juste 2 heures d'installation et quelques semaines de calibration.
 
 ---
 
@@ -1335,7 +1335,7 @@ Mais la logique de fond est solide : les outils qui font gagner du temps compose
 
 Si vous dirigez une PME, un cabinet, une agence, ou si vous exercez une profession libérale en France, la question pratique est simple : qu'est-ce qui vous retient d'installer un agent IA aujourd'hui ?
 
-Si la réponse est "je ne sais pas par où commencer" : c'est exactement ce que Claws règle en 48 heures.
+Si la réponse est "je ne sais pas par où commencer" : c'est exactement ce que Claws règle en 2 heures.
 
 Si la réponse est "j'ai peur que mes données soient exposées" : l'architecture locale d'OpenClaw répond à cette préoccupation à la racine.
 
@@ -1492,7 +1492,7 @@ Toutes ces automatisations fonctionnent avec OpenClaw deploye localement sur vot
 
 Certaines, comme le tri des emails ou les relances, demandent un calibrage sur vos habitudes et votre ton. C'est ce calibrage qui fait la difference entre un agent utile et un agent agacant.
 
-Chez Claws, ces 10 automatisations font partie de la configuration de base qu'on met en place pour chaque client. Vous choisissez celles qui correspondent a votre activite, on les configure, et vous etes operationnel en 48 heures.
+Chez Claws, ces 10 automatisations font partie de la configuration de base qu'on met en place pour chaque client. Vous choisissez celles qui correspondent a votre activite, on les configure, et vous etes operationnel en 2 heures.
 
 ---
 

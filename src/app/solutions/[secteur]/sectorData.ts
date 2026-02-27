@@ -24,7 +24,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe et configure OpenClaw pour votre cabinet juridique. Triage emails, suivi dossiers, relances automatiques. Installation locale, RGPD natif. À partir de 189€.",
     stat1: { value: "8h", label: "gagnées par semaine en moyenne" },
     stat2: { value: "0", label: "donnée client sur un cloud tiers" },
-    stat3: { value: "48h", label: "délai d'installation" },
+    stat3: { value: "2h", label: "délai d'installation" },
     painPoints: [
       { title: "Boite mail ingérable", desc: "Entre les clients, les opposants, les greffes et les huissiers, votre boite reçoit 80+ emails par jour. Trier ça prend 1h le matin. Chaque matin." },
       { title: "Relances chronophages", desc: "Les devis non signés, les honoraires impayés, les clients silencieux. Relancer manuellement est épuisant et ça passe souvent à la trappe." },
@@ -61,7 +61,7 @@ export const sectors: Record<string, Sector> = {
     faq: [
       { q: "Le secret professionnel est-il respecté ?", a: "Oui. L'agent tourne sur votre machine, dans votre cabinet. Aucune donnée client ne transite par un serveur externe. Le seul appel réseau est vers le modèle de langage (Anthropic Claude), qui ne conserve pas les données selon sa politique de confidentialité. Pour les dossiers ultra-sensibles, un modèle local peut être utilisé." },
       { q: "L'agent peut-il accéder à mes logiciels métier (Secib, Jarvis) ?", a: "Partiellement. OpenClaw peut lire des exports de ces logiciels et interagir via leurs APIs quand elles existent. Claws étudie les possibilités d'intégration au cas par cas lors de l'installation." },
-      { q: "Combien de temps pour que l'agent soit opérationnel ?", a: "48 heures ouvrées après la commande. Claws installe et configure tout à distance, sans que vous ayez à intervenir techniquement." },
+      { q: "Combien de temps pour que l'agent soit opérationnel ?", a: "2 heures après la commande. Claws installe et configure tout à distance, sans que vous ayez à intervenir techniquement." },
       { q: "Un agent peut-il rédiger des conclusions ou des actes ?", a: "Il peut générer des premiers jets à partir de vos notes ou de templates que vous avez validés. La relecture et la signature restent de votre responsabilité. C'est un outil d'aide à la rédaction, pas un substitut à votre expertise juridique." },
     ],
     relatedPosts: [
@@ -79,7 +79,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les médecins et professionnels de santé. Gestion RDV, comptes-rendus, relances patients. Données de santé 100% locales. À partir de 189€.",
     stat1: { value: "30%", label: "du temps médical = tâches administratives" },
     stat2: { value: "0", label: "donnée patient sur un serveur externe" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Surcharge administrative", desc: "Ordonnances, comptes-rendus, certificats, courriers aux spécialistes. L'administratif représente jusqu'à 30% du temps d'un médecin généraliste. Du temps pris sur les patients." },
       { title: "Données de santé sensibles", desc: "Les données de santé sont parmi les plus protégées par le RGPD. Utiliser des outils cloud américains pour traiter des informations patients est un risque juridique et éthique majeur." },
@@ -117,7 +117,7 @@ export const sectors: Record<string, Sector> = {
       { q: "Les données patients sont-elles sécurisées ?", a: "Oui. L'agent tourne sur votre propre machine, dans votre cabinet. Aucune donnée de santé ne transite par un cloud externe. C'est architecturalement conforme aux exigences RGPD pour les données de santé." },
       { q: "OpenClaw est-il compatible avec les logiciels médicaux (Doctolib, Maiia, Medistory) ?", a: "OpenClaw peut s'interfacer avec les APIs de ces outils quand elles existent. Claws étudie les possibilités d'intégration lors de l'installation selon votre stack." },
       { q: "Un agent peut-il faire des prescriptions ou des diagnostics ?", a: "Non, et ce n'est pas son rôle. L'agent est un outil administratif et d'aide à la documentation. Le diagnostic et la prescription restent exclusivement de votre responsabilité médicale." },
-      { q: "L'installation nécessite-t-elle une interruption d'activité ?", a: "Non. L'installation se fait à distance, sans interruption de votre activité. Claws configure tout en arrière-plan en moins de 48 heures." },
+      { q: "L'installation nécessite-t-elle une interruption d'activité ?", a: "Non. L'installation se fait à distance, sans interruption de votre activité. Claws configure tout en arrière-plan en moins de 2 heures." },
     ],
     relatedPosts: [
       { slug: "agent-ia-gestion-emails-professionnels", title: "Agent IA pour gérer vos emails" },
@@ -134,7 +134,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les artisans et entreprises BTP. Devis automatisés, relances clients, suivi chantiers. Installation locale. À partir de 189€.",
     stat1: { value: "5h", label: "perdues par semaine en administratif" },
     stat2: { value: "60%", label: "des devis jamais relancés" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Les devis prennent trop de temps", desc: "Répondre à chaque demande de devis prend 30 à 45 minutes. Multiplié par 10 demandes par semaine dont la moitié ne donnent rien, c'est un gouffre de temps." },
       { title: "Les relances partent à la trappe", desc: "Un devis envoyé sans réponse. On se dit qu'on va rappeler. On oublie. Le chantier part chez un concurrent. Ça arrive à tout le monde, tout le temps." },
@@ -184,12 +184,12 @@ export const sectors: Record<string, Sector> = {
     slug: "agences",
     name: "Agences & Consultants",
     headline: "L'agent IA qui travaille la nuit pendant que vous dormez.",
-    subheadline: "Claws configure OpenClaw pour votre agence : veille, reporting, prospection, comptes-rendus. Opérationnel en 48h. Vos clients n'ont pas besoin de savoir.",
+    subheadline: "Claws configure OpenClaw pour votre agence : veille, reporting, prospection, comptes-rendus. Opérationnel en 2h. Vos clients n'ont pas besoin de savoir.",
     metaTitle: "OpenClaw pour agences et consultants | Automatisation | Claws",
     metaDesc: "Claws installe OpenClaw pour les agences et consultants. Veille, reporting, prospection, comptes-rendus automatiques. Installation locale. À partir de 189€.",
     stat1: { value: "12h", label: "de reporting par mois par client" },
     stat2: { value: "3x", label: "plus de clients suivis avec le même temps" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Le reporting prend trop de temps", desc: "Compiler les stats, rédiger les analyses, formatter les slides. Chaque client = plusieurs heures par mois. Pur temps non facturable, non différenciant." },
       { title: "La veille est impossible à tenir", desc: "Surveiller les concurrents de vos clients, les tendances du marché, les mentions de leur marque, c'est un travail à plein temps que vous n'avez pas." },
@@ -244,7 +244,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les entrepreneurs et startups. Emails, prospection, reporting investisseurs, veille marché. Installation locale. À partir de 189€.",
     stat1: { value: "3h", label: "gagnées par jour sur l'opérationnel" },
     stat2: { value: "0", label: "donnée stratégique sur un cloud tiers" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Vous faites tout vous-même", desc: "Répondre aux emails, relancer les prospects, préparer les reportings investisseurs, suivre les partenaires, chaque tâche vous vole du temps de construction produit ou business." },
       { title: "La prospection tombe quand ça charge", desc: "Dès que les opérations s'emballent, la prospection s'arrête. Résultat : un pipeline qui se vide sans que vous vous en rendiez compte, jusqu'au creux suivant." },
@@ -299,7 +299,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les freelances et indépendants. Prospection continue, relances, facturation, onboarding clients. Installation locale. À partir de 189€.",
     stat1: { value: "30%", label: "du temps freelance = admin non facturable" },
     stat2: { value: "2x", label: "plus de clients avec le même temps disponible" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "La prospection s'arrête quand vous êtes en mission", desc: "Vous êtes soit en train de travailler pour un client, soit en train d'en chercher un autre. Rarement les deux en même temps. Résultat : des creux d'activité évitables." },
       { title: "Les relances vous mettent mal à l'aise", desc: "Relancer un devis non signé ou une facture impayée est inconfortable. Donc vous attendez. Et parfois l'argent ne rentre pas, ou arrive trop tard." },
@@ -354,7 +354,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les créateurs de contenu. Veille tendances, repurposing automatique, planning éditorial. Installation locale. À partir de 189€.",
     stat1: { value: "60%", label: "du temps créateur = tâches non créatives" },
     stat2: { value: "3x", label: "plus de contenus publiés avec le même effort" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "La veille prend autant de temps que la création", desc: "Suivre les tendances, surveiller les concurrents, identifier les sujets qui buzzent, sans système, c'est du scroll infini sans résultat clair." },
       { title: "Le repurposing ne se fait jamais", desc: "Vous savez qu'une vidéo YouTube pourrait devenir 5 posts LinkedIn, 3 threads Twitter et 1 newsletter. Mais transformer le contenu prend du temps. Donc ça ne se fait jamais." },
@@ -409,7 +409,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour les DAF et directeurs financiers. Reporting automatisé, alertes trésorerie, clôtures accélérées. Données 100% locales. À partir de 189€.",
     stat1: { value: "40%", label: "du temps DAF = consolidation et reporting" },
     stat2: { value: "0", label: "donnée financière sur un cloud non maîtrisé" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "La consolidation mange les lundis", desc: "Récupérer les chiffres de chaque département, nettoyer les données, consolider dans Excel, corriger les erreurs de formule. C'est des heures de travail répétitif à faible valeur analytique." },
       { title: "Les alertes trésorerie arrivent trop tard", desc: "Vous découvrez un problème de trésorerie quand il est déjà là. Sans monitoring en temps réel, les signaux faibles passent inaperçus jusqu'à ce qu'ils deviennent urgents." },
@@ -464,7 +464,7 @@ export const sectors: Record<string, Sector> = {
     metaDesc: "Claws installe OpenClaw pour le commerce et le retail. Service client 24/7, relances paniers, veille prix concurrents. Installation locale. À partir de 189€.",
     stat1: { value: "40%", label: "des questions clients = FAQ répétitives" },
     stat2: { value: "70%", label: "des paniers abandonnés jamais relancés" },
-    stat3: { value: "48h", label: "pour être opérationnel" },
+    stat3: { value: "2h", label: "pour être opérationnel" },
     painPoints: [
       { title: "Service client débordant", desc: "Heures d'ouverture, disponibilité produit, délais de livraison, retours. Les mêmes questions reviennent en boucle et prennent un temps disproportionné." },
       { title: "Paniers abandonnés perdus", desc: "70% des paniers abandonnés ne sont jamais relancés. Chaque relance non envoyée est du chiffre d'affaires laissé sur la table." },

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Claws",
   },
   description:
-    "Claws installe et configure OpenClaw sur votre machine en 48h. Première agence française spécialisée OpenClaw. 100% local, zéro cloud, RGPD natif. À partir de 189€. Paris.",
+    "Claws installe et configure OpenClaw sur votre machine en 2h. Première agence française spécialisée OpenClaw. 100% local, zéro cloud, RGPD natif. À partir de 189€. Paris.",
   keywords: [
     "installation OpenClaw",
     "OpenClaw France",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Claws | Installation OpenClaw en France · Agents IA locaux",
     description:
-      "Installation OpenClaw en 48h à partir de 189€. Première agence française spécialisée. 100% local, RGPD natif, garantie 30 jours.",
+      "Installation OpenClaw en 2h à partir de 189€. Première agence française spécialisée. 100% local, RGPD natif, garantie 30 jours.",
     url: "https://claws.fr",
     siteName: "Claws",
     locale: "fr_FR",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Claws | Installation OpenClaw en France",
-    description: "Première agence française spécialisée OpenClaw. Installation locale en 48h à partir de 189€. Zéro cloud, RGPD natif.",
+    description: "Première agence française spécialisée OpenClaw. Installation locale en 2h à partir de 189€. Zéro cloud, RGPD natif.",
     images: ["/og-image.png"],
   },
   alternates: { canonical: "https://claws.fr" },
@@ -60,7 +60,7 @@ const jsonLd = [
     url: "https://claws.fr",
     logo: { "@type": "ImageObject", url: "https://claws.fr/icon.png", width: 512, height: 512 },
     image: "https://claws.fr/og-image.png",
-    description: "Claws est la première agence française spécialisée dans l'installation, la configuration et la maintenance d'agents IA autonomes OpenClaw. Fondée à Paris en 2026, Claws déploie des agents OpenClaw en local sur la machine du client en 48 heures, sans aucun transfert de données vers un cloud tiers.",
+    description: "Claws est la première agence française spécialisée dans l'installation, la configuration et la maintenance d'agents IA autonomes OpenClaw. Fondée à Paris en 2026, Claws déploie des agents OpenClaw en local sur la machine du client en 2 heures, sans aucun transfert de données vers un cloud tiers.",
     foundingDate: "2026",
     address: {
       "@type": "PostalAddress",
@@ -96,7 +96,7 @@ const jsonLd = [
           name: "Installation OpenClaw",
           price: "189",
           priceCurrency: "EUR",
-          description: "Installation et configuration complète d'un agent OpenClaw sur votre machine. Opérationnel en 48h avec garantie 30 jours.",
+          description: "Installation et configuration complète d'un agent OpenClaw sur votre machine. Opérationnel en 2h avec garantie 30 jours.",
           url: "https://claws.fr/#offres",
         },
         {
@@ -153,7 +153,7 @@ const jsonLd = [
         name: "Combien coûte l'installation d'OpenClaw par Claws ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "L'installation professionnelle d'OpenClaw par Claws commence à partir de 189€ pour une configuration complète sur votre machine existante. Ce tarif inclut l'installation sécurisée selon le Protocole Claws 12 points, la configuration des canaux de communication (Telegram, WhatsApp), la connexion à vos outils (email, agenda, CRM) et une garantie de 30 jours satisfait ou refait. L'agent est opérationnel en 48h. Des formules de maintenance mensuelle sont disponibles à partir de 149€/mois. En comparaison, ChatGPT Plus coûte 240€/an sans offrir d'autonomie réelle ni de confidentialité des données.",
+          text: "L'installation professionnelle d'OpenClaw par Claws commence à partir de 189€ pour une configuration complète sur votre machine existante. Ce tarif inclut l'installation sécurisée selon le Protocole Claws 12 points, la configuration des canaux de communication (Telegram, WhatsApp), la connexion à vos outils (email, agenda, CRM) et une garantie de 30 jours satisfait ou refait. L'agent est opérationnel en 2h. Des formules de maintenance mensuelle sont disponibles à partir de 149€/mois. En comparaison, ChatGPT Plus coûte 240€/an sans offrir d'autonomie réelle ni de confidentialité des données.",
         },
       },
       {

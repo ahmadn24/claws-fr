@@ -274,7 +274,7 @@ export default function SecuritePage() {
             Installé blindé. Garanti 90 jours.
           </h2>
           <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.5)", marginBottom: 40 }}>
-            À partir de 189€. Installation en 48h. Protocole Claws appliqué systématiquement.
+            À partir de 189€. Installation en 2h. Protocole Claws appliqué systématiquement.
           </p>
           <a href="/#contact" style={{ display: "inline-block", background: "#E85D04", color: "#fff", padding: "16px 36px", fontWeight: 700, fontSize: "1rem", textDecoration: "none" }}>
             Démarrer →
