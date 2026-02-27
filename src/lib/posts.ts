@@ -1350,6 +1350,159 @@ Le reste, c'est de la procrastination. Et la procrastination en 2026, c'est l'é
 *Ce texte s'inspire du format de scénario prospectif développé par CitriniResearch sur l'impact macroéconomique de l'IA. L'intention est identique : pas de la peur, pas du marketing, une modélisation honnête des trajectoires plausibles. Les chiffres de productivité cités sont issus de retours d'expérience documentés par des utilisateurs d'OpenClaw et d'outils d'agents IA similaires.*
 `,
   },
+  {
+    slug: "10-automatisations-openclaw-clients-quotidien",
+    title: "10 automatisations OpenClaw que nos clients utilisent au quotidien",
+    description:
+      "Tri des emails, relances clients, veille sectorielle, comptes-rendus de reunion... Voici les 10 automatisations OpenClaw les plus utilisees par les clients de Claws, avec des exemples concrets.",
+    date: "2026-02-26",
+    category: "Cas pratiques",
+    readTime: "9 min",
+    keywords: ["automatisations OpenClaw", "cron jobs OpenClaw", "cas usage OpenClaw", "exemples agents IA", "automatisation quotidien IA"],
+    content: `
+Un agent OpenClaw peut faire beaucoup de choses. Mais dans la pratique, ce sont souvent les memes automatisations qui reviennent d'un client a l'autre. Pas les plus spectaculaires. Les plus utiles.
+
+Voici les 10 automatisations que nos clients utilisent le plus, celles qu'ils configurent en premier et qu'ils ne desactivent jamais.
+
+---
+
+## 1. Le tri intelligent des emails
+
+C'est la premiere automatisation que tout le monde demande, et celle qui a le plus d'impact immediat.
+
+L'agent lit chaque email entrant, identifie s'il s'agit d'une demande client, d'une facture, d'une newsletter, d'un spam ou d'une urgence. Il classe automatiquement, repond aux demandes standards (horaires, tarifs, disponibilites), et vous notifie uniquement de ce qui merite votre attention.
+
+**Gain moyen** : 30 a 45 minutes par jour. Sur un an, ca represente plus de 150 heures recuperees.
+
+**Exemple reel** : un avocat en droit des affaires recevait 80 emails par jour. Apres configuration, l'agent traite 55 d'entre eux sans intervention. L'avocat n'ouvre plus sa boite que pour les 25 qui comptent.
+
+---
+
+## 2. Les relances automatiques de devis et factures
+
+Vous envoyez un devis, le client ne repond pas. Trois jours passent. Puis cinq. Puis vous oubliez. Le devis expire, le client est parti ailleurs.
+
+L'agent surveille chaque devis envoye. Apres un delai que vous definissez (3 jours, 5 jours, 7 jours), il envoie une relance polie, dans votre ton, depuis votre email. Si le client repond, il vous transmet. Si le client ignore deux relances, il vous alerte pour que vous decidiez de la suite.
+
+**Gain moyen** : entre 10 et 25% de devis convertis en plus, simplement parce que la relance part systematiquement.
+
+**Exemple reel** : un artisan plombier a recupere 4 chantiers en un mois juste parce que ses relances partaient desormais a temps. Avant, il les oubliait une fois sur deux.
+
+---
+
+## 3. Le briefing du matin
+
+Chaque matin a 7h30, l'agent vous envoie un message sur Telegram avec :
+- Les 3 a 5 emails les plus importants recus depuis hier soir
+- Vos rendez-vous du jour avec les details cles
+- Les echeances qui arrivent dans les 48 prochaines heures
+- Les relances en attente de reponse
+
+Vous lisez ca en 2 minutes avec votre cafe, et vous savez exactement par quoi commencer.
+
+**Gain moyen** : 15 minutes de "mise en route" eliminee chaque matin.
+
+**Exemple reel** : une consultante en strategie demarre desormais chaque journee avec une vision claire. Elle dit que c'est "comme avoir une assistante qui a deja lu tous ses emails avant elle".
+
+---
+
+## 4. Les comptes-rendus de reunion automatiques
+
+Vous sortez d'une reunion. Vous envoyez un message vocal de 3 minutes a votre agent sur Telegram en resumant les points cles. Il structure le compte-rendu selon votre format habituel, liste les decisions prises et les actions a suivre, puis vous soumet le resultat pour validation avant envoi aux participants.
+
+**Gain moyen** : 30 a 60 minutes par reunion. Pour quelqu'un qui en fait 3 par semaine, c'est 2 heures recuperees.
+
+**Exemple reel** : un architecte qui faisait 4 reunions de chantier par semaine passait ses vendredis apres-midi a rediger les comptes-rendus. Maintenant, ils partent dans l'heure qui suit chaque reunion.
+
+---
+
+## 5. La veille sectorielle quotidienne
+
+L'agent surveille les sources que vous lui indiquez : blogs specialises, sites concurrents, flux RSS, publications officielles, comptes LinkedIn. Chaque matin ou chaque semaine, il vous envoie un resume de ce qui a bouge dans votre secteur.
+
+Pas une liste de liens. Un vrai resume, avec ce qui est pertinent pour votre activite et pourquoi.
+
+**Gain moyen** : 20 a 30 minutes par jour de navigation web eliminee.
+
+**Exemple reel** : un dirigeant de PME dans le BTP recoit chaque lundi un resume des nouvelles normes, des appels d'offres publies et des mouvements chez ses concurrents. Il dit que ca vaut "un stagiaire a plein temps sur la veille".
+
+---
+
+## 6. Les rappels intelligents de suivi client
+
+Apres une premiere interaction avec un prospect ou un client, l'agent programme automatiquement un suivi. Pas un rappel basique dans un calendrier, un vrai suivi contextuel.
+
+Si un prospect vous a dit "rappelez-moi en mars", l'agent vous le signale debut mars avec le contexte complet de votre dernier echange. Si un client n'a pas donne de nouvelles depuis un mois, l'agent vous suggere de prendre contact et prepare un message.
+
+**Gain moyen** : zero opportunite perdue par oubli.
+
+**Exemple reel** : une agence de communication a recupere un contrat a 15 000 euros parce que l'agent a rappele au bon moment de recontacter un prospect qui avait dit "pas maintenant, peut-etre dans 2 mois". Sans l'agent, le prospect aurait ete oublie.
+
+---
+
+## 7. La preparation de rendez-vous
+
+15 minutes avant chaque rendez-vous important, l'agent vous envoie un briefing : qui vous allez voir, le contexte de la relation, les derniers echanges, les points en suspens, et ce que vous aviez prevu de discuter.
+
+Plus besoin de fouiller dans vos emails ou vos notes pour vous rappeler ou en etait le dossier.
+
+**Gain moyen** : 10 a 15 minutes de preparation par rendez-vous.
+
+**Exemple reel** : un consultant qui enchaine 4 a 5 rendez-vous par jour arrive desormais a chacun parfaitement brief. Ses clients remarquent la difference.
+
+---
+
+## 8. Le monitoring de site web et d'uptime
+
+L'agent verifie periodiquement que votre site web est en ligne, que les pages chargent correctement, et que rien n'a change de facon inattendue. Si votre site tombe ou si un formulaire casse, vous etes prevenu en quelques minutes.
+
+**Gain moyen** : detection instantanee au lieu de decouvrir le probleme 3 jours plus tard quand un client vous dit "votre site ne marche pas".
+
+**Exemple reel** : le site d'un client e-commerce est tombe un samedi soir. L'agent a detecte le probleme en 5 minutes et a envoye une alerte. Le site a ete retabli en 20 minutes au lieu des 12 heures habituelles (personne ne surveillait le week-end).
+
+---
+
+## 9. La gestion des reponses aux FAQ
+
+Si vous recevez regulierement les memes questions par email ou messagerie (tarifs, disponibilites, processus, documents a fournir), l'agent les identifie et y repond automatiquement avec les bonnes informations.
+
+Chaque reponse est envoyee depuis votre email, dans votre ton. Le destinataire ne sait pas que c'est un agent. Et les questions qui sortent de l'ordinaire vous sont transmises avec le contexte.
+
+**Gain moyen** : varie selon le volume, mais souvent 1 a 2 heures par semaine pour les professions qui recoivent beaucoup de demandes entrantes.
+
+**Exemple reel** : un cabinet de kinesitherapeute recevait 15 a 20 emails par semaine sur les horaires, les mutuelles acceptees et la preparation aux seances. L'agent repond maintenant a 90% d'entre eux sans intervention.
+
+---
+
+## 10. Le nettoyage et l'organisation des notes
+
+Vous prenez des notes en vrac, dans Telegram, dans un carnet que vous photographiez, dans un fichier texte. L'agent les recupere, les structure, les classe dans les bons dossiers et les relie aux projets concernes.
+
+Au lieu d'un chaos de notes eparses, vous avez un systeme organise et consultable.
+
+**Gain moyen** : difficilement quantifiable, mais tous les clients qui l'utilisent disent que c'est l'automatisation qu'ils ne pourraient plus abandonner.
+
+**Exemple reel** : un entrepreneur dictait ses idees dans Telegram a toute heure. L'agent les classe par projet, les regroupe par theme, et chaque lundi il recoit un resume de toutes ses notes de la semaine.
+
+---
+
+## Comment mettre en place ces automatisations
+
+Toutes ces automatisations fonctionnent avec OpenClaw deploye localement sur votre machine. La plupart necessitent une configuration initiale qui prend entre 30 minutes et 2 heures selon la complexite.
+
+Certaines, comme le tri des emails ou les relances, demandent un calibrage sur vos habitudes et votre ton. C'est ce calibrage qui fait la difference entre un agent utile et un agent agacant.
+
+Chez Claws, ces 10 automatisations font partie de la configuration de base qu'on met en place pour chaque client. Vous choisissez celles qui correspondent a votre activite, on les configure, et vous etes operationnel en 48 heures.
+
+---
+
+## Vous voulez tester ?
+
+Chaque situation est differente. Certains clients utilisent les 10, d'autres se concentrent sur 3 ou 4 qui changent vraiment leur quotidien. L'important, c'est de commencer par ce qui vous fait perdre le plus de temps.
+
+[Contactez-nous pour identifier vos automatisations prioritaires.](/#contact)
+`,
+  },
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {
